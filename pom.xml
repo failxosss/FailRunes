@@ -6,7 +6,7 @@
   <artifactId>FailRunes</artifactId>
   <version>1.0.0</version>
   <packaging>jar</packaging>
-  <name>FailRunes</name>
+  <n>FailRunes</n>
   <properties>
     <maven.compiler.release>21</maven.compiler.release>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -49,7 +49,18 @@
     </dependency>
   </dependencies>
   <build>
-    <resources><resource><directory>src/main/resources</directory><filtering>false</filtering></resource></resources>
+    <resources>
+      <resource>
+        <directory>src/main/resources</directory>
+        <filtering>true</filtering>
+        <includes><include>plugin.yml</include></includes>
+      </resource>
+      <resource>
+        <directory>src/main/resources</directory>
+        <filtering>false</filtering>
+        <excludes><exclude>plugin.yml</exclude></excludes>
+      </resource>
+    </resources>
     <plugins>
       <plugin><groupId>org.apache.maven.plugins</groupId><artifactId>maven-compiler-plugin</artifactId><version>3.13.0</version></plugin>
     </plugins>
