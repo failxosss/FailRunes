@@ -17,11 +17,11 @@ public final class PreferencesGui extends Gui {
         String[] labels = {"Sounds", "Particles", "Messages", "Cooldown Popups", "Action Bar", "Titles", "Chat Messages", "Visual Effects"};
         int[] slots = {10, 11, 12, 13, 14, 15, 16, 19};
         for (int i = 0; i < bits.length; i++) {
-            int bit = bits[i]; String label = labels[i];
+            int bit = bits[i]; String label = labels[i]; final int slot = slots[i];
             boolean on = RunePreference.has(data.globalPref(), bit);
-            set(slots[i], toggleIcon(label, on), (p, e) -> {
+            set(slot, toggleIcon(label, on), (p, e) -> {
                 plugin.prefs().toggleGlobal(data, bit);
-                inventory.setItem(slots[i], toggleIcon(label, RunePreference.has(data.globalPref(), bit)));
+                inventory.setItem(slot, toggleIcon(label, RunePreference.has(data.globalPref(), bit)));
             });
         }
         GuiItems.fillBorder(inventory);
