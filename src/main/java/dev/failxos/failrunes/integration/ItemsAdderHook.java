@@ -1,6 +1,6 @@
 package dev.failxos.failrunes.integration;
 
-import dev.softserve.iawrapper.CustomStack;
+import dev.lone.itemsadder.api.CustomStack;
 import org.bukkit.Bukkit;
 import org.bukkit.inventory.ItemStack;
 
