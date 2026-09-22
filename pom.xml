@@ -6,7 +6,7 @@
   <artifactId>FailRunes</artifactId>
   <version>1.0.0</version>
   <packaging>jar</packaging>
-  <n>FailRunes</n>
+  <name>FailRunes</name>
   <properties>
     <maven.compiler.release>21</maven.compiler.release>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
