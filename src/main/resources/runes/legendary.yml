@@ -1,0 +1,4110 @@
+# Auto-generated rune definitions for pool 'legendary'. Safe to hand-edit; /runeadmin reload picks up changes.
+runes:
+  executioner:
+    name: Executioner
+    description: Deals massive bonus damage to targets below 20% health.
+    rarity: LEGENDARY
+    category: COMBAT
+    pool: legendary
+    trigger: ON_HIT
+    equipment:
+    - SWORD
+    - AXE
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: true
+    chance:
+      base: 100
+    cooldown:
+      base: 8
+      per-level: -0.5
+    effects:
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 10
+        per-level: 2.5
+    conditions:
+    - target-type:*
+  soul_drain:
+    name: Soul Drain
+    description: Drains XP straight from the souls of your victims.
+    rarity: LEGENDARY
+    category: COMBAT
+    pool: legendary
+    trigger: ON_KILL
+    equipment:
+    - SWORD
+    - AXE
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: true
+    chance:
+      base: 100
+    effects:
+    - type: XP
+      amount:
+        base: 15
+        per-level: 5
+  chain_lightning:
+    name: Chain Lightning
+    description: Strikes your target and arcs to nearby enemies.
+    rarity: LEGENDARY
+    category: COMBAT
+    pool: legendary
+    trigger: ON_HIT
+    equipment:
+    - SWORD
+    - TRIDENT
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: true
+    chance:
+      base: 12
+      per-level: 2
+    cooldown:
+      base: 6
+    effects:
+    - type: LIGHTNING
+      target: TARGET
+      damage-only: true
+    - type: AREA_DAMAGE
+      amount:
+        base: 3
+        per-level: 0.8
+      radius: 4
+  shadow_strike:
+    name: Shadow Strike
+    description: Teleport behind your target and strike from the shadows.
+    rarity: LEGENDARY
+    category: COMBAT
+    pool: legendary
+    trigger: ON_SPRINT
+    equipment:
+    - SWORD
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: true
+    chance:
+      base: 100
+    cooldown:
+      base: 12
+      per-level: -1
+    effects:
+    - type: TELEPORT
+      mode: behind-target
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 6
+        per-level: 1.5
+    conditions:
+    - combat
+  scattershot:
+    name: Scattershot
+    description: Fires a spread of additional arrows alongside your shot.
+    rarity: LEGENDARY
+    category: WEAPONS
+    pool: legendary
+    trigger: ON_ATTACK
+    equipment:
+    - BOW
+    - CROSSBOW
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: true
+    chance:
+      base: 100
+    cooldown:
+      base: 4
+      per-level: -0.3
+    effects:
+    - type: MULTI_PROJECTILE
+      projectile: ARROW
+      count:
+        base: 3
+        per-level: 0.5
+      spread-degrees: 15
+  tesla_coil:
+    name: Tesla Coil
+    description: Charges your weapon; every third hit releases a burst of arcing electricity.
+    rarity: LEGENDARY
+    category: WEAPONS
+    pool: legendary
+    trigger: ON_HIT
+    equipment:
+    - SWORD
+    - TRIDENT
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: true
+    chance:
+      base: 34
+    cooldown:
+      base: 3
+    effects:
+    - type: LIGHTNING
+      target: TARGET
+      damage-only: true
+    - type: AREA_DAMAGE
+      amount:
+        base: 2
+        per-level: 0.5
+      radius: 3
+  decapitation:
+    name: Decapitation
+    description: A critical hit has a chance to instantly finish a low-health target.
+    rarity: LEGENDARY
+    category: WEAPONS
+    pool: legendary
+    trigger: ON_CRITICAL
+    equipment:
+    - SWORD
+    - AXE
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: true
+    chance:
+      base: 8
+      per-level: 1.5
+    cooldown:
+      base: 10
+    effects:
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 20
+        per-level: 4
+    conditions:
+    - target-type:*
+  barricade:
+    name: Barricade
+    description: A chance to completely negate incoming damage.
+    rarity: LEGENDARY
+    category: ARMOR
+    pool: legendary
+    trigger: ON_DAMAGE
+    equipment:
+    - ARMOR
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: true
+    chance:
+      base: 6
+      per-level: 1.2
+    cooldown:
+      base: 12
+      per-level: -1
+    effects:
+    - type: HEAL
+      amount:
+        base: 2
+    - type: TITLE
+      title: <white>BLOCKED
+      subtitle: ''
+  last_stand:
+    name: Last Stand
+    description: Gain Strength and Resistance when your back is against the wall.
+    rarity: LEGENDARY
+    category: ARMOR
+    pool: legendary
+    trigger: ON_LOW_HEALTH
+    equipment:
+    - ARMOR
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: true
+    chance:
+      base: 100
+    cooldown:
+      base: 45
+    effects:
+    - type: STRENGTH
+      ticks:
+        base: 100
+        per-level: 20
+      amplifier: 1
+    - type: ABSORPTION
+      ticks:
+        base: 100
+        per-level: 20
+      amplifier: 0
+    conditions:
+    - health-below:20
+  double_jump:
+    name: Double Jump
+    description: Grants an extra jump in mid-air.
+    rarity: LEGENDARY
+    category: MOVEMENT
+    pool: legendary
+    trigger: ON_JUMP
+    equipment:
+    - BOOTS
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: true
+    chance:
+      base: 100
+    cooldown:
+      base: 6
+      per-level: -0.4
+    effects:
+    - type: PUSH
+      target: SELF
+      strength:
+        base: 0.9
+        per-level: 0.1
+  dodge:
+    name: Dodge
+    description: A chance to completely evade an incoming attack.
+    rarity: LEGENDARY
+    category: MOVEMENT
+    pool: legendary
+    trigger: ON_DAMAGE
+    equipment:
+    - BOOTS
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: true
+    chance:
+      base: 8
+      per-level: 1.5
+    cooldown:
+      base: 6
+    effects:
+    - type: HEAL
+      amount: 0
+    - type: PARTICLE
+      particle: CLOUD
+      count: 20
+  telekinesis:
+    name: Telekinesis
+    description: Mined blocks go straight into your inventory instead of dropping.
+    rarity: LEGENDARY
+    category: MINING
+    pool: legendary
+    trigger: ON_BLOCK_BREAK
+    equipment:
+    - PICKAXE
+    - AXE
+    - SHOVEL
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: true
+    chance:
+      base: 100
+    effects:
+    - type: ITEM_DROP
+      material: AIR
+      amount: 0
+  clown_pickaxe:
+    name: Clown Pickaxe
+    description: Honk! A chance to mine the whole vein at once in a burst of chaos.
+    rarity: LEGENDARY
+    category: MINING
+    pool: legendary
+    trigger: ON_BLOCK_BREAK
+    equipment:
+    - PICKAXE
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: true
+    chance:
+      base: 5
+      per-level: 1
+    cooldown:
+      base: 8
+    effects:
+    - type: AREA_DAMAGE
+      amount: 0
+      radius: 0
+    - type: SOUND
+      sound: ENTITY_VILLAGER_YES
+      pitch: 2
+    - type: PARTICLE
+      particle: TOTEM_OF_UNDYING
+      count: 20
+  clown_sword:
+    name: Clown Sword
+    description: Every hit is a party - random chaotic effects on your foe.
+    rarity: LEGENDARY
+    category: COMBAT
+    pool: legendary
+    trigger: ON_HIT
+    equipment:
+    - SWORD
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: true
+    chance:
+      base: 15
+      per-level: 3
+    effects:
+    - type: SLOW
+      ticks: 40
+      amplifier: 1
+    - type: PARTICLE
+      particle: NOTE
+      count: 15
+    - type: SOUND
+      sound: ENTITY_VILLAGER_YES
+      pitch: 1.5
+  treasure_hunter:
+    name: Treasure Hunter
+    description: Rare chance to unearth an unidentified rune while digging or mining.
+    rarity: LEGENDARY
+    category: MINING
+    pool: legendary
+    trigger: ON_BLOCK_BREAK
+    equipment:
+    - PICKAXE
+    - SHOVEL
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: true
+    chance:
+      base: 2
+      per-level: 0.4
+    effects:
+    - type: LOOT
+      pool: common
+  harvest_master:
+    name: Harvest Master
+    description: Harvests an entire patch of mature crops at once.
+    rarity: LEGENDARY
+    category: FARMING
+    pool: legendary
+    trigger: ON_BLOCK_BREAK
+    equipment:
+    - HOE
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: true
+    chance:
+      base: 100
+    cooldown:
+      base: 5
+      per-level: -0.3
+    effects:
+    - type: ITEM_DROP
+      material: WHEAT
+      amount:
+        base: 3
+        per-level: 1
+  tree_feller:
+    name: Tree Feller
+    description: Chops down the whole tree in a single swing.
+    rarity: LEGENDARY
+    category: LOGGING
+    pool: legendary
+    trigger: ON_BLOCK_BREAK
+    equipment:
+    - AXE
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: true
+    chance:
+      base: 100
+    cooldown:
+      base: 6
+      per-level: -0.4
+    effects:
+    - type: ITEM_DROP
+      material: OAK_LOG
+      amount:
+        base: 4
+        per-level: 1
+  double_catch:
+    name: Double Catch
+    description: A chance to reel in two catches at once.
+    rarity: LEGENDARY
+    category: FISHING
+    pool: legendary
+    trigger: ON_FISH
+    equipment:
+    - FISHING_ROD
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: true
+    chance:
+      base: 20
+      per-level: 4
+    effects:
+    - type: ITEM_DROP
+      material: COD
+      amount: 1
+  plagueweaver:
+    name: Plagueweaver
+    description: Weaves a lingering plague that spreads to nearby enemies.
+    rarity: LEGENDARY
+    category: COMBAT
+    pool: legendary
+    trigger: ON_HIT
+    equipment:
+    - SWORD
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: true
+    chance:
+      base: 15
+      per-level: 3
+    cooldown:
+      base: 6
+    effects:
+    - type: POISON
+      target: NEARBY_MOBS
+      ticks:
+        base: 60
+        per-level: 10
+      amplifier: 1
+  greedy_mobs:
+    name: Greedy Mobs
+    description: Mobs you defeat drop noticeably more loot.
+    rarity: LEGENDARY
+    category: COMBAT
+    pool: legendary
+    trigger: ON_MOB_KILL
+    equipment:
+    - SWORD
+    - AXE
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: true
+    chance:
+      base: 100
+    effects:
+    - type: ITEM_DROP
+      material: GOLD_NUGGET
+      amount:
+        base: 2
+        per-level: 1
+  ender_backpack:
+    name: Ender Backpack
+    description: A rift briefly opens, pulling nearby drops into storage.
+    rarity: LEGENDARY
+    category: UTILITY
+    pool: legendary
+    trigger: ON_BLOCK_BREAK
+    equipment:
+    - PICKAXE
+    - SHOVEL
+    - AXE
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: true
+    chance:
+      base: 100
+    effects:
+    - type: PULL
+      target: AREA
+      radius: 5
+      strength: 0.6
+  saviors_grace:
+    name: Savior's Grace
+    description: Amplifies healing received from any source.
+    rarity: LEGENDARY
+    category: UTILITY
+    pool: legendary
+    trigger: ON_HEAL
+    equipment:
+    - ARMOR
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: true
+    chance:
+      base: 100
+    effects:
+    - type: HEAL
+      amount:
+        base: 1
+        per-level: 0.4
+  nether_forged:
+    name: Nether-Forged
+    description: Blocks broken in the Nether yield bonus ancient debris shards.
+    rarity: LEGENDARY
+    category: MINING
+    pool: legendary
+    trigger: ON_BLOCK_BREAK
+    equipment:
+    - PICKAXE
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: true
+    chance:
+      base: 5
+      per-level: 1
+    effects:
+    - type: ITEM_DROP
+      material: NETHERITE_SCRAP
+      amount: 1
+    conditions:
+    - world-type-nether
+  stormcaller:
+    name: Stormcaller
+    description: Empowers your trident during thunderstorms.
+    rarity: LEGENDARY
+    category: COMBAT
+    pool: legendary
+    trigger: ON_ATTACK
+    equipment:
+    - TRIDENT
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: true
+    chance:
+      base: 30
+      per-level: 5
+    effects:
+    - type: LIGHTNING
+      target: TARGET
+      damage-only: false
+    conditions:
+    - weather-thunder
+  aegis:
+    name: Aegis
+    description: Blocking incoming attacks grants a shield of resistance.
+    rarity: LEGENDARY
+    category: ARMOR
+    pool: legendary
+    trigger: ON_DAMAGE
+    equipment:
+    - ARMOR
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: true
+    chance:
+      base: 100
+    effects:
+    - type: ABSORPTION
+      ticks:
+        base: 60
+        per-level: 12
+      amplifier: 1
+    conditions:
+    - blocking
+  bounty_hunter:
+    name: Bounty Hunter
+    description: Earn a cash bounty for defeating other players.
+    rarity: LEGENDARY
+    category: COMBAT
+    pool: legendary
+    trigger: ON_PLAYER_KILL
+    equipment:
+    - SWORD
+    - BOW
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: true
+    chance:
+      base: 100
+    effects:
+    - type: MONEY
+      amount:
+        base: 25
+        per-level: 8
+  spirit_walker:
+    name: Spirit Walker
+    description: Phase briefly through danger while sprinting.
+    rarity: LEGENDARY
+    category: MOVEMENT
+    pool: legendary
+    trigger: ON_SPRINT
+    equipment:
+    - BOOTS
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: true
+    chance:
+      base: 100
+    cooldown:
+      base: 15
+      per-level: -1
+    effects:
+    - type: SPEED
+      ticks:
+        base: 40
+        per-level: 8
+      amplifier: 1
+    - type: PARTICLE
+      particle: SOUL
+      count: 8
+  blast_mining:
+    name: Blast Mining
+    description: Occasionally triggers a controlled blast, clearing surrounding stone.
+    rarity: LEGENDARY
+    category: MINING
+    pool: legendary
+    trigger: ON_BLOCK_BREAK
+    equipment:
+    - PICKAXE
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: true
+    chance:
+      base: 100
+    cooldown:
+      base: 6
+      per-level: -0.4
+    effects:
+    - type: EXPLOSION
+      power: 1.5
+      fire: false
+      break-blocks: true
+  superior_ember_blade:
+    name: Superior Ember Blade
+    description: Your blade burns enemies with ember energy on hit.
+    rarity: LEGENDARY
+    category: WEAPONS
+    pool: legendary
+    trigger: ON_HIT
+    equipment: &id002
+    - SWORD
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 14
+      per-level: 3
+    effects:
+    - type: FIRE
+      ticks: &id001
+        base: 40
+        per-level: 8
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 4
+        per-level: 1.0
+  superior_ember_axe:
+    name: Superior Ember Axe
+    description: Your axe burns enemies with ember energy on hit.
+    rarity: LEGENDARY
+    category: WEAPONS
+    pool: legendary
+    trigger: ON_HIT
+    equipment: &id003
+    - AXE
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 14
+      per-level: 3
+    effects:
+    - type: FIRE
+      ticks: *id001
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 4
+        per-level: 1.0
+  superior_ember_bow:
+    name: Superior Ember Bow
+    description: Your bow burns enemies with ember energy on hit.
+    rarity: LEGENDARY
+    category: WEAPONS
+    pool: legendary
+    trigger: ON_ATTACK
+    equipment: &id006
+    - BOW
+    - CROSSBOW
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 14
+      per-level: 3
+    effects:
+    - type: FIRE
+      ticks: *id001
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 4
+        per-level: 1.0
+  superior_ember_trident:
+    name: Superior Ember Trident
+    description: Your trident burns enemies with ember energy on hit.
+    rarity: LEGENDARY
+    category: WEAPONS
+    pool: legendary
+    trigger: ON_HIT
+    equipment: &id007
+    - TRIDENT
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 14
+      per-level: 3
+    effects:
+    - type: FIRE
+      ticks: *id001
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 4
+        per-level: 1.0
+  superior_frost_blade:
+    name: Superior Frost Blade
+    description: Your blade chills enemies with frost energy on hit.
+    rarity: LEGENDARY
+    category: WEAPONS
+    pool: legendary
+    trigger: ON_HIT
+    equipment: *id002
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 14
+      per-level: 3
+    effects:
+    - type: SLOW
+      ticks: &id004
+        base: 40
+        per-level: 8
+      amplifier: &id005
+        base: 0
+        per-level: 0.2
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 4
+        per-level: 1.0
+  superior_frost_axe:
+    name: Superior Frost Axe
+    description: Your axe chills enemies with frost energy on hit.
+    rarity: LEGENDARY
+    category: WEAPONS
+    pool: legendary
+    trigger: ON_HIT
+    equipment: *id003
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 14
+      per-level: 3
+    effects:
+    - type: SLOW
+      ticks: *id004
+      amplifier: *id005
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 4
+        per-level: 1.0
+  superior_frost_bow:
+    name: Superior Frost Bow
+    description: Your bow chills enemies with frost energy on hit.
+    rarity: LEGENDARY
+    category: WEAPONS
+    pool: legendary
+    trigger: ON_ATTACK
+    equipment: *id006
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 14
+      per-level: 3
+    effects:
+    - type: SLOW
+      ticks: *id004
+      amplifier: *id005
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 4
+        per-level: 1.0
+  superior_frost_trident:
+    name: Superior Frost Trident
+    description: Your trident chills enemies with frost energy on hit.
+    rarity: LEGENDARY
+    category: WEAPONS
+    pool: legendary
+    trigger: ON_HIT
+    equipment: *id007
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 14
+      per-level: 3
+    effects:
+    - type: SLOW
+      ticks: *id004
+      amplifier: *id005
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 4
+        per-level: 1.0
+  superior_toxic_blade:
+    name: Superior Toxic Blade
+    description: Your blade poisons enemies with toxic energy on hit.
+    rarity: LEGENDARY
+    category: WEAPONS
+    pool: legendary
+    trigger: ON_HIT
+    equipment: *id002
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 14
+      per-level: 3
+    effects:
+    - type: POISON
+      ticks: &id008
+        base: 40
+        per-level: 8
+      amplifier: 0
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 4
+        per-level: 1.0
+  superior_toxic_axe:
+    name: Superior Toxic Axe
+    description: Your axe poisons enemies with toxic energy on hit.
+    rarity: LEGENDARY
+    category: WEAPONS
+    pool: legendary
+    trigger: ON_HIT
+    equipment: *id003
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 14
+      per-level: 3
+    effects:
+    - type: POISON
+      ticks: *id008
+      amplifier: 0
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 4
+        per-level: 1.0
+  superior_toxic_bow:
+    name: Superior Toxic Bow
+    description: Your bow poisons enemies with toxic energy on hit.
+    rarity: LEGENDARY
+    category: WEAPONS
+    pool: legendary
+    trigger: ON_ATTACK
+    equipment: *id006
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 14
+      per-level: 3
+    effects:
+    - type: POISON
+      ticks: *id008
+      amplifier: 0
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 4
+        per-level: 1.0
+  superior_toxic_trident:
+    name: Superior Toxic Trident
+    description: Your trident poisons enemies with toxic energy on hit.
+    rarity: LEGENDARY
+    category: WEAPONS
+    pool: legendary
+    trigger: ON_HIT
+    equipment: *id007
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 14
+      per-level: 3
+    effects:
+    - type: POISON
+      ticks: *id008
+      amplifier: 0
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 4
+        per-level: 1.0
+  superior_wither_blade:
+    name: Superior Wither Blade
+    description: Your blade withers enemies with wither energy on hit.
+    rarity: LEGENDARY
+    category: WEAPONS
+    pool: legendary
+    trigger: ON_HIT
+    equipment: *id002
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 14
+      per-level: 3
+    effects:
+    - type: WITHER
+      ticks: &id009
+        base: 30
+        per-level: 6
+      amplifier: 0
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 4
+        per-level: 1.0
+  superior_wither_axe:
+    name: Superior Wither Axe
+    description: Your axe withers enemies with wither energy on hit.
+    rarity: LEGENDARY
+    category: WEAPONS
+    pool: legendary
+    trigger: ON_HIT
+    equipment: *id003
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 14
+      per-level: 3
+    effects:
+    - type: WITHER
+      ticks: *id009
+      amplifier: 0
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 4
+        per-level: 1.0
+  superior_wither_bow:
+    name: Superior Wither Bow
+    description: Your bow withers enemies with wither energy on hit.
+    rarity: LEGENDARY
+    category: WEAPONS
+    pool: legendary
+    trigger: ON_ATTACK
+    equipment: *id006
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 14
+      per-level: 3
+    effects:
+    - type: WITHER
+      ticks: *id009
+      amplifier: 0
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 4
+        per-level: 1.0
+  superior_wither_trident:
+    name: Superior Wither Trident
+    description: Your trident withers enemies with wither energy on hit.
+    rarity: LEGENDARY
+    category: WEAPONS
+    pool: legendary
+    trigger: ON_HIT
+    equipment: *id007
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 14
+      per-level: 3
+    effects:
+    - type: WITHER
+      ticks: *id009
+      amplifier: 0
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 4
+        per-level: 1.0
+  superior_void_blade:
+    name: Superior Void Blade
+    description: Your blade warps enemies with void energy on hit.
+    rarity: LEGENDARY
+    category: WEAPONS
+    pool: legendary
+    trigger: ON_HIT
+    equipment: *id002
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 14
+      per-level: 3
+    effects:
+    - type: SLOW
+      ticks: &id010
+        base: 30
+        per-level: 6
+      amplifier: 1
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 4
+        per-level: 1.0
+  superior_void_axe:
+    name: Superior Void Axe
+    description: Your axe warps enemies with void energy on hit.
+    rarity: LEGENDARY
+    category: WEAPONS
+    pool: legendary
+    trigger: ON_HIT
+    equipment: *id003
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 14
+      per-level: 3
+    effects:
+    - type: SLOW
+      ticks: *id010
+      amplifier: 1
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 4
+        per-level: 1.0
+  superior_void_bow:
+    name: Superior Void Bow
+    description: Your bow warps enemies with void energy on hit.
+    rarity: LEGENDARY
+    category: WEAPONS
+    pool: legendary
+    trigger: ON_ATTACK
+    equipment: *id006
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 14
+      per-level: 3
+    effects:
+    - type: SLOW
+      ticks: *id010
+      amplifier: 1
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 4
+        per-level: 1.0
+  superior_void_trident:
+    name: Superior Void Trident
+    description: Your trident warps enemies with void energy on hit.
+    rarity: LEGENDARY
+    category: WEAPONS
+    pool: legendary
+    trigger: ON_HIT
+    equipment: *id007
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 14
+      per-level: 3
+    effects:
+    - type: SLOW
+      ticks: *id010
+      amplifier: 1
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 4
+        per-level: 1.0
+  superior_storm_blade:
+    name: Superior Storm Blade
+    description: Your blade shocks enemies with storm energy on hit.
+    rarity: LEGENDARY
+    category: WEAPONS
+    pool: legendary
+    trigger: ON_HIT
+    equipment: *id002
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 14
+      per-level: 3
+    effects:
+    - type: LIGHTNING
+      target: TARGET
+      damage-only: true
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 4
+        per-level: 1.0
+  superior_storm_axe:
+    name: Superior Storm Axe
+    description: Your axe shocks enemies with storm energy on hit.
+    rarity: LEGENDARY
+    category: WEAPONS
+    pool: legendary
+    trigger: ON_HIT
+    equipment: *id003
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 14
+      per-level: 3
+    effects:
+    - type: LIGHTNING
+      target: TARGET
+      damage-only: true
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 4
+        per-level: 1.0
+  superior_storm_bow:
+    name: Superior Storm Bow
+    description: Your bow shocks enemies with storm energy on hit.
+    rarity: LEGENDARY
+    category: WEAPONS
+    pool: legendary
+    trigger: ON_ATTACK
+    equipment: *id006
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 14
+      per-level: 3
+    effects:
+    - type: LIGHTNING
+      target: TARGET
+      damage-only: true
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 4
+        per-level: 1.0
+  superior_storm_trident:
+    name: Superior Storm Trident
+    description: Your trident shocks enemies with storm energy on hit.
+    rarity: LEGENDARY
+    category: WEAPONS
+    pool: legendary
+    trigger: ON_HIT
+    equipment: *id007
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 14
+      per-level: 3
+    effects:
+    - type: LIGHTNING
+      target: TARGET
+      damage-only: true
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 4
+        per-level: 1.0
+  expert_ore:
+    name: Expert Ore
+    description: Expert proficiency grants bonus copper ore while working.
+    rarity: LEGENDARY
+    category: MINING
+    pool: legendary
+    trigger: ON_BLOCK_BREAK
+    equipment:
+    - PICKAXE
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 14
+      per-level: 3
+    effects:
+    - type: ITEM_DROP
+      material: COPPER_ORE
+      amount:
+        base: 2.5
+        per-level: 0.625
+  expert_timber:
+    name: Expert Timber
+    description: Expert proficiency grants bonus birch log while working.
+    rarity: LEGENDARY
+    category: LOGGING
+    pool: legendary
+    trigger: ON_BLOCK_BREAK
+    equipment:
+    - AXE
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 14
+      per-level: 3
+    effects:
+    - type: ITEM_DROP
+      material: BIRCH_LOG
+      amount:
+        base: 2.5
+        per-level: 0.625
+  expert_harvest:
+    name: Expert Harvest
+    description: Expert proficiency grants bonus potato while working.
+    rarity: LEGENDARY
+    category: FARMING
+    pool: legendary
+    trigger: ON_BLOCK_BREAK
+    equipment:
+    - HOE
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 14
+      per-level: 3
+    effects:
+    - type: ITEM_DROP
+      material: POTATO
+      amount:
+        base: 2.5
+        per-level: 0.625
+  expert_excavation:
+    name: Expert Excavation
+    description: Expert proficiency grants bonus gravel while working.
+    rarity: LEGENDARY
+    category: DIGGING
+    pool: legendary
+    trigger: ON_BLOCK_BREAK
+    equipment:
+    - SHOVEL
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 14
+      per-level: 3
+    effects:
+    - type: ITEM_DROP
+      material: GRAVEL
+      amount:
+        base: 2.5
+        per-level: 0.625
+  expert_angler:
+    name: Expert Angler
+    description: Expert proficiency grants bonus tropical fish while working.
+    rarity: LEGENDARY
+    category: FISHING
+    pool: legendary
+    trigger: ON_FISH
+    equipment:
+    - FISHING_ROD
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 14
+      per-level: 3
+    effects:
+    - type: ITEM_DROP
+      material: TROPICAL_FISH
+      amount:
+        base: 2.5
+        per-level: 0.625
+  superior_vigor_helm:
+    name: Superior Vigor Helm
+    description: Your helm channels vigor, triggered by combat and movement.
+    rarity: LEGENDARY
+    category: ARMOR
+    pool: legendary
+    trigger: ON_ARMOR_EQUIP
+    equipment: &id012
+    - HELMET
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 10
+    effects:
+    - type: STRENGTH
+      ticks: &id011
+        base: 60
+        per-level: 12
+      amplifier: 0
+  superior_vigor_plate:
+    name: Superior Vigor Plate
+    description: Your plate channels vigor, triggered by combat and movement.
+    rarity: LEGENDARY
+    category: ARMOR
+    pool: legendary
+    trigger: ON_ARMOR_EQUIP
+    equipment: &id013
+    - CHESTPLATE
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 10
+    effects:
+    - type: STRENGTH
+      ticks: *id011
+      amplifier: 0
+  superior_vigor_greaves:
+    name: Superior Vigor Greaves
+    description: Your greaves channels vigor, triggered by combat and movement.
+    rarity: LEGENDARY
+    category: ARMOR
+    pool: legendary
+    trigger: ON_ARMOR_EQUIP
+    equipment: &id015
+    - LEGGINGS
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 10
+    effects:
+    - type: STRENGTH
+      ticks: *id011
+      amplifier: 0
+  superior_vigor_treads:
+    name: Superior Vigor Treads
+    description: Your treads channels vigor, triggered by combat and movement.
+    rarity: LEGENDARY
+    category: ARMOR
+    pool: legendary
+    trigger: ON_ARMOR_EQUIP
+    equipment: &id016
+    - BOOTS
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 10
+    effects:
+    - type: STRENGTH
+      ticks: *id011
+      amplifier: 0
+  superior_haste_helm:
+    name: Superior Haste Helm
+    description: Your helm channels haste, triggered by combat and movement.
+    rarity: LEGENDARY
+    category: ARMOR
+    pool: legendary
+    trigger: ON_SPRINT
+    equipment: *id012
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 10
+    effects:
+    - type: SPEED
+      ticks: &id014
+        base: 60
+        per-level: 12
+      amplifier: 0
+  superior_haste_plate:
+    name: Superior Haste Plate
+    description: Your plate channels haste, triggered by combat and movement.
+    rarity: LEGENDARY
+    category: ARMOR
+    pool: legendary
+    trigger: ON_SPRINT
+    equipment: *id013
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 10
+    effects:
+    - type: SPEED
+      ticks: *id014
+      amplifier: 0
+  superior_haste_greaves:
+    name: Superior Haste Greaves
+    description: Your greaves channels haste, triggered by combat and movement.
+    rarity: LEGENDARY
+    category: ARMOR
+    pool: legendary
+    trigger: ON_SPRINT
+    equipment: *id015
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 10
+    effects:
+    - type: SPEED
+      ticks: *id014
+      amplifier: 0
+  superior_haste_treads:
+    name: Superior Haste Treads
+    description: Your treads channels haste, triggered by combat and movement.
+    rarity: LEGENDARY
+    category: ARMOR
+    pool: legendary
+    trigger: ON_SPRINT
+    equipment: *id016
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 10
+    effects:
+    - type: SPEED
+      ticks: *id014
+      amplifier: 0
+  superior_resolve_helm:
+    name: Superior Resolve Helm
+    description: Your helm channels resolve, triggered by combat and movement.
+    rarity: LEGENDARY
+    category: ARMOR
+    pool: legendary
+    trigger: ON_DAMAGE
+    equipment: *id012
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 10
+    effects:
+    - type: ABSORPTION
+      ticks: &id017
+        base: 60
+        per-level: 12
+      amplifier: 0
+  superior_resolve_plate:
+    name: Superior Resolve Plate
+    description: Your plate channels resolve, triggered by combat and movement.
+    rarity: LEGENDARY
+    category: ARMOR
+    pool: legendary
+    trigger: ON_DAMAGE
+    equipment: *id013
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 10
+    effects:
+    - type: ABSORPTION
+      ticks: *id017
+      amplifier: 0
+  superior_resolve_greaves:
+    name: Superior Resolve Greaves
+    description: Your greaves channels resolve, triggered by combat and movement.
+    rarity: LEGENDARY
+    category: ARMOR
+    pool: legendary
+    trigger: ON_DAMAGE
+    equipment: *id015
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 10
+    effects:
+    - type: ABSORPTION
+      ticks: *id017
+      amplifier: 0
+  superior_resolve_treads:
+    name: Superior Resolve Treads
+    description: Your treads channels resolve, triggered by combat and movement.
+    rarity: LEGENDARY
+    category: ARMOR
+    pool: legendary
+    trigger: ON_DAMAGE
+    equipment: *id016
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 10
+    effects:
+    - type: ABSORPTION
+      ticks: *id017
+      amplifier: 0
+  superior_renewal_helm:
+    name: Superior Renewal Helm
+    description: Your helm channels renewal, triggered by combat and movement.
+    rarity: LEGENDARY
+    category: ARMOR
+    pool: legendary
+    trigger: ON_LOW_HEALTH
+    equipment: *id012
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 10
+    effects:
+    - type: REGENERATION
+      ticks: &id018
+        base: 60
+        per-level: 12
+      amplifier: 0
+    conditions:
+    - health-below:40
+  superior_renewal_plate:
+    name: Superior Renewal Plate
+    description: Your plate channels renewal, triggered by combat and movement.
+    rarity: LEGENDARY
+    category: ARMOR
+    pool: legendary
+    trigger: ON_LOW_HEALTH
+    equipment: *id013
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 10
+    effects:
+    - type: REGENERATION
+      ticks: *id018
+      amplifier: 0
+    conditions:
+    - health-below:40
+  superior_renewal_greaves:
+    name: Superior Renewal Greaves
+    description: Your greaves channels renewal, triggered by combat and movement.
+    rarity: LEGENDARY
+    category: ARMOR
+    pool: legendary
+    trigger: ON_LOW_HEALTH
+    equipment: *id015
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 10
+    effects:
+    - type: REGENERATION
+      ticks: *id018
+      amplifier: 0
+    conditions:
+    - health-below:40
+  superior_renewal_treads:
+    name: Superior Renewal Treads
+    description: Your treads channels renewal, triggered by combat and movement.
+    rarity: LEGENDARY
+    category: ARMOR
+    pool: legendary
+    trigger: ON_LOW_HEALTH
+    equipment: *id016
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 10
+    effects:
+    - type: REGENERATION
+      ticks: *id018
+      amplifier: 0
+    conditions:
+    - health-below:40
+  wither_fang_legendary:
+    name: Wither Fang
+    description: A relic fang torn from the wither, hungry for battle.
+    rarity: LEGENDARY
+    category: BOSS
+    pool: legendary
+    trigger: ON_HIT
+    equipment:
+    - SWORD
+    - AXE
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 10
+      per-level: 2
+    effects:
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 8
+        per-level: 1.6
+  wither_fang_mythical:
+    name: Wither Fang
+    description: A relic fang torn from the wither, hungry for battle.
+    rarity: MYTHICAL
+    category: BOSS
+    pool: legendary
+    trigger: ON_HIT
+    equipment:
+    - SWORD
+    - AXE
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 10
+      per-level: 2
+    effects:
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 14
+        per-level: 2.8000000000000003
+  warden_fang_legendary:
+    name: Warden Fang
+    description: A relic fang torn from the warden, hungry for battle.
+    rarity: LEGENDARY
+    category: BOSS
+    pool: legendary
+    trigger: ON_HIT
+    equipment:
+    - SWORD
+    - AXE
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 10
+      per-level: 2
+    effects:
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 8
+        per-level: 1.6
+  warden_fang_mythical:
+    name: Warden Fang
+    description: A relic fang torn from the warden, hungry for battle.
+    rarity: MYTHICAL
+    category: BOSS
+    pool: legendary
+    trigger: ON_HIT
+    equipment:
+    - SWORD
+    - AXE
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 10
+      per-level: 2
+    effects:
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 14
+        per-level: 2.8000000000000003
+  elder_guardian_fang_legendary:
+    name: Elder Guardian Fang
+    description: A relic fang torn from the elder guardian, hungry for battle.
+    rarity: LEGENDARY
+    category: BOSS
+    pool: legendary
+    trigger: ON_HIT
+    equipment:
+    - SWORD
+    - AXE
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 10
+      per-level: 2
+    effects:
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 8
+        per-level: 1.6
+  elder_guardian_fang_mythical:
+    name: Elder Guardian Fang
+    description: A relic fang torn from the elder guardian, hungry for battle.
+    rarity: MYTHICAL
+    category: BOSS
+    pool: legendary
+    trigger: ON_HIT
+    equipment:
+    - SWORD
+    - AXE
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 10
+      per-level: 2
+    effects:
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 14
+        per-level: 2.8000000000000003
+  superior_scorching_pick:
+    name: Superior Scorching Pick
+    description: Your pick leaves scorched bonus coal behind as you work.
+    rarity: LEGENDARY
+    category: MINING
+    pool: legendary
+    trigger: ON_BLOCK_BREAK
+    equipment: &id019
+    - PICKAXE
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 12
+      per-level: 3
+    effects:
+    - type: ITEM_DROP
+      material: COAL
+      amount: &id020
+        base: 1
+        per-level: 0.3
+  superior_glacial_pick:
+    name: Superior Glacial Pick
+    description: Your pick chills the surrounding area as you work.
+    rarity: LEGENDARY
+    category: MINING
+    pool: legendary
+    trigger: ON_BLOCK_BREAK
+    equipment: *id019
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 12
+      per-level: 3
+    effects:
+    - type: PARTICLE
+      particle: SNOWFLAKE
+      count: 6
+  superior_verdant_pick:
+    name: Superior Verdant Pick
+    description: Your pick channels nature's bounty into XP as you work.
+    rarity: LEGENDARY
+    category: MINING
+    pool: legendary
+    trigger: ON_BLOCK_BREAK
+    equipment: *id019
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 12
+      per-level: 3
+    effects:
+    - type: XP
+      amount: &id022
+        base: 2
+        per-level: 0.5
+  superior_gilded_pick:
+    name: Superior Gilded Pick
+    description: Your pick leaves a trace of gold value as you work.
+    rarity: LEGENDARY
+    category: MINING
+    pool: legendary
+    trigger: ON_BLOCK_BREAK
+    equipment: *id019
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 12
+      per-level: 3
+    effects:
+    - type: MONEY
+      amount: &id023
+        base: 2
+        per-level: 0.6
+  superior_scorching_shovel:
+    name: Superior Scorching Shovel
+    description: Your shovel leaves scorched bonus coal behind as you work.
+    rarity: LEGENDARY
+    category: DIGGING
+    pool: legendary
+    trigger: ON_BLOCK_BREAK
+    equipment: &id021
+    - SHOVEL
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 12
+      per-level: 3
+    effects:
+    - type: ITEM_DROP
+      material: COAL
+      amount: *id020
+  superior_glacial_shovel:
+    name: Superior Glacial Shovel
+    description: Your shovel chills the surrounding area as you work.
+    rarity: LEGENDARY
+    category: DIGGING
+    pool: legendary
+    trigger: ON_BLOCK_BREAK
+    equipment: *id021
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 12
+      per-level: 3
+    effects:
+    - type: PARTICLE
+      particle: SNOWFLAKE
+      count: 6
+  superior_verdant_shovel:
+    name: Superior Verdant Shovel
+    description: Your shovel channels nature's bounty into XP as you work.
+    rarity: LEGENDARY
+    category: DIGGING
+    pool: legendary
+    trigger: ON_BLOCK_BREAK
+    equipment: *id021
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 12
+      per-level: 3
+    effects:
+    - type: XP
+      amount: *id022
+  superior_gilded_shovel:
+    name: Superior Gilded Shovel
+    description: Your shovel leaves a trace of gold value as you work.
+    rarity: LEGENDARY
+    category: DIGGING
+    pool: legendary
+    trigger: ON_BLOCK_BREAK
+    equipment: *id021
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 12
+      per-level: 3
+    effects:
+    - type: MONEY
+      amount: *id023
+  superior_scorching_hoe:
+    name: Superior Scorching Hoe
+    description: Your hoe leaves scorched bonus coal behind as you work.
+    rarity: LEGENDARY
+    category: FARMING
+    pool: legendary
+    trigger: ON_BLOCK_BREAK
+    equipment: &id024
+    - HOE
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 12
+      per-level: 3
+    effects:
+    - type: ITEM_DROP
+      material: COAL
+      amount: *id020
+  superior_glacial_hoe:
+    name: Superior Glacial Hoe
+    description: Your hoe chills the surrounding area as you work.
+    rarity: LEGENDARY
+    category: FARMING
+    pool: legendary
+    trigger: ON_BLOCK_BREAK
+    equipment: *id024
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 12
+      per-level: 3
+    effects:
+    - type: PARTICLE
+      particle: SNOWFLAKE
+      count: 6
+  superior_verdant_hoe:
+    name: Superior Verdant Hoe
+    description: Your hoe channels nature's bounty into XP as you work.
+    rarity: LEGENDARY
+    category: FARMING
+    pool: legendary
+    trigger: ON_BLOCK_BREAK
+    equipment: *id024
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 12
+      per-level: 3
+    effects:
+    - type: XP
+      amount: *id022
+  superior_gilded_hoe:
+    name: Superior Gilded Hoe
+    description: Your hoe leaves a trace of gold value as you work.
+    rarity: LEGENDARY
+    category: FARMING
+    pool: legendary
+    trigger: ON_BLOCK_BREAK
+    equipment: *id024
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 12
+      per-level: 3
+    effects:
+    - type: MONEY
+      amount: *id023
+  superior_scorching_rod:
+    name: Superior Scorching Rod
+    description: Your rod leaves scorched bonus coal behind as you work.
+    rarity: LEGENDARY
+    category: FISHING
+    pool: legendary
+    trigger: ON_FISH
+    equipment: &id025
+    - FISHING_ROD
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 12
+      per-level: 3
+    effects:
+    - type: ITEM_DROP
+      material: COAL
+      amount: *id020
+  superior_glacial_rod:
+    name: Superior Glacial Rod
+    description: Your rod chills the surrounding area as you work.
+    rarity: LEGENDARY
+    category: FISHING
+    pool: legendary
+    trigger: ON_FISH
+    equipment: *id025
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 12
+      per-level: 3
+    effects:
+    - type: PARTICLE
+      particle: SNOWFLAKE
+      count: 6
+  superior_verdant_rod:
+    name: Superior Verdant Rod
+    description: Your rod channels nature's bounty into XP as you work.
+    rarity: LEGENDARY
+    category: FISHING
+    pool: legendary
+    trigger: ON_FISH
+    equipment: *id025
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 12
+      per-level: 3
+    effects:
+    - type: XP
+      amount: *id022
+  superior_gilded_rod:
+    name: Superior Gilded Rod
+    description: Your rod leaves a trace of gold value as you work.
+    rarity: LEGENDARY
+    category: FISHING
+    pool: legendary
+    trigger: ON_FISH
+    equipment: *id025
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 12
+      per-level: 3
+    effects:
+    - type: MONEY
+      amount: *id023
+  artisan_coal_finder:
+    name: Artisan's Coal Finder
+    description: A artisan's touch yields bonus coal.
+    rarity: LEGENDARY
+    category: MINING
+    pool: legendary
+    trigger: ON_BLOCK_BREAK
+    equipment: &id026
+    - PICKAXE
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 11
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: COAL
+      amount:
+        base: 2.5
+        per-level: 0.5
+  artisan_iron_ore_finder:
+    name: Artisan's Iron Ore Finder
+    description: A artisan's touch yields bonus iron ore.
+    rarity: LEGENDARY
+    category: MINING
+    pool: legendary
+    trigger: ON_BLOCK_BREAK
+    equipment: *id026
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 11
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: IRON_ORE
+      amount:
+        base: 2.5
+        per-level: 0.5
+  artisan_gold_ore_finder:
+    name: Artisan's Gold Ore Finder
+    description: A artisan's touch yields bonus gold ore.
+    rarity: LEGENDARY
+    category: MINING
+    pool: legendary
+    trigger: ON_BLOCK_BREAK
+    equipment: *id026
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 11
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: GOLD_ORE
+      amount:
+        base: 2.5
+        per-level: 0.5
+  artisan_diamond_finder:
+    name: Artisan's Diamond Finder
+    description: A artisan's touch yields bonus diamond.
+    rarity: LEGENDARY
+    category: MINING
+    pool: legendary
+    trigger: ON_BLOCK_BREAK
+    equipment: *id026
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 11
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: DIAMOND
+      amount:
+        base: 2.5
+        per-level: 0.5
+  artisan_emerald_ore_finder:
+    name: Artisan's Emerald Ore Finder
+    description: A artisan's touch yields bonus emerald ore.
+    rarity: LEGENDARY
+    category: MINING
+    pool: legendary
+    trigger: ON_BLOCK_BREAK
+    equipment: *id026
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 11
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: EMERALD_ORE
+      amount:
+        base: 2.5
+        per-level: 0.5
+  artisan_redstone_finder:
+    name: Artisan's Redstone Finder
+    description: A artisan's touch yields bonus redstone.
+    rarity: LEGENDARY
+    category: MINING
+    pool: legendary
+    trigger: ON_BLOCK_BREAK
+    equipment: *id026
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 11
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: REDSTONE
+      amount:
+        base: 2.5
+        per-level: 0.5
+  artisan_lapis_ore_finder:
+    name: Artisan's Lapis Ore Finder
+    description: A artisan's touch yields bonus lapis ore.
+    rarity: LEGENDARY
+    category: MINING
+    pool: legendary
+    trigger: ON_BLOCK_BREAK
+    equipment: *id026
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 11
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: LAPIS_ORE
+      amount:
+        base: 2.5
+        per-level: 0.5
+  artisan_copper_ore_finder:
+    name: Artisan's Copper Ore Finder
+    description: A artisan's touch yields bonus copper ore.
+    rarity: LEGENDARY
+    category: MINING
+    pool: legendary
+    trigger: ON_BLOCK_BREAK
+    equipment: *id026
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 11
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: COPPER_ORE
+      amount:
+        base: 2.5
+        per-level: 0.5
+  artisan_oak_log_finder:
+    name: Artisan's Oak Log Finder
+    description: A artisan's touch yields bonus oak log.
+    rarity: LEGENDARY
+    category: LOGGING
+    pool: legendary
+    trigger: ON_BLOCK_BREAK
+    equipment: &id027
+    - AXE
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 11
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: OAK_LOG
+      amount:
+        base: 2.5
+        per-level: 0.5
+  artisan_spruce_log_finder:
+    name: Artisan's Spruce Log Finder
+    description: A artisan's touch yields bonus spruce log.
+    rarity: LEGENDARY
+    category: LOGGING
+    pool: legendary
+    trigger: ON_BLOCK_BREAK
+    equipment: *id027
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 11
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: SPRUCE_LOG
+      amount:
+        base: 2.5
+        per-level: 0.5
+  artisan_birch_log_finder:
+    name: Artisan's Birch Log Finder
+    description: A artisan's touch yields bonus birch log.
+    rarity: LEGENDARY
+    category: LOGGING
+    pool: legendary
+    trigger: ON_BLOCK_BREAK
+    equipment: *id027
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 11
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: BIRCH_LOG
+      amount:
+        base: 2.5
+        per-level: 0.5
+  artisan_jungle_log_finder:
+    name: Artisan's Jungle Log Finder
+    description: A artisan's touch yields bonus jungle log.
+    rarity: LEGENDARY
+    category: LOGGING
+    pool: legendary
+    trigger: ON_BLOCK_BREAK
+    equipment: *id027
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 11
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: JUNGLE_LOG
+      amount:
+        base: 2.5
+        per-level: 0.5
+  artisan_acacia_log_finder:
+    name: Artisan's Acacia Log Finder
+    description: A artisan's touch yields bonus acacia log.
+    rarity: LEGENDARY
+    category: LOGGING
+    pool: legendary
+    trigger: ON_BLOCK_BREAK
+    equipment: *id027
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 11
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: ACACIA_LOG
+      amount:
+        base: 2.5
+        per-level: 0.5
+  artisan_dark_oak_log_finder:
+    name: Artisan's Dark Oak Log Finder
+    description: A artisan's touch yields bonus dark oak log.
+    rarity: LEGENDARY
+    category: LOGGING
+    pool: legendary
+    trigger: ON_BLOCK_BREAK
+    equipment: *id027
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 11
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: DARK_OAK_LOG
+      amount:
+        base: 2.5
+        per-level: 0.5
+  artisan_mangrove_log_finder:
+    name: Artisan's Mangrove Log Finder
+    description: A artisan's touch yields bonus mangrove log.
+    rarity: LEGENDARY
+    category: LOGGING
+    pool: legendary
+    trigger: ON_BLOCK_BREAK
+    equipment: *id027
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 11
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: MANGROVE_LOG
+      amount:
+        base: 2.5
+        per-level: 0.5
+  artisan_cherry_log_finder:
+    name: Artisan's Cherry Log Finder
+    description: A artisan's touch yields bonus cherry log.
+    rarity: LEGENDARY
+    category: LOGGING
+    pool: legendary
+    trigger: ON_BLOCK_BREAK
+    equipment: *id027
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 11
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: CHERRY_LOG
+      amount:
+        base: 2.5
+        per-level: 0.5
+  artisan_wheat_finder:
+    name: Artisan's Wheat Finder
+    description: A artisan's touch yields bonus wheat.
+    rarity: LEGENDARY
+    category: FARMING
+    pool: legendary
+    trigger: ON_BLOCK_BREAK
+    equipment: &id028
+    - HOE
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 11
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: WHEAT
+      amount:
+        base: 2.5
+        per-level: 0.5
+  artisan_carrot_finder:
+    name: Artisan's Carrot Finder
+    description: A artisan's touch yields bonus carrot.
+    rarity: LEGENDARY
+    category: FARMING
+    pool: legendary
+    trigger: ON_BLOCK_BREAK
+    equipment: *id028
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 11
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: CARROT
+      amount:
+        base: 2.5
+        per-level: 0.5
+  artisan_potato_finder:
+    name: Artisan's Potato Finder
+    description: A artisan's touch yields bonus potato.
+    rarity: LEGENDARY
+    category: FARMING
+    pool: legendary
+    trigger: ON_BLOCK_BREAK
+    equipment: *id028
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 11
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: POTATO
+      amount:
+        base: 2.5
+        per-level: 0.5
+  artisan_beetroot_finder:
+    name: Artisan's Beetroot Finder
+    description: A artisan's touch yields bonus beetroot.
+    rarity: LEGENDARY
+    category: FARMING
+    pool: legendary
+    trigger: ON_BLOCK_BREAK
+    equipment: *id028
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 11
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: BEETROOT
+      amount:
+        base: 2.5
+        per-level: 0.5
+  artisan_pumpkin_finder:
+    name: Artisan's Pumpkin Finder
+    description: A artisan's touch yields bonus pumpkin.
+    rarity: LEGENDARY
+    category: FARMING
+    pool: legendary
+    trigger: ON_BLOCK_BREAK
+    equipment: *id028
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 11
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: PUMPKIN
+      amount:
+        base: 2.5
+        per-level: 0.5
+  artisan_melon_slice_finder:
+    name: Artisan's Melon Slice Finder
+    description: A artisan's touch yields bonus melon slice.
+    rarity: LEGENDARY
+    category: FARMING
+    pool: legendary
+    trigger: ON_BLOCK_BREAK
+    equipment: *id028
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 11
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: MELON_SLICE
+      amount:
+        base: 2.5
+        per-level: 0.5
+  artisan_sugar_cane_finder:
+    name: Artisan's Sugar Cane Finder
+    description: A artisan's touch yields bonus sugar cane.
+    rarity: LEGENDARY
+    category: FARMING
+    pool: legendary
+    trigger: ON_BLOCK_BREAK
+    equipment: *id028
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 11
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: SUGAR_CANE
+      amount:
+        base: 2.5
+        per-level: 0.5
+  artisan_nether_wart_finder:
+    name: Artisan's Nether Wart Finder
+    description: A artisan's touch yields bonus nether wart.
+    rarity: LEGENDARY
+    category: FARMING
+    pool: legendary
+    trigger: ON_BLOCK_BREAK
+    equipment: *id028
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 11
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: NETHER_WART
+      amount:
+        base: 2.5
+        per-level: 0.5
+  artisan_sand_finder:
+    name: Artisan's Sand Finder
+    description: A artisan's touch yields bonus sand.
+    rarity: LEGENDARY
+    category: DIGGING
+    pool: legendary
+    trigger: ON_BLOCK_BREAK
+    equipment: &id029
+    - SHOVEL
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 11
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: SAND
+      amount:
+        base: 2.5
+        per-level: 0.5
+  artisan_gravel_finder:
+    name: Artisan's Gravel Finder
+    description: A artisan's touch yields bonus gravel.
+    rarity: LEGENDARY
+    category: DIGGING
+    pool: legendary
+    trigger: ON_BLOCK_BREAK
+    equipment: *id029
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 11
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: GRAVEL
+      amount:
+        base: 2.5
+        per-level: 0.5
+  artisan_clay_ball_finder:
+    name: Artisan's Clay Ball Finder
+    description: A artisan's touch yields bonus clay ball.
+    rarity: LEGENDARY
+    category: DIGGING
+    pool: legendary
+    trigger: ON_BLOCK_BREAK
+    equipment: *id029
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 11
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: CLAY_BALL
+      amount:
+        base: 2.5
+        per-level: 0.5
+  artisan_dirt_finder:
+    name: Artisan's Dirt Finder
+    description: A artisan's touch yields bonus dirt.
+    rarity: LEGENDARY
+    category: DIGGING
+    pool: legendary
+    trigger: ON_BLOCK_BREAK
+    equipment: *id029
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 11
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: DIRT
+      amount:
+        base: 2.5
+        per-level: 0.5
+  artisan_soul_sand_finder:
+    name: Artisan's Soul Sand Finder
+    description: A artisan's touch yields bonus soul sand.
+    rarity: LEGENDARY
+    category: DIGGING
+    pool: legendary
+    trigger: ON_BLOCK_BREAK
+    equipment: *id029
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 11
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: SOUL_SAND
+      amount:
+        base: 2.5
+        per-level: 0.5
+  artisan_red_sand_finder:
+    name: Artisan's Red Sand Finder
+    description: A artisan's touch yields bonus red sand.
+    rarity: LEGENDARY
+    category: DIGGING
+    pool: legendary
+    trigger: ON_BLOCK_BREAK
+    equipment: *id029
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 11
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: RED_SAND
+      amount:
+        base: 2.5
+        per-level: 0.5
+  artisan_snowball_finder:
+    name: Artisan's Snowball Finder
+    description: A artisan's touch yields bonus snowball.
+    rarity: LEGENDARY
+    category: DIGGING
+    pool: legendary
+    trigger: ON_BLOCK_BREAK
+    equipment: *id029
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 11
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: SNOWBALL
+      amount:
+        base: 2.5
+        per-level: 0.5
+  artisan_mud_finder:
+    name: Artisan's Mud Finder
+    description: A artisan's touch yields bonus mud.
+    rarity: LEGENDARY
+    category: DIGGING
+    pool: legendary
+    trigger: ON_BLOCK_BREAK
+    equipment: *id029
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 11
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: MUD
+      amount:
+        base: 2.5
+        per-level: 0.5
+  artisan_cod_finder:
+    name: Artisan's Cod Finder
+    description: A artisan's touch yields bonus cod.
+    rarity: LEGENDARY
+    category: FISHING
+    pool: legendary
+    trigger: ON_FISH
+    equipment: &id030
+    - FISHING_ROD
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 11
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: COD
+      amount:
+        base: 2.5
+        per-level: 0.5
+  artisan_salmon_finder:
+    name: Artisan's Salmon Finder
+    description: A artisan's touch yields bonus salmon.
+    rarity: LEGENDARY
+    category: FISHING
+    pool: legendary
+    trigger: ON_FISH
+    equipment: *id030
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 11
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: SALMON
+      amount:
+        base: 2.5
+        per-level: 0.5
+  artisan_tropical_fish_finder:
+    name: Artisan's Tropical Fish Finder
+    description: A artisan's touch yields bonus tropical fish.
+    rarity: LEGENDARY
+    category: FISHING
+    pool: legendary
+    trigger: ON_FISH
+    equipment: *id030
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 11
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: TROPICAL_FISH
+      amount:
+        base: 2.5
+        per-level: 0.5
+  artisan_pufferfish_finder:
+    name: Artisan's Pufferfish Finder
+    description: A artisan's touch yields bonus pufferfish.
+    rarity: LEGENDARY
+    category: FISHING
+    pool: legendary
+    trigger: ON_FISH
+    equipment: *id030
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 11
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: PUFFERFISH
+      amount:
+        base: 2.5
+        per-level: 0.5
+  artisan_ink_sac_finder:
+    name: Artisan's Ink Sac Finder
+    description: A artisan's touch yields bonus ink sac.
+    rarity: LEGENDARY
+    category: FISHING
+    pool: legendary
+    trigger: ON_FISH
+    equipment: *id030
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 11
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: INK_SAC
+      amount:
+        base: 2.5
+        per-level: 0.5
+  artisan_prismarine_shard_finder:
+    name: Artisan's Prismarine Shard Finder
+    description: A artisan's touch yields bonus prismarine shard.
+    rarity: LEGENDARY
+    category: FISHING
+    pool: legendary
+    trigger: ON_FISH
+    equipment: *id030
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 11
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: PRISMARINE_SHARD
+      amount:
+        base: 2.5
+        per-level: 0.5
+  artisan_nautilus_shell_finder:
+    name: Artisan's Nautilus Shell Finder
+    description: A artisan's touch yields bonus nautilus shell.
+    rarity: LEGENDARY
+    category: FISHING
+    pool: legendary
+    trigger: ON_FISH
+    equipment: *id030
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 11
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: NAUTILUS_SHELL
+      amount:
+        base: 2.5
+        per-level: 0.5
+  artisan_bone_finder:
+    name: Artisan's Bone Finder
+    description: A artisan's touch yields bonus bone.
+    rarity: LEGENDARY
+    category: FISHING
+    pool: legendary
+    trigger: ON_FISH
+    equipment: *id030
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 11
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: BONE
+      amount:
+        base: 2.5
+        per-level: 0.5
+  ravager_alpha_trophy_legendary:
+    name: Ravager Alpha Trophy
+    description: A trophy from defeating the ravager alpha, radiating leftover power.
+    rarity: LEGENDARY
+    category: BOSS
+    pool: legendary
+    trigger: ON_KILL
+    equipment:
+    - SWORD
+    - AXE
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 8
+    effects:
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 7
+        per-level: 1.4000000000000001
+  ravager_alpha_trophy_mythical:
+    name: Ravager Alpha Trophy
+    description: A trophy from defeating the ravager alpha, radiating leftover power.
+    rarity: MYTHICAL
+    category: BOSS
+    pool: legendary
+    trigger: ON_KILL
+    equipment:
+    - SWORD
+    - AXE
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 8
+    effects:
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 12
+        per-level: 2.4000000000000004
+  piglin_brute_king_trophy_legendary:
+    name: Piglin Brute King Trophy
+    description: A trophy from defeating the piglin brute king, radiating leftover power.
+    rarity: LEGENDARY
+    category: BOSS
+    pool: legendary
+    trigger: ON_KILL
+    equipment:
+    - SWORD
+    - AXE
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 8
+    effects:
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 7
+        per-level: 1.4000000000000001
+  piglin_brute_king_trophy_mythical:
+    name: Piglin Brute King Trophy
+    description: A trophy from defeating the piglin brute king, radiating leftover power.
+    rarity: MYTHICAL
+    category: BOSS
+    pool: legendary
+    trigger: ON_KILL
+    equipment:
+    - SWORD
+    - AXE
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 8
+    effects:
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 12
+        per-level: 2.4000000000000004
+  guardian_elder_trophy_legendary:
+    name: Guardian Elder Trophy
+    description: A trophy from defeating the guardian elder, radiating leftover power.
+    rarity: LEGENDARY
+    category: BOSS
+    pool: legendary
+    trigger: ON_KILL
+    equipment:
+    - SWORD
+    - AXE
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 8
+    effects:
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 7
+        per-level: 1.4000000000000001
+  guardian_elder_trophy_mythical:
+    name: Guardian Elder Trophy
+    description: A trophy from defeating the guardian elder, radiating leftover power.
+    rarity: MYTHICAL
+    category: BOSS
+    pool: legendary
+    trigger: ON_KILL
+    equipment:
+    - SWORD
+    - AXE
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 8
+    effects:
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 12
+        per-level: 2.4000000000000004
+  shulker_prime_trophy_legendary:
+    name: Shulker Prime Trophy
+    description: A trophy from defeating the shulker prime, radiating leftover power.
+    rarity: LEGENDARY
+    category: BOSS
+    pool: legendary
+    trigger: ON_KILL
+    equipment:
+    - SWORD
+    - AXE
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 8
+    effects:
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 7
+        per-level: 1.4000000000000001
+  shulker_prime_trophy_mythical:
+    name: Shulker Prime Trophy
+    description: A trophy from defeating the shulker prime, radiating leftover power.
+    rarity: MYTHICAL
+    category: BOSS
+    pool: legendary
+    trigger: ON_KILL
+    equipment:
+    - SWORD
+    - AXE
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 8
+    effects:
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 12
+        per-level: 2.4000000000000004
+  superior_vampiric_blade:
+    name: Superior Vampiric Blade
+    description: This blade drains life force on hit.
+    rarity: LEGENDARY
+    category: COMBAT
+    pool: legendary
+    trigger: ON_HIT
+    equipment: *id002
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 12
+      per-level: 2.5
+    effects:
+    - type: HEAL
+      amount: &id031
+        base: 1.5
+        per-level: 0.4
+  superior_vampiric_axe:
+    name: Superior Vampiric Axe
+    description: This axe drains life force on hit.
+    rarity: LEGENDARY
+    category: COMBAT
+    pool: legendary
+    trigger: ON_HIT
+    equipment: *id003
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 12
+      per-level: 2.5
+    effects:
+    - type: HEAL
+      amount: *id031
+  superior_vampiric_bow:
+    name: Superior Vampiric Bow
+    description: This bow drains life force on hit.
+    rarity: LEGENDARY
+    category: COMBAT
+    pool: legendary
+    trigger: ON_ATTACK
+    equipment: *id006
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 12
+      per-level: 2.5
+    effects:
+    - type: HEAL
+      amount: *id031
+  superior_vampiric_trident:
+    name: Superior Vampiric Trident
+    description: This trident drains life force on hit.
+    rarity: LEGENDARY
+    category: COMBAT
+    pool: legendary
+    trigger: ON_HIT
+    equipment: *id007
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 12
+      per-level: 2.5
+    effects:
+    - type: HEAL
+      amount: *id031
+  superior_executing_blade:
+    name: Superior Executing Blade
+    description: This blade seeks out weak points.
+    rarity: LEGENDARY
+    category: COMBAT
+    pool: legendary
+    trigger: ON_HIT
+    equipment: *id002
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 12
+      per-level: 2.5
+    effects:
+    - type: DAMAGE
+      target: TARGET
+      amount: &id032
+        base: 3
+        per-level: 0.8
+  superior_executing_axe:
+    name: Superior Executing Axe
+    description: This axe seeks out weak points.
+    rarity: LEGENDARY
+    category: COMBAT
+    pool: legendary
+    trigger: ON_HIT
+    equipment: *id003
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 12
+      per-level: 2.5
+    effects:
+    - type: DAMAGE
+      target: TARGET
+      amount: *id032
+  superior_executing_bow:
+    name: Superior Executing Bow
+    description: This bow seeks out weak points.
+    rarity: LEGENDARY
+    category: COMBAT
+    pool: legendary
+    trigger: ON_ATTACK
+    equipment: *id006
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 12
+      per-level: 2.5
+    effects:
+    - type: DAMAGE
+      target: TARGET
+      amount: *id032
+  superior_executing_trident:
+    name: Superior Executing Trident
+    description: This trident seeks out weak points.
+    rarity: LEGENDARY
+    category: COMBAT
+    pool: legendary
+    trigger: ON_HIT
+    equipment: *id007
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 12
+      per-level: 2.5
+    effects:
+    - type: DAMAGE
+      target: TARGET
+      amount: *id032
+  superior_stunning_blade:
+    name: Superior Stunning Blade
+    description: This blade stuns on impact.
+    rarity: LEGENDARY
+    category: COMBAT
+    pool: legendary
+    trigger: ON_HIT
+    equipment: *id002
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 12
+      per-level: 2.5
+    effects:
+    - type: SLOW
+      ticks: &id033
+        base: 30
+        per-level: 6
+      amplifier: 2
+  superior_stunning_axe:
+    name: Superior Stunning Axe
+    description: This axe stuns on impact.
+    rarity: LEGENDARY
+    category: COMBAT
+    pool: legendary
+    trigger: ON_HIT
+    equipment: *id003
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 12
+      per-level: 2.5
+    effects:
+    - type: SLOW
+      ticks: *id033
+      amplifier: 2
+  superior_stunning_bow:
+    name: Superior Stunning Bow
+    description: This bow stuns on impact.
+    rarity: LEGENDARY
+    category: COMBAT
+    pool: legendary
+    trigger: ON_ATTACK
+    equipment: *id006
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 12
+      per-level: 2.5
+    effects:
+    - type: SLOW
+      ticks: *id033
+      amplifier: 2
+  superior_stunning_trident:
+    name: Superior Stunning Trident
+    description: This trident stuns on impact.
+    rarity: LEGENDARY
+    category: COMBAT
+    pool: legendary
+    trigger: ON_HIT
+    equipment: *id007
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 12
+      per-level: 2.5
+    effects:
+    - type: SLOW
+      ticks: *id033
+      amplifier: 2
+  superior_piercing_blade:
+    name: Superior Piercing Blade
+    description: This blade pierces through to nearby foes.
+    rarity: LEGENDARY
+    category: COMBAT
+    pool: legendary
+    trigger: ON_HIT
+    equipment: *id002
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 12
+      per-level: 2.5
+    effects:
+    - type: AREA_DAMAGE
+      amount: &id034
+        base: 2
+        per-level: 0.5
+      radius: 2
+  superior_piercing_axe:
+    name: Superior Piercing Axe
+    description: This axe pierces through to nearby foes.
+    rarity: LEGENDARY
+    category: COMBAT
+    pool: legendary
+    trigger: ON_HIT
+    equipment: *id003
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 12
+      per-level: 2.5
+    effects:
+    - type: AREA_DAMAGE
+      amount: *id034
+      radius: 2
+  superior_piercing_bow:
+    name: Superior Piercing Bow
+    description: This bow pierces through to nearby foes.
+    rarity: LEGENDARY
+    category: COMBAT
+    pool: legendary
+    trigger: ON_ATTACK
+    equipment: *id006
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 12
+      per-level: 2.5
+    effects:
+    - type: AREA_DAMAGE
+      amount: *id034
+      radius: 2
+  superior_piercing_trident:
+    name: Superior Piercing Trident
+    description: This trident pierces through to nearby foes.
+    rarity: LEGENDARY
+    category: COMBAT
+    pool: legendary
+    trigger: ON_HIT
+    equipment: *id007
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 12
+      per-level: 2.5
+    effects:
+    - type: AREA_DAMAGE
+      amount: *id034
+      radius: 2
+  superior_momentum_blade:
+    name: Superior Momentum Blade
+    description: This blade knocks enemies back with force.
+    rarity: LEGENDARY
+    category: COMBAT
+    pool: legendary
+    trigger: ON_HIT
+    equipment: *id002
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 12
+      per-level: 2.5
+    effects:
+    - type: PUSH
+      strength: &id035
+        base: 0.8
+        per-level: 0.15
+  superior_momentum_axe:
+    name: Superior Momentum Axe
+    description: This axe knocks enemies back with force.
+    rarity: LEGENDARY
+    category: COMBAT
+    pool: legendary
+    trigger: ON_HIT
+    equipment: *id003
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 12
+      per-level: 2.5
+    effects:
+    - type: PUSH
+      strength: *id035
+  superior_momentum_bow:
+    name: Superior Momentum Bow
+    description: This bow knocks enemies back with force.
+    rarity: LEGENDARY
+    category: COMBAT
+    pool: legendary
+    trigger: ON_ATTACK
+    equipment: *id006
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 12
+      per-level: 2.5
+    effects:
+    - type: PUSH
+      strength: *id035
+  superior_momentum_trident:
+    name: Superior Momentum Trident
+    description: This trident knocks enemies back with force.
+    rarity: LEGENDARY
+    category: COMBAT
+    pool: legendary
+    trigger: ON_HIT
+    equipment: *id007
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 12
+      per-level: 2.5
+    effects:
+    - type: PUSH
+      strength: *id035
+  superior_ferocity_helm:
+    name: Superior Ferocity Helm
+    description: Your helm resonates with ferocity.
+    rarity: LEGENDARY
+    category: ARMOR
+    pool: legendary
+    trigger: ON_HIT
+    equipment: *id012
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 10
+    effects:
+    - type: STRENGTH
+      ticks: &id036
+        base: 40
+        per-level: 8
+      amplifier: 0
+  superior_ferocity_plate:
+    name: Superior Ferocity Plate
+    description: Your plate resonates with ferocity.
+    rarity: LEGENDARY
+    category: ARMOR
+    pool: legendary
+    trigger: ON_HIT
+    equipment: *id013
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 10
+    effects:
+    - type: STRENGTH
+      ticks: *id036
+      amplifier: 0
+  superior_ferocity_greaves:
+    name: Superior Ferocity Greaves
+    description: Your greaves resonates with ferocity.
+    rarity: LEGENDARY
+    category: ARMOR
+    pool: legendary
+    trigger: ON_HIT
+    equipment: *id015
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 10
+    effects:
+    - type: STRENGTH
+      ticks: *id036
+      amplifier: 0
+  superior_ferocity_treads:
+    name: Superior Ferocity Treads
+    description: Your treads resonates with ferocity.
+    rarity: LEGENDARY
+    category: ARMOR
+    pool: legendary
+    trigger: ON_HIT
+    equipment: *id016
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 10
+    effects:
+    - type: STRENGTH
+      ticks: *id036
+      amplifier: 0
+  superior_ward_helm:
+    name: Superior Ward Helm
+    description: Your helm resonates with ward.
+    rarity: LEGENDARY
+    category: ARMOR
+    pool: legendary
+    trigger: ON_ARMOR_EQUIP
+    equipment: *id012
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 10
+    effects:
+    - type: ABSORPTION
+      ticks: &id037
+        base: 40
+        per-level: 8
+      amplifier: 0
+  superior_ward_plate:
+    name: Superior Ward Plate
+    description: Your plate resonates with ward.
+    rarity: LEGENDARY
+    category: ARMOR
+    pool: legendary
+    trigger: ON_ARMOR_EQUIP
+    equipment: *id013
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 10
+    effects:
+    - type: ABSORPTION
+      ticks: *id037
+      amplifier: 0
+  superior_ward_greaves:
+    name: Superior Ward Greaves
+    description: Your greaves resonates with ward.
+    rarity: LEGENDARY
+    category: ARMOR
+    pool: legendary
+    trigger: ON_ARMOR_EQUIP
+    equipment: *id015
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 10
+    effects:
+    - type: ABSORPTION
+      ticks: *id037
+      amplifier: 0
+  superior_ward_treads:
+    name: Superior Ward Treads
+    description: Your treads resonates with ward.
+    rarity: LEGENDARY
+    category: ARMOR
+    pool: legendary
+    trigger: ON_ARMOR_EQUIP
+    equipment: *id016
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 10
+    effects:
+    - type: ABSORPTION
+      ticks: *id037
+      amplifier: 0
+  superior_momentum_guard_helm:
+    name: Superior Momentum Guard Helm
+    description: Your helm resonates with momentum guard.
+    rarity: LEGENDARY
+    category: ARMOR
+    pool: legendary
+    trigger: ON_JUMP
+    equipment: *id012
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 10
+    effects:
+    - type: SPEED
+      ticks: &id038
+        base: 40
+        per-level: 8
+      amplifier: 0
+  superior_momentum_guard_plate:
+    name: Superior Momentum Guard Plate
+    description: Your plate resonates with momentum guard.
+    rarity: LEGENDARY
+    category: ARMOR
+    pool: legendary
+    trigger: ON_JUMP
+    equipment: *id013
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 10
+    effects:
+    - type: SPEED
+      ticks: *id038
+      amplifier: 0
+  superior_momentum_guard_greaves:
+    name: Superior Momentum Guard Greaves
+    description: Your greaves resonates with momentum guard.
+    rarity: LEGENDARY
+    category: ARMOR
+    pool: legendary
+    trigger: ON_JUMP
+    equipment: *id015
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 10
+    effects:
+    - type: SPEED
+      ticks: *id038
+      amplifier: 0
+  superior_momentum_guard_treads:
+    name: Superior Momentum Guard Treads
+    description: Your treads resonates with momentum guard.
+    rarity: LEGENDARY
+    category: ARMOR
+    pool: legendary
+    trigger: ON_JUMP
+    equipment: *id016
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 10
+    effects:
+    - type: SPEED
+      ticks: *id038
+      amplifier: 0
+  superior_mending_light_helm:
+    name: Superior Mending Light Helm
+    description: Your helm resonates with mending light.
+    rarity: LEGENDARY
+    category: ARMOR
+    pool: legendary
+    trigger: ON_HEAL
+    equipment: *id012
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 10
+    effects:
+    - type: REGENERATION
+      ticks: &id039
+        base: 40
+        per-level: 8
+      amplifier: 1
+  superior_mending_light_plate:
+    name: Superior Mending Light Plate
+    description: Your plate resonates with mending light.
+    rarity: LEGENDARY
+    category: ARMOR
+    pool: legendary
+    trigger: ON_HEAL
+    equipment: *id013
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 10
+    effects:
+    - type: REGENERATION
+      ticks: *id039
+      amplifier: 1
+  superior_mending_light_greaves:
+    name: Superior Mending Light Greaves
+    description: Your greaves resonates with mending light.
+    rarity: LEGENDARY
+    category: ARMOR
+    pool: legendary
+    trigger: ON_HEAL
+    equipment: *id015
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 10
+    effects:
+    - type: REGENERATION
+      ticks: *id039
+      amplifier: 1
+  superior_mending_light_treads:
+    name: Superior Mending Light Treads
+    description: Your treads resonates with mending light.
+    rarity: LEGENDARY
+    category: ARMOR
+    pool: legendary
+    trigger: ON_HEAL
+    equipment: *id016
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 10
+    effects:
+    - type: REGENERATION
+      ticks: *id039
+      amplifier: 1
+  superior_recall:
+    name: Superior Recall
+    description: A utility rune themed around recall.
+    rarity: LEGENDARY
+    category: UTILITY
+    pool: legendary
+    trigger: ON_SPRINT
+    equipment:
+    - ANY
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 12
+      per-level: 2.5
+    cooldown:
+      base: 10
+      per-level: -0.5
+    effects:
+    - type: TELEPORT
+      mode: random-nearby
+      radius: 6
+  superior_magpie:
+    name: Superior Magpie
+    description: A utility rune themed around magpie.
+    rarity: LEGENDARY
+    category: UTILITY
+    pool: legendary
+    trigger: ON_BLOCK_BREAK
+    equipment:
+    - PICKAXE
+    - SHOVEL
+    - AXE
+    - HOE
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 12
+      per-level: 2.5
+    cooldown:
+      base: 10
+      per-level: -0.5
+    effects:
+    - type: PULL
+      target: AREA
+      radius: 5
+      strength: 0.5
+  superior_windfall:
+    name: Superior Windfall
+    description: A utility rune themed around windfall.
+    rarity: LEGENDARY
+    category: UTILITY
+    pool: legendary
+    trigger: ON_KILL
+    equipment:
+    - SWORD
+    - AXE
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 12
+      per-level: 2.5
+    cooldown:
+      base: 10
+      per-level: -0.5
+    effects:
+    - type: PUSH
+      target: NEARBY_MOBS
+      strength: 1.2
+  superior_prospectors_call:
+    name: Superior Prospector's Call
+    description: A utility rune themed around prospector's call.
+    rarity: LEGENDARY
+    category: UTILITY
+    pool: legendary
+    trigger: ON_BLOCK_BREAK
+    equipment:
+    - PICKAXE
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 12
+      per-level: 2.5
+    cooldown:
+      base: 10
+      per-level: -0.5
+    effects:
+    - type: ACTIONBAR
+      text: <gray>You sense something nearby...
+  superior_riptide:
+    name: Superior Riptide
+    description: A combat rune built around riptide.
+    rarity: LEGENDARY
+    category: COMBAT
+    pool: legendary
+    trigger: ON_ATTACK
+    equipment:
+    - TRIDENT
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 10
+      per-level: 2
+    cooldown:
+      base: 6
+      per-level: -0.3
+    effects:
+    - type: PUSH
+      target: SELF
+      strength:
+        base: 1
+        per-level: 0.2
+  superior_overcharge:
+    name: Superior Overcharge
+    description: A combat rune built around overcharge.
+    rarity: LEGENDARY
+    category: WEAPONS
+    pool: legendary
+    trigger: ON_CRITICAL
+    equipment:
+    - SWORD
+    - AXE
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 10
+      per-level: 2
+    cooldown:
+      base: 6
+      per-level: -0.3
+    effects:
+    - type: STRENGTH
+      ticks:
+        base: 40
+        per-level: 8
+      amplifier: 1
+  superior_backdraft:
+    name: Superior Backdraft
+    description: A combat rune built around backdraft.
+    rarity: LEGENDARY
+    category: COMBAT
+    pool: legendary
+    trigger: ON_KILL
+    equipment:
+    - SWORD
+    - AXE
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 10
+      per-level: 2
+    cooldown:
+      base: 6
+      per-level: -0.3
+    effects:
+    - type: FIRE
+      target: NEARBY_MOBS
+      ticks:
+        base: 30
+        per-level: 6
+  superior_static_field:
+    name: Superior Static Field
+    description: A combat rune built around static field.
+    rarity: LEGENDARY
+    category: COMBAT
+    pool: legendary
+    trigger: ON_ATTACK
+    equipment:
+    - TRIDENT
+    - SWORD
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 10
+      per-level: 2
+    cooldown:
+      base: 6
+      per-level: -0.3
+    effects:
+    - type: SLOW
+      target: NEARBY_MOBS
+      ticks:
+        base: 30
+        per-level: 6
+      amplifier: 0

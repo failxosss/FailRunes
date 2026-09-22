@@ -1,0 +1,45 @@
+# FailRunes messages (English). Every message is configurable - no text is hardcoded in Java.
+# Placeholders in curly braces are substituted at runtime; {rune} is a live, hoverable component.
+message:
+  rune-activated: "{rune} <gray>activated!"
+  apply-success: "<green>Rune successfully applied: {rune}<green>!"
+  apply-fail: "<yellow>Rune failed: {rune}<yellow>. The item survives."
+  apply-critical: "<red>CRITICAL FAILURE applying {rune}<red>!"
+  apply-missing-items: "<red>Place an item and a Rune to apply first."
+  apply-invalid.wrong_equipment: "<red>This Rune cannot be applied to that equipment type."
+  apply-invalid.level_too_high: "<red>This Rune's level is too high for this item."
+  apply-invalid.conflict: "<red>This Rune conflicts with another Rune already on the item."
+  apply-invalid.duplicate_max: "<red>This item already has that Rune applied."
+  apply-invalid.zone_blocked: "<red>Rune application is disabled in this zone."
+  apply-invalid.protected_item: "<red>This item is protected and cannot be modified."
+  not-enough-xp: "<red>You don't have enough XP for that."
+  tome-purchased: "<green>Rune Tome purchased!"
+  gems-purchased: "<green>Purchased {amount} Lucky Gem(s)!"
+  wand-purchased: "<green>Cleansing Wand purchased!"
+  identifier-empty: "<red>Place an Unidentified Rune first."
+  identify-failed: "<red>Identification failed. Try again."
+  identify-success: "<green>Rune identified!"
+  incinerator-empty: "<red>Place a Rune to incinerate first."
+  detector-find: "<yellow>✦ Your Rune Detector found something!"
+  search-prompt: "<gray>Type a search term in chat..."
+  no-permission: "<red>You don't have permission to do that."
+  admin-reloaded: "<green>FailRunes configuration reloaded."
+  admin-debug-toggled: "<gray>Debug mode: {state}"
+  admin-list: "<gray>{count} runes currently loaded."
+  admin-not-found: "<red>Player or Rune not found."
+  admin-given: "<green>Rune given."
+  admin-inspect: "<gray>Runes on held item: {runes}"
+
+item:
+  unidentified:
+    name: "Unidentified Rune"
+    lore:
+      - "This Rune must be identified."
+      - "Use a Rune Identifier."
+  wand:
+    lore:
+      - "Removes a single Rune from an item."
+      - "Consumed on use."
+
+damage-history:
+  death-link: "<gray>[<aqua>Click here to view your damage history<gray>]"

@@ -1,0 +1,14 @@
+# Display metadata for the four core purchasable rarities (requirement #2). Tier order also defines Infuser sorting.
+rarities:
+  common:
+    color: "gray"
+    weight-multiplier: 1.0
+  rare:
+    color: "aqua"
+    weight-multiplier: 0.6
+  legendary:
+    color: "gold"
+    weight-multiplier: 0.25
+  mythical:
+    color: "light_purple"
+    weight-multiplier: 0.08

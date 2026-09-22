@@ -1,0 +1,8 @@
+# Requirement #63: SQLite (default, zero-config) or MySQL/MariaDB.
+type: SQLITE   # SQLITE | MYSQL | MARIADB
+mysql:
+  host: localhost
+  port: 3306
+  database: failrunes
+  username: root
+  password: ""

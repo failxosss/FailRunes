@@ -1,0 +1,83 @@
+# Auto-generated rune definitions for pool 'seasonal_halloween'. Safe to hand-edit; /runeadmin reload picks up changes.
+runes:
+  seasonal_halloween_pumpkin kings_charm:
+    name: Pumpkin King's Charm
+    description: A seasonal relic (Halloween) with festive flair.
+    rarity: RARE
+    category: SEASONAL
+    pool: seasonal_halloween
+    trigger: ON_HIT
+    equipment:
+    - SWORD
+    - AXE
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 15
+      per-level: 2
+    effects:
+    - type: PARTICLE
+      particle: HEART
+      count: 8
+  seasonal_halloween_wraiths_ward:
+    name: Wraith's Ward
+    description: A seasonal relic (Halloween) with festive flair.
+    rarity: LEGENDARY
+    category: SEASONAL
+    pool: seasonal_halloween
+    trigger: ON_ARMOR_EQUIP
+    equipment:
+    - ARMOR
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+      per-level: 2
+    effects:
+    - type: PARTICLE
+      particle: WITCH
+      count: 6
+  seasonal_halloween_cauldron_fortune:
+    name: Cauldron Fortune
+    description: A seasonal relic (Halloween) with festive flair.
+    rarity: RARE
+    category: SEASONAL
+    pool: seasonal_halloween
+    trigger: ON_BLOCK_BREAK
+    equipment:
+    - PICKAXE
+    - HOE
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 15
+      per-level: 2
+    effects:
+    - type: ITEM_DROP
+      material: EMERALD
+      amount: 1
+  seasonal_halloween_graveyard_rod:
+    name: Graveyard Rod
+    description: A seasonal relic (Halloween) with festive flair.
+    rarity: LEGENDARY
+    category: SEASONAL
+    pool: seasonal_halloween
+    trigger: ON_FISH
+    equipment:
+    - FISHING_ROD
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 10
+      per-level: 2
+    effects:
+    - type: XP
+      amount: 3

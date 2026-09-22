@@ -1,0 +1,29 @@
+# Requirement #36: separate zones with independently configurable proc chance, cooldown, reward, damage, loot,
+# and enabled/disabled rune or pool lists.
+zones:
+  tomb_1:
+    worlds: ["skyblock"]
+    priority: 10
+    enabled-pools: [common, rare, tomb]
+    proc-multiplier: 1.15
+    loot-multiplier: 1.2
+
+  dragon_dojo:
+    worlds: ["skyblock"]
+    priority: 10
+    enabled-pools: [common, rare, legendary, dojo]
+    proc-multiplier: 1.0
+    fishing-proc-multiplier: 1.5
+
+  darkzone:
+    worlds: ["skyblock"]
+    priority: 10
+    disabled-pools: []
+    damage-multiplier: 1.25
+    loot-multiplier: 1.3
+
+  pvp_arena:
+    worlds: ["skyblock"]
+    priority: 20
+    disabled-runes: []
+    allow-apply: false

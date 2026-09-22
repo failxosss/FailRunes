@@ -1,0 +1,62 @@
+# Auto-generated rune definitions for pool 'seasonal_christmas'. Safe to hand-edit; /runeadmin reload picks up changes.
+runes:
+  the_naughtiest:
+    name: The Naughtiest
+    description: A festive but wicked blade that leaves coal in its wake.
+    rarity: MYTHICAL
+    category: SEASONAL
+    pool: seasonal_christmas
+    trigger: ON_KILL
+    equipment:
+    - SWORD
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: true
+    chance:
+      base: 100
+    effects:
+    - type: ITEM_DROP
+      material: COAL
+      amount:
+        base: 2
+        per-level: 1
+  christmas_helmet:
+    name: Christmas Helmet
+    description: Snow gently falls around you while worn.
+    rarity: LEGENDARY
+    category: SEASONAL
+    pool: seasonal_christmas
+    trigger: ON_ARMOR_EQUIP
+    equipment:
+    - HELMET
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: true
+    chance:
+      base: 100
+    effects:
+    - type: PARTICLE
+      particle: SNOWFLAKE
+      count: 4
+  christmas_fishing_rod:
+    name: Christmas Fishing Rod
+    description: A festive rod that reels in seasonal treats.
+    rarity: LEGENDARY
+    category: SEASONAL
+    pool: seasonal_christmas
+    trigger: ON_FISH
+    equipment:
+    - FISHING_ROD
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: true
+    chance:
+      base: 30
+      per-level: 5
+    effects:
+    - type: ITEM_DROP
+      material: COOKIE
+      amount: 1

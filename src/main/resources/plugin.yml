@@ -1,0 +1,34 @@
+name: FailRunes
+version: '${project.version}'
+main: dev.failxos.failrunes.FailRunesPlugin
+api-version: '1.21'
+author: Failxos
+description: Complete rune / custom enchantment endgame progression system.
+website: https://github.com/failxos/failrunes
+softdepend: [ItemsAdder, PlaceholderAPI, WorldGuard, mcMMO, MythicMobs, Vault]
+load: POSTWORLD
+
+commands:
+  infuser:
+    description: Open the FailRunes Infuser.
+    aliases: [runes, rune]
+  runeinfo:
+    description: Show runes on the item in your hand, or search all runes.
+  runeprefs:
+    description: Configure your per-rune sound/particle/message preferences.
+    aliases: [prefs]
+  damagehistory:
+    description: View your recent damage history.
+  runecollection:
+    description: View your rune collection progress.
+  runeadmin:
+    description: FailRunes admin commands.
+    permission: failrunes.admin
+
+permissions:
+  failrunes.use:
+    description: Use the Infuser and all player commands.
+    default: true
+  failrunes.admin:
+    description: Use /runeadmin.
+    default: op

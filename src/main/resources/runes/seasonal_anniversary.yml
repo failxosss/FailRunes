@@ -1,0 +1,83 @@
+# Auto-generated rune definitions for pool 'seasonal_anniversary'. Safe to hand-edit; /runeadmin reload picks up changes.
+runes:
+  seasonal_anniversary_founders_charm:
+    name: Founder's Charm
+    description: A seasonal relic (Anniversary) with festive flair.
+    rarity: RARE
+    category: SEASONAL
+    pool: seasonal_anniversary
+    trigger: ON_HIT
+    equipment:
+    - SWORD
+    - AXE
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 15
+      per-level: 2
+    effects:
+    - type: PARTICLE
+      particle: HEART
+      count: 8
+  seasonal_anniversary_vintage_ward:
+    name: Vintage Ward
+    description: A seasonal relic (Anniversary) with festive flair.
+    rarity: LEGENDARY
+    category: SEASONAL
+    pool: seasonal_anniversary
+    trigger: ON_ARMOR_EQUIP
+    equipment:
+    - ARMOR
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+      per-level: 2
+    effects:
+    - type: PARTICLE
+      particle: WITCH
+      count: 6
+  seasonal_anniversary_jubilee_fortune:
+    name: Jubilee Fortune
+    description: A seasonal relic (Anniversary) with festive flair.
+    rarity: RARE
+    category: SEASONAL
+    pool: seasonal_anniversary
+    trigger: ON_BLOCK_BREAK
+    equipment:
+    - PICKAXE
+    - HOE
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 15
+      per-level: 2
+    effects:
+    - type: ITEM_DROP
+      material: EMERALD
+      amount: 1
+  seasonal_anniversary_legacy_rod:
+    name: Legacy Rod
+    description: A seasonal relic (Anniversary) with festive flair.
+    rarity: LEGENDARY
+    category: SEASONAL
+    pool: seasonal_anniversary
+    trigger: ON_FISH
+    equipment:
+    - FISHING_ROD
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 10
+      per-level: 2
+    effects:
+    - type: XP
+      amount: 3

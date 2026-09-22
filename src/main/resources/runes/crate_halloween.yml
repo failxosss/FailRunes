@@ -1,0 +1,82 @@
+# Auto-generated rune definitions for pool 'crate_halloween'. Safe to hand-edit; /runeadmin reload picks up changes.
+runes:
+  crate_halloween_mask:
+    name: Halloween Mask
+    description: A crate-exclusive relic from the Halloween Crate.
+    rarity: LEGENDARY
+    category: CRATE
+    pool: crate_halloween
+    trigger: ON_ARMOR_EQUIP
+    equipment:
+    - HELMET
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+      per-level: 0
+    effects:
+    - type: PARTICLE
+      particle: SOUL
+      count: 8
+  crate_halloween_robes:
+    name: Halloween Robes
+    description: A crate-exclusive relic from the Halloween Crate.
+    rarity: LEGENDARY
+    category: CRATE
+    pool: crate_halloween
+    trigger: ON_ARMOR_EQUIP
+    equipment:
+    - CHESTPLATE
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+      per-level: 0
+    effects:
+    - type: PARTICLE
+      particle: SOUL
+      count: 8
+  crate_halloween_fang:
+    name: Halloween Fang
+    description: A crate-exclusive relic from the Halloween Crate.
+    rarity: LEGENDARY
+    category: CRATE
+    pool: crate_halloween
+    trigger: ON_HIT
+    equipment:
+    - SWORD
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 12
+      per-level: 2
+    effects:
+    - type: PARTICLE
+      particle: SOUL
+      count: 8
+  crate_halloween_boots:
+    name: Halloween Boots
+    description: A crate-exclusive relic from the Halloween Crate.
+    rarity: LEGENDARY
+    category: CRATE
+    pool: crate_halloween
+    trigger: ON_ARMOR_EQUIP
+    equipment:
+    - BOOTS
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+      per-level: 0
+    effects:
+    - type: PARTICLE
+      particle: SOUL
+      count: 8

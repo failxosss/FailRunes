@@ -1,0 +1,95 @@
+# FailRunes main configuration. Every value here is safe to change and reload with /runeadmin reload.
+language: en_US
+default-gamemode: skyblock
+
+# XP prices are fully configurable per gamemode (requirement #5). Add as many gamemodes as you like.
+gamemodes:
+  survival:
+    common: 5000
+    rare: 20000
+    legendary: 50000
+    mythical: 100000
+    lucky-gem: 400
+    identify: 200
+    cleansing-wand: 800
+    incinerate-return-percent: 50
+
+  skyblock:
+    common: 6250
+    rare: 25000
+    legendary: 62500
+    mythical: 125000
+    lucky-gem: 500
+    identify: 250
+    cleansing-wand: 1000
+    incinerate-return-percent: 50
+
+  factions:
+    common: 5500
+    rare: 22000
+    legendary: 55000
+    mythical: 110000
+    lucky-gem: 450
+    identify: 225
+    cleansing-wand: 900
+    incinerate-return-percent: 50
+
+  prison:
+    common: 4500
+    rare: 18000
+    legendary: 45000
+    mythical: 90000
+    lucky-gem: 350
+    identify: 175
+    cleansing-wand: 700
+    incinerate-return-percent: 50
+
+# Lucky Gem formula (requirement #13). success = base + min(gems, max-per-application) * bonus-per-gem,
+# taken proportionally from fail/critical-fail (critical-fail-share = fraction of the bonus taken from crit).
+lucky-gems:
+  bonus-per-gem: 10
+  max-per-application: 3
+  max-success: 100
+  critical-fail-share: 0.3
+
+# Overmax levels beyond a rune's normal maximum (requirement #19-#20). Off by default.
+overmax:
+  enabled: false
+
+# Requirement #10: Rune Detector.
+detector:
+  activation-chance: 2.0
+  default-pools: [common, rare]
+  level-1:
+    pools: [common]
+  level-2:
+    pools: [common, rare]
+  level-3:
+    pools: [common, rare, legendary]
+  level-4:
+    pools: [rare, legendary]
+  level-5:
+    pools: [rare, legendary, mythical]
+
+# Requirement #25: bounded damage history, memory only, no unbounded DB growth.
+damage-history:
+  max-events: 100
+  retention-seconds: 3600
+
+# Requirement #30: standardized block categories. Add/remove without touching Java.
+block-tags:
+  ORE:
+    add: []
+    remove: []
+  WOOD:
+    add: []
+    remove: []
+  CROP:
+    add: [BEETROOT_STEM]
+    remove: []
+  DIGGABLE:
+    add: []
+    remove: []
+  FISH:
+    add: []
+    remove: []

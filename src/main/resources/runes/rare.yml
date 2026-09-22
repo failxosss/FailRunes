@@ -1,0 +1,3815 @@
+# Auto-generated rune definitions for pool 'rare'. Safe to hand-edit; /runeadmin reload picks up changes.
+runes:
+  thunder:
+    name: Thunder
+    description: Calls down lightning on your target when you land a hit.
+    rarity: RARE
+    category: COMBAT
+    pool: rare
+    trigger: ON_HIT
+    equipment:
+    - SWORD
+    - AXE
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: true
+    chance:
+      base: 8
+      per-level: 2
+    cooldown:
+      base: 5
+      per-level: -0.3
+    effects:
+    - type: LIGHTNING
+      target: TARGET
+      damage-only: true
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 4
+        per-level: 1
+    sound: entity.lightning_bolt.thunder
+    particle: ELECTRIC_SPARK
+  berserker:
+    name: Berserker
+    description: Gain Strength and Speed when your health drops low.
+    rarity: RARE
+    category: COMBAT
+    pool: rare
+    trigger: ON_LOW_HEALTH
+    equipment:
+    - SWORD
+    - AXE
+    - ARMOR
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: true
+    chance:
+      base: 100
+    cooldown:
+      base: 20
+      per-level: -1.5
+    effects:
+    - type: STRENGTH
+      ticks:
+        base: 100
+        per-level: 20
+      amplifier:
+        base: 0
+        per-level: 0.34
+    - type: SPEED
+      ticks:
+        base: 100
+        per-level: 20
+      amplifier: 1
+    - type: TITLE
+      title: <red>BERSERK
+      subtitle: <gray>Fight through the pain
+    conditions:
+    - health-below:30
+  bloodlust:
+    name: Bloodlust
+    description: Each kill briefly boosts your Strength, stacking with itself.
+    rarity: RARE
+    category: COMBAT
+    pool: rare
+    trigger: ON_KILL
+    equipment:
+    - SWORD
+    - AXE
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: true
+    chance:
+      base: 100
+    cooldown:
+      base: 1
+    effects:
+    - type: STRENGTH
+      ticks:
+        base: 60
+        per-level: 10
+      amplifier: 0
+  venom:
+    name: Venom
+    description: Poisons your target on hit, with a chance to apply a stronger dose.
+    rarity: RARE
+    category: COMBAT
+    pool: rare
+    trigger: ON_HIT
+    equipment:
+    - SWORD
+    - TRIDENT
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: true
+    chance:
+      base: 30
+      per-level: 5
+    effects:
+    - type: POISON
+      ticks:
+        base: 60
+        per-level: 15
+      amplifier:
+        base: 0
+        per-level: 0.14
+  frostbite:
+    name: Frostbite
+    description: Chills your target, slowing their movement sharply.
+    rarity: RARE
+    category: COMBAT
+    pool: rare
+    trigger: ON_HIT
+    equipment:
+    - SWORD
+    - TRIDENT
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: true
+    chance:
+      base: 25
+      per-level: 4
+    effects:
+    - type: SLOW
+      ticks:
+        base: 60
+        per-level: 10
+      amplifier:
+        base: 1
+        per-level: 0.2
+  monster_hunter:
+    name: Monster Hunter
+    description: Extra damage against hostile mobs specifically.
+    rarity: RARE
+    category: COMBAT
+    pool: rare
+    trigger: ON_HIT
+    equipment:
+    - SWORD
+    - BOW
+    - CROSSBOW
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: true
+    chance:
+      base: 100
+    effects:
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 3
+        per-level: 0.7
+    conditions:
+    - target-type:ZOMBIE
+  ricochet:
+    name: Ricochet
+    description: Your arrows have a chance to bounce toward a second nearby target.
+    rarity: RARE
+    category: WEAPONS
+    pool: rare
+    trigger: ON_PROJECTILE
+    equipment:
+    - BOW
+    - CROSSBOW
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: true
+    chance:
+      base: 20
+      per-level: 4
+    effects:
+    - type: PROJECTILE
+      projectile: ARROW
+      speed: 1.5
+  saboteur:
+    name: Saboteur
+    description: Sabotages your target, weakening their attack power briefly.
+    rarity: RARE
+    category: WEAPONS
+    pool: rare
+    trigger: ON_HIT
+    equipment:
+    - SWORD
+    - AXE
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: true
+    chance:
+      base: 20
+      per-level: 4
+    effects:
+    - type: SLOW
+      ticks:
+        base: 60
+        per-level: 10
+      amplifier: 0
+  guards_up:
+    name: Guards Up
+    description: Raises your defenses briefly after taking a hit.
+    rarity: RARE
+    category: ARMOR
+    pool: rare
+    trigger: ON_DAMAGE
+    equipment:
+    - ARMOR
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: true
+    chance:
+      base: 100
+    cooldown:
+      base: 8
+      per-level: -0.5
+    effects:
+    - type: ABSORPTION
+      ticks:
+        base: 60
+        per-level: 15
+      amplifier:
+        base: 0
+        per-level: 0.34
+  tank:
+    name: Tank
+    description: Passively reduces incoming damage the more pieces you wear.
+    rarity: RARE
+    category: ARMOR
+    pool: rare
+    trigger: ON_DAMAGE
+    equipment:
+    - ARMOR
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: true
+    chance:
+      base: 100
+    effects:
+    - type: ABSORPTION
+      ticks:
+        base: 40
+        per-level: 8
+      amplifier: 0
+  guardian:
+    name: Guardian
+    description: Reflects a portion of melee damage back at your attacker.
+    rarity: RARE
+    category: ARMOR
+    pool: rare
+    trigger: ON_DAMAGE
+    equipment:
+    - ARMOR
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: true
+    chance:
+      base: 30
+      per-level: 5
+    effects:
+    - type: AREA_DAMAGE
+      amount:
+        base: 2
+        per-level: 0.5
+      radius: 2
+  wind_dancer:
+    name: Wind Dancer
+    description: Grants a burst of speed while sprinting.
+    rarity: RARE
+    category: MOVEMENT
+    pool: rare
+    trigger: ON_SPRINT
+    equipment:
+    - BOOTS
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: true
+    chance:
+      base: 100
+    cooldown:
+      base: 10
+      per-level: -0.6
+    effects:
+    - type: SPEED
+      ticks:
+        base: 60
+        per-level: 12
+      amplifier: 0
+  leap:
+    name: Leap
+    description: Launches you higher into the air when you jump.
+    rarity: RARE
+    category: MOVEMENT
+    pool: rare
+    trigger: ON_JUMP
+    equipment:
+    - BOOTS
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: true
+    chance:
+      base: 100
+    cooldown:
+      base: 5
+      per-level: -0.3
+    effects:
+    - type: PUSH
+      target: SELF
+      strength:
+        base: 0.6
+        per-level: 0.1
+  sky_stepper:
+    name: Sky Stepper
+    description: Softens your landing and grants a brief speed boost.
+    rarity: RARE
+    category: MOVEMENT
+    pool: rare
+    trigger: ON_FALL
+    equipment:
+    - BOOTS
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: true
+    chance:
+      base: 100
+    effects:
+    - type: SPEED
+      ticks:
+        base: 40
+        per-level: 8
+      amplifier: 0
+  firework_footsteps:
+    name: Firework Footsteps
+    description: Leaves a trail of festive sparks as you run.
+    rarity: RARE
+    category: MOVEMENT
+    pool: rare
+    trigger: ON_SPRINT
+    equipment:
+    - BOOTS
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: true
+    chance:
+      base: 100
+    cooldown:
+      base: 2
+    effects:
+    - type: PARTICLE
+      particle: FIREWORK
+      count: 6
+  fortune_seeker:
+    name: Fortune Seeker
+    description: Increases your chance of bonus ore drops.
+    rarity: RARE
+    category: MINING
+    pool: rare
+    trigger: ON_BLOCK_BREAK
+    equipment:
+    - PICKAXE
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: true
+    chance:
+      base: 25
+      per-level: 4
+    effects:
+    - type: ITEM_DROP
+      material: IRON_ORE
+      amount:
+        base: 1
+        per-level: 0.3
+  gem_finder:
+    name: Gem Finder
+    description: A chance to find a stray gem while mining.
+    rarity: RARE
+    category: MINING
+    pool: rare
+    trigger: ON_BLOCK_BREAK
+    equipment:
+    - PICKAXE
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: true
+    chance:
+      base: 8
+      per-level: 1.5
+    effects:
+    - type: ITEM_DROP
+      material: EMERALD
+      amount: 1
+  auto_smelt:
+    name: Auto Smelt
+    description: Automatically smelts ores as you mine them.
+    rarity: RARE
+    category: MINING
+    pool: rare
+    trigger: ON_BLOCK_BREAK
+    equipment:
+    - PICKAXE
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: true
+    chance:
+      base: 100
+    effects:
+    - type: ITEM_DROP
+      material: IRON_INGOT
+      amount: 0
+  excavator:
+    name: Excavator
+    description: Digs out a wider area around the block you break.
+    rarity: RARE
+    category: DIGGING
+    pool: rare
+    trigger: ON_BLOCK_BREAK
+    equipment:
+    - SHOVEL
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: true
+    chance:
+      base: 100
+    cooldown:
+      base: 4
+      per-level: -0.3
+    effects:
+    - type: ITEM_DROP
+      material: DIRT
+      amount:
+        base: 1
+        per-level: 0.5
+  herbalist:
+    name: Herbalist
+    description: Boosts the value of harvested crops when sold.
+    rarity: RARE
+    category: FARMING
+    pool: rare
+    trigger: ON_BLOCK_BREAK
+    equipment:
+    - HOE
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: true
+    chance:
+      base: 100
+    effects:
+    - type: MONEY
+      amount:
+        base: 1
+        per-level: 0.5
+  lumberjack:
+    name: Lumberjack
+    description: Extra wood on every log you chop.
+    rarity: RARE
+    category: LOGGING
+    pool: rare
+    trigger: ON_BLOCK_BREAK
+    equipment:
+    - AXE
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: true
+    chance:
+      base: 25
+      per-level: 4
+    effects:
+    - type: ITEM_DROP
+      material: OAK_LOG
+      amount:
+        base: 1
+        per-level: 0.4
+  lucky_catch:
+    name: Lucky Catch
+    description: Improves your odds of catching treasure.
+    rarity: RARE
+    category: FISHING
+    pool: rare
+    trigger: ON_FISH
+    equipment:
+    - FISHING_ROD
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: true
+    chance:
+      base: 100
+    effects:
+    - type: LOOT
+      pool: rare
+  greenhouse:
+    name: Greenhouse
+    description: Crops you plant grow noticeably faster nearby.
+    rarity: RARE
+    category: FARMING
+    pool: rare
+    trigger: ON_BLOCK_PLACE
+    equipment:
+    - HOE
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: true
+    chance:
+      base: 100
+    effects:
+    - type: PARTICLE
+      particle: COMPOSTER
+      count: 6
+  headhunter:
+    name: Headhunter
+    description: Collects a trophy from defeated players.
+    rarity: RARE
+    category: LOOT
+    pool: rare
+    trigger: ON_PLAYER_KILL
+    equipment:
+    - SWORD
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: true
+    chance:
+      base: 20
+      per-level: 4
+    effects:
+    - type: ITEM_DROP
+      material: PLAYER_HEAD
+      amount: 1
+  sage:
+    name: Sage
+    description: Grants bonus XP from gathering.
+    rarity: RARE
+    category: XP
+    pool: rare
+    trigger: ON_BLOCK_BREAK
+    equipment:
+    - PICKAXE
+    - HOE
+    - AXE
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: true
+    chance:
+      base: 30
+      per-level: 5
+    effects:
+    - type: XP
+      amount:
+        base: 1
+        per-level: 0.3
+  sunforged:
+    name: Sunforged
+    description: Deals extra damage to undead in daylight.
+    rarity: RARE
+    category: COMBAT
+    pool: rare
+    trigger: ON_HIT
+    equipment:
+    - SWORD
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: true
+    chance:
+      base: 100
+    effects:
+    - type: FIRE
+      target: TARGET
+      ticks:
+        base: 40
+        per-level: 8
+    conditions:
+    - time-day
+  sneak_attack:
+    name: Sneak Attack
+    description: Bonus damage when striking from a sneaking stance.
+    rarity: RARE
+    category: COMBAT
+    pool: rare
+    trigger: ON_ATTACK
+    equipment:
+    - SWORD
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: true
+    chance:
+      base: 100
+    effects:
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 4
+        per-level: 1
+    conditions:
+    - sneaking
+  adrenaline:
+    name: Adrenaline
+    description: Fighting while sprinting fuels a surge of aggression.
+    rarity: RARE
+    category: COMBAT
+    pool: rare
+    trigger: ON_ATTACK
+    equipment:
+    - SWORD
+    - AXE
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: true
+    chance:
+      base: 100
+    cooldown:
+      base: 10
+    effects:
+    - type: STRENGTH
+      ticks:
+        base: 60
+        per-level: 12
+      amplifier: 0
+    conditions:
+    - sprinting
+  gilded_line:
+    name: Gilded Line
+    description: Your line is laced with gold, tempting bigger catches.
+    rarity: RARE
+    category: FISHING
+    pool: rare
+    trigger: ON_FISH
+    equipment:
+    - FISHING_ROD
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: true
+    chance:
+      base: 100
+    effects:
+    - type: MONEY
+      amount:
+        base: 5
+        per-level: 2
+  magma_walker:
+    name: Magma Walker
+    description: Immune to fall damage and briefly resistant to fire.
+    rarity: RARE
+    category: MOVEMENT
+    pool: rare
+    trigger: ON_FALL
+    equipment:
+    - BOOTS
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: true
+    chance:
+      base: 100
+    cooldown:
+      base: 8
+    effects:
+    - type: HEAL
+      amount: 0
+  hunters_mark:
+    name: Hunter's Mark
+    description: Marks your target, revealing them briefly through walls.
+    rarity: RARE
+    category: COMBAT
+    pool: rare
+    trigger: ON_ATTACK
+    equipment:
+    - BOW
+    - CROSSBOW
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: true
+    chance:
+      base: 100
+    cooldown:
+      base: 6
+    effects:
+    - type: PARTICLE
+      target: TARGET
+      particle: SOUL
+      count: 5
+  greater_ember_blade:
+    name: Greater Ember Blade
+    description: Your blade burns enemies with ember energy on hit.
+    rarity: RARE
+    category: WEAPONS
+    pool: rare
+    trigger: ON_HIT
+    equipment: &id002
+    - SWORD
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 18
+      per-level: 3
+    effects:
+    - type: FIRE
+      ticks: &id001
+        base: 40
+        per-level: 8
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 2.5
+        per-level: 0.625
+  greater_ember_axe:
+    name: Greater Ember Axe
+    description: Your axe burns enemies with ember energy on hit.
+    rarity: RARE
+    category: WEAPONS
+    pool: rare
+    trigger: ON_HIT
+    equipment: &id003
+    - AXE
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 18
+      per-level: 3
+    effects:
+    - type: FIRE
+      ticks: *id001
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 2.5
+        per-level: 0.625
+  greater_ember_bow:
+    name: Greater Ember Bow
+    description: Your bow burns enemies with ember energy on hit.
+    rarity: RARE
+    category: WEAPONS
+    pool: rare
+    trigger: ON_ATTACK
+    equipment: &id006
+    - BOW
+    - CROSSBOW
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 18
+      per-level: 3
+    effects:
+    - type: FIRE
+      ticks: *id001
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 2.5
+        per-level: 0.625
+  greater_ember_trident:
+    name: Greater Ember Trident
+    description: Your trident burns enemies with ember energy on hit.
+    rarity: RARE
+    category: WEAPONS
+    pool: rare
+    trigger: ON_HIT
+    equipment: &id007
+    - TRIDENT
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 18
+      per-level: 3
+    effects:
+    - type: FIRE
+      ticks: *id001
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 2.5
+        per-level: 0.625
+  greater_frost_blade:
+    name: Greater Frost Blade
+    description: Your blade chills enemies with frost energy on hit.
+    rarity: RARE
+    category: WEAPONS
+    pool: rare
+    trigger: ON_HIT
+    equipment: *id002
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 18
+      per-level: 3
+    effects:
+    - type: SLOW
+      ticks: &id004
+        base: 40
+        per-level: 8
+      amplifier: &id005
+        base: 0
+        per-level: 0.2
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 2.5
+        per-level: 0.625
+  greater_frost_axe:
+    name: Greater Frost Axe
+    description: Your axe chills enemies with frost energy on hit.
+    rarity: RARE
+    category: WEAPONS
+    pool: rare
+    trigger: ON_HIT
+    equipment: *id003
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 18
+      per-level: 3
+    effects:
+    - type: SLOW
+      ticks: *id004
+      amplifier: *id005
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 2.5
+        per-level: 0.625
+  greater_frost_bow:
+    name: Greater Frost Bow
+    description: Your bow chills enemies with frost energy on hit.
+    rarity: RARE
+    category: WEAPONS
+    pool: rare
+    trigger: ON_ATTACK
+    equipment: *id006
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 18
+      per-level: 3
+    effects:
+    - type: SLOW
+      ticks: *id004
+      amplifier: *id005
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 2.5
+        per-level: 0.625
+  greater_frost_trident:
+    name: Greater Frost Trident
+    description: Your trident chills enemies with frost energy on hit.
+    rarity: RARE
+    category: WEAPONS
+    pool: rare
+    trigger: ON_HIT
+    equipment: *id007
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 18
+      per-level: 3
+    effects:
+    - type: SLOW
+      ticks: *id004
+      amplifier: *id005
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 2.5
+        per-level: 0.625
+  greater_toxic_blade:
+    name: Greater Toxic Blade
+    description: Your blade poisons enemies with toxic energy on hit.
+    rarity: RARE
+    category: WEAPONS
+    pool: rare
+    trigger: ON_HIT
+    equipment: *id002
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 18
+      per-level: 3
+    effects:
+    - type: POISON
+      ticks: &id008
+        base: 40
+        per-level: 8
+      amplifier: 0
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 2.5
+        per-level: 0.625
+  greater_toxic_axe:
+    name: Greater Toxic Axe
+    description: Your axe poisons enemies with toxic energy on hit.
+    rarity: RARE
+    category: WEAPONS
+    pool: rare
+    trigger: ON_HIT
+    equipment: *id003
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 18
+      per-level: 3
+    effects:
+    - type: POISON
+      ticks: *id008
+      amplifier: 0
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 2.5
+        per-level: 0.625
+  greater_toxic_bow:
+    name: Greater Toxic Bow
+    description: Your bow poisons enemies with toxic energy on hit.
+    rarity: RARE
+    category: WEAPONS
+    pool: rare
+    trigger: ON_ATTACK
+    equipment: *id006
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 18
+      per-level: 3
+    effects:
+    - type: POISON
+      ticks: *id008
+      amplifier: 0
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 2.5
+        per-level: 0.625
+  greater_toxic_trident:
+    name: Greater Toxic Trident
+    description: Your trident poisons enemies with toxic energy on hit.
+    rarity: RARE
+    category: WEAPONS
+    pool: rare
+    trigger: ON_HIT
+    equipment: *id007
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 18
+      per-level: 3
+    effects:
+    - type: POISON
+      ticks: *id008
+      amplifier: 0
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 2.5
+        per-level: 0.625
+  greater_wither_blade:
+    name: Greater Wither Blade
+    description: Your blade withers enemies with wither energy on hit.
+    rarity: RARE
+    category: WEAPONS
+    pool: rare
+    trigger: ON_HIT
+    equipment: *id002
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 18
+      per-level: 3
+    effects:
+    - type: WITHER
+      ticks: &id009
+        base: 30
+        per-level: 6
+      amplifier: 0
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 2.5
+        per-level: 0.625
+  greater_wither_axe:
+    name: Greater Wither Axe
+    description: Your axe withers enemies with wither energy on hit.
+    rarity: RARE
+    category: WEAPONS
+    pool: rare
+    trigger: ON_HIT
+    equipment: *id003
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 18
+      per-level: 3
+    effects:
+    - type: WITHER
+      ticks: *id009
+      amplifier: 0
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 2.5
+        per-level: 0.625
+  greater_wither_bow:
+    name: Greater Wither Bow
+    description: Your bow withers enemies with wither energy on hit.
+    rarity: RARE
+    category: WEAPONS
+    pool: rare
+    trigger: ON_ATTACK
+    equipment: *id006
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 18
+      per-level: 3
+    effects:
+    - type: WITHER
+      ticks: *id009
+      amplifier: 0
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 2.5
+        per-level: 0.625
+  greater_wither_trident:
+    name: Greater Wither Trident
+    description: Your trident withers enemies with wither energy on hit.
+    rarity: RARE
+    category: WEAPONS
+    pool: rare
+    trigger: ON_HIT
+    equipment: *id007
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 18
+      per-level: 3
+    effects:
+    - type: WITHER
+      ticks: *id009
+      amplifier: 0
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 2.5
+        per-level: 0.625
+  greater_void_blade:
+    name: Greater Void Blade
+    description: Your blade warps enemies with void energy on hit.
+    rarity: RARE
+    category: WEAPONS
+    pool: rare
+    trigger: ON_HIT
+    equipment: *id002
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 18
+      per-level: 3
+    effects:
+    - type: SLOW
+      ticks: &id010
+        base: 30
+        per-level: 6
+      amplifier: 1
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 2.5
+        per-level: 0.625
+  greater_void_axe:
+    name: Greater Void Axe
+    description: Your axe warps enemies with void energy on hit.
+    rarity: RARE
+    category: WEAPONS
+    pool: rare
+    trigger: ON_HIT
+    equipment: *id003
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 18
+      per-level: 3
+    effects:
+    - type: SLOW
+      ticks: *id010
+      amplifier: 1
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 2.5
+        per-level: 0.625
+  greater_void_bow:
+    name: Greater Void Bow
+    description: Your bow warps enemies with void energy on hit.
+    rarity: RARE
+    category: WEAPONS
+    pool: rare
+    trigger: ON_ATTACK
+    equipment: *id006
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 18
+      per-level: 3
+    effects:
+    - type: SLOW
+      ticks: *id010
+      amplifier: 1
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 2.5
+        per-level: 0.625
+  greater_void_trident:
+    name: Greater Void Trident
+    description: Your trident warps enemies with void energy on hit.
+    rarity: RARE
+    category: WEAPONS
+    pool: rare
+    trigger: ON_HIT
+    equipment: *id007
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 18
+      per-level: 3
+    effects:
+    - type: SLOW
+      ticks: *id010
+      amplifier: 1
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 2.5
+        per-level: 0.625
+  greater_storm_blade:
+    name: Greater Storm Blade
+    description: Your blade shocks enemies with storm energy on hit.
+    rarity: RARE
+    category: WEAPONS
+    pool: rare
+    trigger: ON_HIT
+    equipment: *id002
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 18
+      per-level: 3
+    effects:
+    - type: LIGHTNING
+      target: TARGET
+      damage-only: true
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 2.5
+        per-level: 0.625
+  greater_storm_axe:
+    name: Greater Storm Axe
+    description: Your axe shocks enemies with storm energy on hit.
+    rarity: RARE
+    category: WEAPONS
+    pool: rare
+    trigger: ON_HIT
+    equipment: *id003
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 18
+      per-level: 3
+    effects:
+    - type: LIGHTNING
+      target: TARGET
+      damage-only: true
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 2.5
+        per-level: 0.625
+  greater_storm_bow:
+    name: Greater Storm Bow
+    description: Your bow shocks enemies with storm energy on hit.
+    rarity: RARE
+    category: WEAPONS
+    pool: rare
+    trigger: ON_ATTACK
+    equipment: *id006
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 18
+      per-level: 3
+    effects:
+    - type: LIGHTNING
+      target: TARGET
+      damage-only: true
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 2.5
+        per-level: 0.625
+  greater_storm_trident:
+    name: Greater Storm Trident
+    description: Your trident shocks enemies with storm energy on hit.
+    rarity: RARE
+    category: WEAPONS
+    pool: rare
+    trigger: ON_HIT
+    equipment: *id007
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 18
+      per-level: 3
+    effects:
+    - type: LIGHTNING
+      target: TARGET
+      damage-only: true
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 2.5
+        per-level: 0.625
+  skilled_ore:
+    name: Skilled Ore
+    description: Skilled proficiency grants bonus gold ore while working.
+    rarity: RARE
+    category: MINING
+    pool: rare
+    trigger: ON_BLOCK_BREAK
+    equipment:
+    - PICKAXE
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 18
+      per-level: 3
+    effects:
+    - type: ITEM_DROP
+      material: GOLD_ORE
+      amount:
+        base: 1.5
+        per-level: 0.375
+  skilled_timber:
+    name: Skilled Timber
+    description: Skilled proficiency grants bonus spruce log while working.
+    rarity: RARE
+    category: LOGGING
+    pool: rare
+    trigger: ON_BLOCK_BREAK
+    equipment:
+    - AXE
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 18
+      per-level: 3
+    effects:
+    - type: ITEM_DROP
+      material: SPRUCE_LOG
+      amount:
+        base: 1.5
+        per-level: 0.375
+  skilled_harvest:
+    name: Skilled Harvest
+    description: Skilled proficiency grants bonus carrot while working.
+    rarity: RARE
+    category: FARMING
+    pool: rare
+    trigger: ON_BLOCK_BREAK
+    equipment:
+    - HOE
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 18
+      per-level: 3
+    effects:
+    - type: ITEM_DROP
+      material: CARROT
+      amount:
+        base: 1.5
+        per-level: 0.375
+  skilled_excavation:
+    name: Skilled Excavation
+    description: Skilled proficiency grants bonus flint while working.
+    rarity: RARE
+    category: DIGGING
+    pool: rare
+    trigger: ON_BLOCK_BREAK
+    equipment:
+    - SHOVEL
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 18
+      per-level: 3
+    effects:
+    - type: ITEM_DROP
+      material: FLINT
+      amount:
+        base: 1.5
+        per-level: 0.375
+  skilled_angler:
+    name: Skilled Angler
+    description: Skilled proficiency grants bonus salmon while working.
+    rarity: RARE
+    category: FISHING
+    pool: rare
+    trigger: ON_FISH
+    equipment:
+    - FISHING_ROD
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 18
+      per-level: 3
+    effects:
+    - type: ITEM_DROP
+      material: SALMON
+      amount:
+        base: 1.5
+        per-level: 0.375
+  greater_vigor_helm:
+    name: Greater Vigor Helm
+    description: Your helm channels vigor, triggered by combat and movement.
+    rarity: RARE
+    category: ARMOR
+    pool: rare
+    trigger: ON_ARMOR_EQUIP
+    equipment: &id012
+    - HELMET
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 15
+    effects:
+    - type: STRENGTH
+      ticks: &id011
+        base: 60
+        per-level: 12
+      amplifier: 0
+  greater_vigor_plate:
+    name: Greater Vigor Plate
+    description: Your plate channels vigor, triggered by combat and movement.
+    rarity: RARE
+    category: ARMOR
+    pool: rare
+    trigger: ON_ARMOR_EQUIP
+    equipment: &id013
+    - CHESTPLATE
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 15
+    effects:
+    - type: STRENGTH
+      ticks: *id011
+      amplifier: 0
+  greater_vigor_greaves:
+    name: Greater Vigor Greaves
+    description: Your greaves channels vigor, triggered by combat and movement.
+    rarity: RARE
+    category: ARMOR
+    pool: rare
+    trigger: ON_ARMOR_EQUIP
+    equipment: &id015
+    - LEGGINGS
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 15
+    effects:
+    - type: STRENGTH
+      ticks: *id011
+      amplifier: 0
+  greater_vigor_treads:
+    name: Greater Vigor Treads
+    description: Your treads channels vigor, triggered by combat and movement.
+    rarity: RARE
+    category: ARMOR
+    pool: rare
+    trigger: ON_ARMOR_EQUIP
+    equipment: &id016
+    - BOOTS
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 15
+    effects:
+    - type: STRENGTH
+      ticks: *id011
+      amplifier: 0
+  greater_haste_helm:
+    name: Greater Haste Helm
+    description: Your helm channels haste, triggered by combat and movement.
+    rarity: RARE
+    category: ARMOR
+    pool: rare
+    trigger: ON_SPRINT
+    equipment: *id012
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 15
+    effects:
+    - type: SPEED
+      ticks: &id014
+        base: 60
+        per-level: 12
+      amplifier: 0
+  greater_haste_plate:
+    name: Greater Haste Plate
+    description: Your plate channels haste, triggered by combat and movement.
+    rarity: RARE
+    category: ARMOR
+    pool: rare
+    trigger: ON_SPRINT
+    equipment: *id013
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 15
+    effects:
+    - type: SPEED
+      ticks: *id014
+      amplifier: 0
+  greater_haste_greaves:
+    name: Greater Haste Greaves
+    description: Your greaves channels haste, triggered by combat and movement.
+    rarity: RARE
+    category: ARMOR
+    pool: rare
+    trigger: ON_SPRINT
+    equipment: *id015
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 15
+    effects:
+    - type: SPEED
+      ticks: *id014
+      amplifier: 0
+  greater_haste_treads:
+    name: Greater Haste Treads
+    description: Your treads channels haste, triggered by combat and movement.
+    rarity: RARE
+    category: ARMOR
+    pool: rare
+    trigger: ON_SPRINT
+    equipment: *id016
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 15
+    effects:
+    - type: SPEED
+      ticks: *id014
+      amplifier: 0
+  greater_resolve_helm:
+    name: Greater Resolve Helm
+    description: Your helm channels resolve, triggered by combat and movement.
+    rarity: RARE
+    category: ARMOR
+    pool: rare
+    trigger: ON_DAMAGE
+    equipment: *id012
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 15
+    effects:
+    - type: ABSORPTION
+      ticks: &id017
+        base: 60
+        per-level: 12
+      amplifier: 0
+  greater_resolve_plate:
+    name: Greater Resolve Plate
+    description: Your plate channels resolve, triggered by combat and movement.
+    rarity: RARE
+    category: ARMOR
+    pool: rare
+    trigger: ON_DAMAGE
+    equipment: *id013
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 15
+    effects:
+    - type: ABSORPTION
+      ticks: *id017
+      amplifier: 0
+  greater_resolve_greaves:
+    name: Greater Resolve Greaves
+    description: Your greaves channels resolve, triggered by combat and movement.
+    rarity: RARE
+    category: ARMOR
+    pool: rare
+    trigger: ON_DAMAGE
+    equipment: *id015
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 15
+    effects:
+    - type: ABSORPTION
+      ticks: *id017
+      amplifier: 0
+  greater_resolve_treads:
+    name: Greater Resolve Treads
+    description: Your treads channels resolve, triggered by combat and movement.
+    rarity: RARE
+    category: ARMOR
+    pool: rare
+    trigger: ON_DAMAGE
+    equipment: *id016
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 15
+    effects:
+    - type: ABSORPTION
+      ticks: *id017
+      amplifier: 0
+  greater_renewal_helm:
+    name: Greater Renewal Helm
+    description: Your helm channels renewal, triggered by combat and movement.
+    rarity: RARE
+    category: ARMOR
+    pool: rare
+    trigger: ON_LOW_HEALTH
+    equipment: *id012
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 15
+    effects:
+    - type: REGENERATION
+      ticks: &id018
+        base: 60
+        per-level: 12
+      amplifier: 0
+    conditions:
+    - health-below:40
+  greater_renewal_plate:
+    name: Greater Renewal Plate
+    description: Your plate channels renewal, triggered by combat and movement.
+    rarity: RARE
+    category: ARMOR
+    pool: rare
+    trigger: ON_LOW_HEALTH
+    equipment: *id013
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 15
+    effects:
+    - type: REGENERATION
+      ticks: *id018
+      amplifier: 0
+    conditions:
+    - health-below:40
+  greater_renewal_greaves:
+    name: Greater Renewal Greaves
+    description: Your greaves channels renewal, triggered by combat and movement.
+    rarity: RARE
+    category: ARMOR
+    pool: rare
+    trigger: ON_LOW_HEALTH
+    equipment: *id015
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 15
+    effects:
+    - type: REGENERATION
+      ticks: *id018
+      amplifier: 0
+    conditions:
+    - health-below:40
+  greater_renewal_treads:
+    name: Greater Renewal Treads
+    description: Your treads channels renewal, triggered by combat and movement.
+    rarity: RARE
+    category: ARMOR
+    pool: rare
+    trigger: ON_LOW_HEALTH
+    equipment: *id016
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 15
+    effects:
+    - type: REGENERATION
+      ticks: *id018
+      amplifier: 0
+    conditions:
+    - health-below:40
+  greater_scorching_pick:
+    name: Greater Scorching Pick
+    description: Your pick leaves scorched bonus coal behind as you work.
+    rarity: RARE
+    category: MINING
+    pool: rare
+    trigger: ON_BLOCK_BREAK
+    equipment: &id019
+    - PICKAXE
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 16
+      per-level: 3
+    effects:
+    - type: ITEM_DROP
+      material: COAL
+      amount: &id020
+        base: 1
+        per-level: 0.3
+  greater_glacial_pick:
+    name: Greater Glacial Pick
+    description: Your pick chills the surrounding area as you work.
+    rarity: RARE
+    category: MINING
+    pool: rare
+    trigger: ON_BLOCK_BREAK
+    equipment: *id019
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 16
+      per-level: 3
+    effects:
+    - type: PARTICLE
+      particle: SNOWFLAKE
+      count: 6
+  greater_verdant_pick:
+    name: Greater Verdant Pick
+    description: Your pick channels nature's bounty into XP as you work.
+    rarity: RARE
+    category: MINING
+    pool: rare
+    trigger: ON_BLOCK_BREAK
+    equipment: *id019
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 16
+      per-level: 3
+    effects:
+    - type: XP
+      amount: &id022
+        base: 2
+        per-level: 0.5
+  greater_gilded_pick:
+    name: Greater Gilded Pick
+    description: Your pick leaves a trace of gold value as you work.
+    rarity: RARE
+    category: MINING
+    pool: rare
+    trigger: ON_BLOCK_BREAK
+    equipment: *id019
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 16
+      per-level: 3
+    effects:
+    - type: MONEY
+      amount: &id023
+        base: 2
+        per-level: 0.6
+  greater_scorching_shovel:
+    name: Greater Scorching Shovel
+    description: Your shovel leaves scorched bonus coal behind as you work.
+    rarity: RARE
+    category: DIGGING
+    pool: rare
+    trigger: ON_BLOCK_BREAK
+    equipment: &id021
+    - SHOVEL
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 16
+      per-level: 3
+    effects:
+    - type: ITEM_DROP
+      material: COAL
+      amount: *id020
+  greater_glacial_shovel:
+    name: Greater Glacial Shovel
+    description: Your shovel chills the surrounding area as you work.
+    rarity: RARE
+    category: DIGGING
+    pool: rare
+    trigger: ON_BLOCK_BREAK
+    equipment: *id021
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 16
+      per-level: 3
+    effects:
+    - type: PARTICLE
+      particle: SNOWFLAKE
+      count: 6
+  greater_verdant_shovel:
+    name: Greater Verdant Shovel
+    description: Your shovel channels nature's bounty into XP as you work.
+    rarity: RARE
+    category: DIGGING
+    pool: rare
+    trigger: ON_BLOCK_BREAK
+    equipment: *id021
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 16
+      per-level: 3
+    effects:
+    - type: XP
+      amount: *id022
+  greater_gilded_shovel:
+    name: Greater Gilded Shovel
+    description: Your shovel leaves a trace of gold value as you work.
+    rarity: RARE
+    category: DIGGING
+    pool: rare
+    trigger: ON_BLOCK_BREAK
+    equipment: *id021
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 16
+      per-level: 3
+    effects:
+    - type: MONEY
+      amount: *id023
+  greater_scorching_hoe:
+    name: Greater Scorching Hoe
+    description: Your hoe leaves scorched bonus coal behind as you work.
+    rarity: RARE
+    category: FARMING
+    pool: rare
+    trigger: ON_BLOCK_BREAK
+    equipment: &id024
+    - HOE
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 16
+      per-level: 3
+    effects:
+    - type: ITEM_DROP
+      material: COAL
+      amount: *id020
+  greater_glacial_hoe:
+    name: Greater Glacial Hoe
+    description: Your hoe chills the surrounding area as you work.
+    rarity: RARE
+    category: FARMING
+    pool: rare
+    trigger: ON_BLOCK_BREAK
+    equipment: *id024
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 16
+      per-level: 3
+    effects:
+    - type: PARTICLE
+      particle: SNOWFLAKE
+      count: 6
+  greater_verdant_hoe:
+    name: Greater Verdant Hoe
+    description: Your hoe channels nature's bounty into XP as you work.
+    rarity: RARE
+    category: FARMING
+    pool: rare
+    trigger: ON_BLOCK_BREAK
+    equipment: *id024
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 16
+      per-level: 3
+    effects:
+    - type: XP
+      amount: *id022
+  greater_gilded_hoe:
+    name: Greater Gilded Hoe
+    description: Your hoe leaves a trace of gold value as you work.
+    rarity: RARE
+    category: FARMING
+    pool: rare
+    trigger: ON_BLOCK_BREAK
+    equipment: *id024
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 16
+      per-level: 3
+    effects:
+    - type: MONEY
+      amount: *id023
+  greater_scorching_rod:
+    name: Greater Scorching Rod
+    description: Your rod leaves scorched bonus coal behind as you work.
+    rarity: RARE
+    category: FISHING
+    pool: rare
+    trigger: ON_FISH
+    equipment: &id025
+    - FISHING_ROD
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 16
+      per-level: 3
+    effects:
+    - type: ITEM_DROP
+      material: COAL
+      amount: *id020
+  greater_glacial_rod:
+    name: Greater Glacial Rod
+    description: Your rod chills the surrounding area as you work.
+    rarity: RARE
+    category: FISHING
+    pool: rare
+    trigger: ON_FISH
+    equipment: *id025
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 16
+      per-level: 3
+    effects:
+    - type: PARTICLE
+      particle: SNOWFLAKE
+      count: 6
+  greater_verdant_rod:
+    name: Greater Verdant Rod
+    description: Your rod channels nature's bounty into XP as you work.
+    rarity: RARE
+    category: FISHING
+    pool: rare
+    trigger: ON_FISH
+    equipment: *id025
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 16
+      per-level: 3
+    effects:
+    - type: XP
+      amount: *id022
+  greater_gilded_rod:
+    name: Greater Gilded Rod
+    description: Your rod leaves a trace of gold value as you work.
+    rarity: RARE
+    category: FISHING
+    pool: rare
+    trigger: ON_FISH
+    equipment: *id025
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 16
+      per-level: 3
+    effects:
+    - type: MONEY
+      amount: *id023
+  journeyman_coal_finder:
+    name: Journeyman's Coal Finder
+    description: A journeyman's touch yields bonus coal.
+    rarity: RARE
+    category: MINING
+    pool: rare
+    trigger: ON_BLOCK_BREAK
+    equipment: &id026
+    - PICKAXE
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 15
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: COAL
+      amount:
+        base: 1.5
+        per-level: 0.30000000000000004
+  journeyman_iron_ore_finder:
+    name: Journeyman's Iron Ore Finder
+    description: A journeyman's touch yields bonus iron ore.
+    rarity: RARE
+    category: MINING
+    pool: rare
+    trigger: ON_BLOCK_BREAK
+    equipment: *id026
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 15
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: IRON_ORE
+      amount:
+        base: 1.5
+        per-level: 0.30000000000000004
+  journeyman_gold_ore_finder:
+    name: Journeyman's Gold Ore Finder
+    description: A journeyman's touch yields bonus gold ore.
+    rarity: RARE
+    category: MINING
+    pool: rare
+    trigger: ON_BLOCK_BREAK
+    equipment: *id026
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 15
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: GOLD_ORE
+      amount:
+        base: 1.5
+        per-level: 0.30000000000000004
+  journeyman_diamond_finder:
+    name: Journeyman's Diamond Finder
+    description: A journeyman's touch yields bonus diamond.
+    rarity: RARE
+    category: MINING
+    pool: rare
+    trigger: ON_BLOCK_BREAK
+    equipment: *id026
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 15
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: DIAMOND
+      amount:
+        base: 1.5
+        per-level: 0.30000000000000004
+  journeyman_emerald_ore_finder:
+    name: Journeyman's Emerald Ore Finder
+    description: A journeyman's touch yields bonus emerald ore.
+    rarity: RARE
+    category: MINING
+    pool: rare
+    trigger: ON_BLOCK_BREAK
+    equipment: *id026
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 15
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: EMERALD_ORE
+      amount:
+        base: 1.5
+        per-level: 0.30000000000000004
+  journeyman_redstone_finder:
+    name: Journeyman's Redstone Finder
+    description: A journeyman's touch yields bonus redstone.
+    rarity: RARE
+    category: MINING
+    pool: rare
+    trigger: ON_BLOCK_BREAK
+    equipment: *id026
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 15
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: REDSTONE
+      amount:
+        base: 1.5
+        per-level: 0.30000000000000004
+  journeyman_lapis_ore_finder:
+    name: Journeyman's Lapis Ore Finder
+    description: A journeyman's touch yields bonus lapis ore.
+    rarity: RARE
+    category: MINING
+    pool: rare
+    trigger: ON_BLOCK_BREAK
+    equipment: *id026
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 15
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: LAPIS_ORE
+      amount:
+        base: 1.5
+        per-level: 0.30000000000000004
+  journeyman_copper_ore_finder:
+    name: Journeyman's Copper Ore Finder
+    description: A journeyman's touch yields bonus copper ore.
+    rarity: RARE
+    category: MINING
+    pool: rare
+    trigger: ON_BLOCK_BREAK
+    equipment: *id026
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 15
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: COPPER_ORE
+      amount:
+        base: 1.5
+        per-level: 0.30000000000000004
+  journeyman_oak_log_finder:
+    name: Journeyman's Oak Log Finder
+    description: A journeyman's touch yields bonus oak log.
+    rarity: RARE
+    category: LOGGING
+    pool: rare
+    trigger: ON_BLOCK_BREAK
+    equipment: &id027
+    - AXE
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 15
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: OAK_LOG
+      amount:
+        base: 1.5
+        per-level: 0.30000000000000004
+  journeyman_spruce_log_finder:
+    name: Journeyman's Spruce Log Finder
+    description: A journeyman's touch yields bonus spruce log.
+    rarity: RARE
+    category: LOGGING
+    pool: rare
+    trigger: ON_BLOCK_BREAK
+    equipment: *id027
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 15
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: SPRUCE_LOG
+      amount:
+        base: 1.5
+        per-level: 0.30000000000000004
+  journeyman_birch_log_finder:
+    name: Journeyman's Birch Log Finder
+    description: A journeyman's touch yields bonus birch log.
+    rarity: RARE
+    category: LOGGING
+    pool: rare
+    trigger: ON_BLOCK_BREAK
+    equipment: *id027
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 15
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: BIRCH_LOG
+      amount:
+        base: 1.5
+        per-level: 0.30000000000000004
+  journeyman_jungle_log_finder:
+    name: Journeyman's Jungle Log Finder
+    description: A journeyman's touch yields bonus jungle log.
+    rarity: RARE
+    category: LOGGING
+    pool: rare
+    trigger: ON_BLOCK_BREAK
+    equipment: *id027
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 15
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: JUNGLE_LOG
+      amount:
+        base: 1.5
+        per-level: 0.30000000000000004
+  journeyman_acacia_log_finder:
+    name: Journeyman's Acacia Log Finder
+    description: A journeyman's touch yields bonus acacia log.
+    rarity: RARE
+    category: LOGGING
+    pool: rare
+    trigger: ON_BLOCK_BREAK
+    equipment: *id027
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 15
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: ACACIA_LOG
+      amount:
+        base: 1.5
+        per-level: 0.30000000000000004
+  journeyman_dark_oak_log_finder:
+    name: Journeyman's Dark Oak Log Finder
+    description: A journeyman's touch yields bonus dark oak log.
+    rarity: RARE
+    category: LOGGING
+    pool: rare
+    trigger: ON_BLOCK_BREAK
+    equipment: *id027
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 15
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: DARK_OAK_LOG
+      amount:
+        base: 1.5
+        per-level: 0.30000000000000004
+  journeyman_mangrove_log_finder:
+    name: Journeyman's Mangrove Log Finder
+    description: A journeyman's touch yields bonus mangrove log.
+    rarity: RARE
+    category: LOGGING
+    pool: rare
+    trigger: ON_BLOCK_BREAK
+    equipment: *id027
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 15
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: MANGROVE_LOG
+      amount:
+        base: 1.5
+        per-level: 0.30000000000000004
+  journeyman_cherry_log_finder:
+    name: Journeyman's Cherry Log Finder
+    description: A journeyman's touch yields bonus cherry log.
+    rarity: RARE
+    category: LOGGING
+    pool: rare
+    trigger: ON_BLOCK_BREAK
+    equipment: *id027
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 15
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: CHERRY_LOG
+      amount:
+        base: 1.5
+        per-level: 0.30000000000000004
+  journeyman_wheat_finder:
+    name: Journeyman's Wheat Finder
+    description: A journeyman's touch yields bonus wheat.
+    rarity: RARE
+    category: FARMING
+    pool: rare
+    trigger: ON_BLOCK_BREAK
+    equipment: &id028
+    - HOE
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 15
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: WHEAT
+      amount:
+        base: 1.5
+        per-level: 0.30000000000000004
+  journeyman_carrot_finder:
+    name: Journeyman's Carrot Finder
+    description: A journeyman's touch yields bonus carrot.
+    rarity: RARE
+    category: FARMING
+    pool: rare
+    trigger: ON_BLOCK_BREAK
+    equipment: *id028
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 15
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: CARROT
+      amount:
+        base: 1.5
+        per-level: 0.30000000000000004
+  journeyman_potato_finder:
+    name: Journeyman's Potato Finder
+    description: A journeyman's touch yields bonus potato.
+    rarity: RARE
+    category: FARMING
+    pool: rare
+    trigger: ON_BLOCK_BREAK
+    equipment: *id028
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 15
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: POTATO
+      amount:
+        base: 1.5
+        per-level: 0.30000000000000004
+  journeyman_beetroot_finder:
+    name: Journeyman's Beetroot Finder
+    description: A journeyman's touch yields bonus beetroot.
+    rarity: RARE
+    category: FARMING
+    pool: rare
+    trigger: ON_BLOCK_BREAK
+    equipment: *id028
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 15
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: BEETROOT
+      amount:
+        base: 1.5
+        per-level: 0.30000000000000004
+  journeyman_pumpkin_finder:
+    name: Journeyman's Pumpkin Finder
+    description: A journeyman's touch yields bonus pumpkin.
+    rarity: RARE
+    category: FARMING
+    pool: rare
+    trigger: ON_BLOCK_BREAK
+    equipment: *id028
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 15
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: PUMPKIN
+      amount:
+        base: 1.5
+        per-level: 0.30000000000000004
+  journeyman_melon_slice_finder:
+    name: Journeyman's Melon Slice Finder
+    description: A journeyman's touch yields bonus melon slice.
+    rarity: RARE
+    category: FARMING
+    pool: rare
+    trigger: ON_BLOCK_BREAK
+    equipment: *id028
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 15
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: MELON_SLICE
+      amount:
+        base: 1.5
+        per-level: 0.30000000000000004
+  journeyman_sugar_cane_finder:
+    name: Journeyman's Sugar Cane Finder
+    description: A journeyman's touch yields bonus sugar cane.
+    rarity: RARE
+    category: FARMING
+    pool: rare
+    trigger: ON_BLOCK_BREAK
+    equipment: *id028
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 15
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: SUGAR_CANE
+      amount:
+        base: 1.5
+        per-level: 0.30000000000000004
+  journeyman_nether_wart_finder:
+    name: Journeyman's Nether Wart Finder
+    description: A journeyman's touch yields bonus nether wart.
+    rarity: RARE
+    category: FARMING
+    pool: rare
+    trigger: ON_BLOCK_BREAK
+    equipment: *id028
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 15
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: NETHER_WART
+      amount:
+        base: 1.5
+        per-level: 0.30000000000000004
+  journeyman_sand_finder:
+    name: Journeyman's Sand Finder
+    description: A journeyman's touch yields bonus sand.
+    rarity: RARE
+    category: DIGGING
+    pool: rare
+    trigger: ON_BLOCK_BREAK
+    equipment: &id029
+    - SHOVEL
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 15
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: SAND
+      amount:
+        base: 1.5
+        per-level: 0.30000000000000004
+  journeyman_gravel_finder:
+    name: Journeyman's Gravel Finder
+    description: A journeyman's touch yields bonus gravel.
+    rarity: RARE
+    category: DIGGING
+    pool: rare
+    trigger: ON_BLOCK_BREAK
+    equipment: *id029
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 15
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: GRAVEL
+      amount:
+        base: 1.5
+        per-level: 0.30000000000000004
+  journeyman_clay_ball_finder:
+    name: Journeyman's Clay Ball Finder
+    description: A journeyman's touch yields bonus clay ball.
+    rarity: RARE
+    category: DIGGING
+    pool: rare
+    trigger: ON_BLOCK_BREAK
+    equipment: *id029
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 15
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: CLAY_BALL
+      amount:
+        base: 1.5
+        per-level: 0.30000000000000004
+  journeyman_dirt_finder:
+    name: Journeyman's Dirt Finder
+    description: A journeyman's touch yields bonus dirt.
+    rarity: RARE
+    category: DIGGING
+    pool: rare
+    trigger: ON_BLOCK_BREAK
+    equipment: *id029
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 15
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: DIRT
+      amount:
+        base: 1.5
+        per-level: 0.30000000000000004
+  journeyman_soul_sand_finder:
+    name: Journeyman's Soul Sand Finder
+    description: A journeyman's touch yields bonus soul sand.
+    rarity: RARE
+    category: DIGGING
+    pool: rare
+    trigger: ON_BLOCK_BREAK
+    equipment: *id029
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 15
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: SOUL_SAND
+      amount:
+        base: 1.5
+        per-level: 0.30000000000000004
+  journeyman_red_sand_finder:
+    name: Journeyman's Red Sand Finder
+    description: A journeyman's touch yields bonus red sand.
+    rarity: RARE
+    category: DIGGING
+    pool: rare
+    trigger: ON_BLOCK_BREAK
+    equipment: *id029
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 15
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: RED_SAND
+      amount:
+        base: 1.5
+        per-level: 0.30000000000000004
+  journeyman_snowball_finder:
+    name: Journeyman's Snowball Finder
+    description: A journeyman's touch yields bonus snowball.
+    rarity: RARE
+    category: DIGGING
+    pool: rare
+    trigger: ON_BLOCK_BREAK
+    equipment: *id029
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 15
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: SNOWBALL
+      amount:
+        base: 1.5
+        per-level: 0.30000000000000004
+  journeyman_mud_finder:
+    name: Journeyman's Mud Finder
+    description: A journeyman's touch yields bonus mud.
+    rarity: RARE
+    category: DIGGING
+    pool: rare
+    trigger: ON_BLOCK_BREAK
+    equipment: *id029
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 15
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: MUD
+      amount:
+        base: 1.5
+        per-level: 0.30000000000000004
+  journeyman_cod_finder:
+    name: Journeyman's Cod Finder
+    description: A journeyman's touch yields bonus cod.
+    rarity: RARE
+    category: FISHING
+    pool: rare
+    trigger: ON_FISH
+    equipment: &id030
+    - FISHING_ROD
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 15
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: COD
+      amount:
+        base: 1.5
+        per-level: 0.30000000000000004
+  journeyman_salmon_finder:
+    name: Journeyman's Salmon Finder
+    description: A journeyman's touch yields bonus salmon.
+    rarity: RARE
+    category: FISHING
+    pool: rare
+    trigger: ON_FISH
+    equipment: *id030
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 15
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: SALMON
+      amount:
+        base: 1.5
+        per-level: 0.30000000000000004
+  journeyman_tropical_fish_finder:
+    name: Journeyman's Tropical Fish Finder
+    description: A journeyman's touch yields bonus tropical fish.
+    rarity: RARE
+    category: FISHING
+    pool: rare
+    trigger: ON_FISH
+    equipment: *id030
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 15
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: TROPICAL_FISH
+      amount:
+        base: 1.5
+        per-level: 0.30000000000000004
+  journeyman_pufferfish_finder:
+    name: Journeyman's Pufferfish Finder
+    description: A journeyman's touch yields bonus pufferfish.
+    rarity: RARE
+    category: FISHING
+    pool: rare
+    trigger: ON_FISH
+    equipment: *id030
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 15
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: PUFFERFISH
+      amount:
+        base: 1.5
+        per-level: 0.30000000000000004
+  journeyman_ink_sac_finder:
+    name: Journeyman's Ink Sac Finder
+    description: A journeyman's touch yields bonus ink sac.
+    rarity: RARE
+    category: FISHING
+    pool: rare
+    trigger: ON_FISH
+    equipment: *id030
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 15
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: INK_SAC
+      amount:
+        base: 1.5
+        per-level: 0.30000000000000004
+  journeyman_prismarine_shard_finder:
+    name: Journeyman's Prismarine Shard Finder
+    description: A journeyman's touch yields bonus prismarine shard.
+    rarity: RARE
+    category: FISHING
+    pool: rare
+    trigger: ON_FISH
+    equipment: *id030
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 15
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: PRISMARINE_SHARD
+      amount:
+        base: 1.5
+        per-level: 0.30000000000000004
+  journeyman_nautilus_shell_finder:
+    name: Journeyman's Nautilus Shell Finder
+    description: A journeyman's touch yields bonus nautilus shell.
+    rarity: RARE
+    category: FISHING
+    pool: rare
+    trigger: ON_FISH
+    equipment: *id030
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 15
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: NAUTILUS_SHELL
+      amount:
+        base: 1.5
+        per-level: 0.30000000000000004
+  journeyman_bone_finder:
+    name: Journeyman's Bone Finder
+    description: A journeyman's touch yields bonus bone.
+    rarity: RARE
+    category: FISHING
+    pool: rare
+    trigger: ON_FISH
+    equipment: *id030
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 15
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: BONE
+      amount:
+        base: 1.5
+        per-level: 0.30000000000000004
+  greater_vampiric_blade:
+    name: Greater Vampiric Blade
+    description: This blade drains life force on hit.
+    rarity: RARE
+    category: COMBAT
+    pool: rare
+    trigger: ON_HIT
+    equipment: *id002
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 16
+      per-level: 2.5
+    effects:
+    - type: HEAL
+      amount: &id031
+        base: 1.5
+        per-level: 0.4
+  greater_vampiric_axe:
+    name: Greater Vampiric Axe
+    description: This axe drains life force on hit.
+    rarity: RARE
+    category: COMBAT
+    pool: rare
+    trigger: ON_HIT
+    equipment: *id003
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 16
+      per-level: 2.5
+    effects:
+    - type: HEAL
+      amount: *id031
+  greater_vampiric_bow:
+    name: Greater Vampiric Bow
+    description: This bow drains life force on hit.
+    rarity: RARE
+    category: COMBAT
+    pool: rare
+    trigger: ON_ATTACK
+    equipment: *id006
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 16
+      per-level: 2.5
+    effects:
+    - type: HEAL
+      amount: *id031
+  greater_vampiric_trident:
+    name: Greater Vampiric Trident
+    description: This trident drains life force on hit.
+    rarity: RARE
+    category: COMBAT
+    pool: rare
+    trigger: ON_HIT
+    equipment: *id007
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 16
+      per-level: 2.5
+    effects:
+    - type: HEAL
+      amount: *id031
+  greater_executing_blade:
+    name: Greater Executing Blade
+    description: This blade seeks out weak points.
+    rarity: RARE
+    category: COMBAT
+    pool: rare
+    trigger: ON_HIT
+    equipment: *id002
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 16
+      per-level: 2.5
+    effects:
+    - type: DAMAGE
+      target: TARGET
+      amount: &id032
+        base: 3
+        per-level: 0.8
+  greater_executing_axe:
+    name: Greater Executing Axe
+    description: This axe seeks out weak points.
+    rarity: RARE
+    category: COMBAT
+    pool: rare
+    trigger: ON_HIT
+    equipment: *id003
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 16
+      per-level: 2.5
+    effects:
+    - type: DAMAGE
+      target: TARGET
+      amount: *id032
+  greater_executing_bow:
+    name: Greater Executing Bow
+    description: This bow seeks out weak points.
+    rarity: RARE
+    category: COMBAT
+    pool: rare
+    trigger: ON_ATTACK
+    equipment: *id006
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 16
+      per-level: 2.5
+    effects:
+    - type: DAMAGE
+      target: TARGET
+      amount: *id032
+  greater_executing_trident:
+    name: Greater Executing Trident
+    description: This trident seeks out weak points.
+    rarity: RARE
+    category: COMBAT
+    pool: rare
+    trigger: ON_HIT
+    equipment: *id007
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 16
+      per-level: 2.5
+    effects:
+    - type: DAMAGE
+      target: TARGET
+      amount: *id032
+  greater_stunning_blade:
+    name: Greater Stunning Blade
+    description: This blade stuns on impact.
+    rarity: RARE
+    category: COMBAT
+    pool: rare
+    trigger: ON_HIT
+    equipment: *id002
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 16
+      per-level: 2.5
+    effects:
+    - type: SLOW
+      ticks: &id033
+        base: 30
+        per-level: 6
+      amplifier: 2
+  greater_stunning_axe:
+    name: Greater Stunning Axe
+    description: This axe stuns on impact.
+    rarity: RARE
+    category: COMBAT
+    pool: rare
+    trigger: ON_HIT
+    equipment: *id003
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 16
+      per-level: 2.5
+    effects:
+    - type: SLOW
+      ticks: *id033
+      amplifier: 2
+  greater_stunning_bow:
+    name: Greater Stunning Bow
+    description: This bow stuns on impact.
+    rarity: RARE
+    category: COMBAT
+    pool: rare
+    trigger: ON_ATTACK
+    equipment: *id006
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 16
+      per-level: 2.5
+    effects:
+    - type: SLOW
+      ticks: *id033
+      amplifier: 2
+  greater_stunning_trident:
+    name: Greater Stunning Trident
+    description: This trident stuns on impact.
+    rarity: RARE
+    category: COMBAT
+    pool: rare
+    trigger: ON_HIT
+    equipment: *id007
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 16
+      per-level: 2.5
+    effects:
+    - type: SLOW
+      ticks: *id033
+      amplifier: 2
+  greater_piercing_blade:
+    name: Greater Piercing Blade
+    description: This blade pierces through to nearby foes.
+    rarity: RARE
+    category: COMBAT
+    pool: rare
+    trigger: ON_HIT
+    equipment: *id002
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 16
+      per-level: 2.5
+    effects:
+    - type: AREA_DAMAGE
+      amount: &id034
+        base: 2
+        per-level: 0.5
+      radius: 2
+  greater_piercing_axe:
+    name: Greater Piercing Axe
+    description: This axe pierces through to nearby foes.
+    rarity: RARE
+    category: COMBAT
+    pool: rare
+    trigger: ON_HIT
+    equipment: *id003
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 16
+      per-level: 2.5
+    effects:
+    - type: AREA_DAMAGE
+      amount: *id034
+      radius: 2
+  greater_piercing_bow:
+    name: Greater Piercing Bow
+    description: This bow pierces through to nearby foes.
+    rarity: RARE
+    category: COMBAT
+    pool: rare
+    trigger: ON_ATTACK
+    equipment: *id006
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 16
+      per-level: 2.5
+    effects:
+    - type: AREA_DAMAGE
+      amount: *id034
+      radius: 2
+  greater_piercing_trident:
+    name: Greater Piercing Trident
+    description: This trident pierces through to nearby foes.
+    rarity: RARE
+    category: COMBAT
+    pool: rare
+    trigger: ON_HIT
+    equipment: *id007
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 16
+      per-level: 2.5
+    effects:
+    - type: AREA_DAMAGE
+      amount: *id034
+      radius: 2
+  greater_momentum_blade:
+    name: Greater Momentum Blade
+    description: This blade knocks enemies back with force.
+    rarity: RARE
+    category: COMBAT
+    pool: rare
+    trigger: ON_HIT
+    equipment: *id002
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 16
+      per-level: 2.5
+    effects:
+    - type: PUSH
+      strength: &id035
+        base: 0.8
+        per-level: 0.15
+  greater_momentum_axe:
+    name: Greater Momentum Axe
+    description: This axe knocks enemies back with force.
+    rarity: RARE
+    category: COMBAT
+    pool: rare
+    trigger: ON_HIT
+    equipment: *id003
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 16
+      per-level: 2.5
+    effects:
+    - type: PUSH
+      strength: *id035
+  greater_momentum_bow:
+    name: Greater Momentum Bow
+    description: This bow knocks enemies back with force.
+    rarity: RARE
+    category: COMBAT
+    pool: rare
+    trigger: ON_ATTACK
+    equipment: *id006
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 16
+      per-level: 2.5
+    effects:
+    - type: PUSH
+      strength: *id035
+  greater_momentum_trident:
+    name: Greater Momentum Trident
+    description: This trident knocks enemies back with force.
+    rarity: RARE
+    category: COMBAT
+    pool: rare
+    trigger: ON_HIT
+    equipment: *id007
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 16
+      per-level: 2.5
+    effects:
+    - type: PUSH
+      strength: *id035
+  greater_ferocity_helm:
+    name: Greater Ferocity Helm
+    description: Your helm resonates with ferocity.
+    rarity: RARE
+    category: ARMOR
+    pool: rare
+    trigger: ON_HIT
+    equipment: *id012
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 14
+    effects:
+    - type: STRENGTH
+      ticks: &id036
+        base: 40
+        per-level: 8
+      amplifier: 0
+  greater_ferocity_plate:
+    name: Greater Ferocity Plate
+    description: Your plate resonates with ferocity.
+    rarity: RARE
+    category: ARMOR
+    pool: rare
+    trigger: ON_HIT
+    equipment: *id013
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 14
+    effects:
+    - type: STRENGTH
+      ticks: *id036
+      amplifier: 0
+  greater_ferocity_greaves:
+    name: Greater Ferocity Greaves
+    description: Your greaves resonates with ferocity.
+    rarity: RARE
+    category: ARMOR
+    pool: rare
+    trigger: ON_HIT
+    equipment: *id015
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 14
+    effects:
+    - type: STRENGTH
+      ticks: *id036
+      amplifier: 0
+  greater_ferocity_treads:
+    name: Greater Ferocity Treads
+    description: Your treads resonates with ferocity.
+    rarity: RARE
+    category: ARMOR
+    pool: rare
+    trigger: ON_HIT
+    equipment: *id016
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 14
+    effects:
+    - type: STRENGTH
+      ticks: *id036
+      amplifier: 0
+  greater_ward_helm:
+    name: Greater Ward Helm
+    description: Your helm resonates with ward.
+    rarity: RARE
+    category: ARMOR
+    pool: rare
+    trigger: ON_ARMOR_EQUIP
+    equipment: *id012
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 14
+    effects:
+    - type: ABSORPTION
+      ticks: &id037
+        base: 40
+        per-level: 8
+      amplifier: 0
+  greater_ward_plate:
+    name: Greater Ward Plate
+    description: Your plate resonates with ward.
+    rarity: RARE
+    category: ARMOR
+    pool: rare
+    trigger: ON_ARMOR_EQUIP
+    equipment: *id013
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 14
+    effects:
+    - type: ABSORPTION
+      ticks: *id037
+      amplifier: 0
+  greater_ward_greaves:
+    name: Greater Ward Greaves
+    description: Your greaves resonates with ward.
+    rarity: RARE
+    category: ARMOR
+    pool: rare
+    trigger: ON_ARMOR_EQUIP
+    equipment: *id015
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 14
+    effects:
+    - type: ABSORPTION
+      ticks: *id037
+      amplifier: 0
+  greater_ward_treads:
+    name: Greater Ward Treads
+    description: Your treads resonates with ward.
+    rarity: RARE
+    category: ARMOR
+    pool: rare
+    trigger: ON_ARMOR_EQUIP
+    equipment: *id016
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 14
+    effects:
+    - type: ABSORPTION
+      ticks: *id037
+      amplifier: 0
+  greater_momentum_guard_helm:
+    name: Greater Momentum Guard Helm
+    description: Your helm resonates with momentum guard.
+    rarity: RARE
+    category: ARMOR
+    pool: rare
+    trigger: ON_JUMP
+    equipment: *id012
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 14
+    effects:
+    - type: SPEED
+      ticks: &id038
+        base: 40
+        per-level: 8
+      amplifier: 0
+  greater_momentum_guard_plate:
+    name: Greater Momentum Guard Plate
+    description: Your plate resonates with momentum guard.
+    rarity: RARE
+    category: ARMOR
+    pool: rare
+    trigger: ON_JUMP
+    equipment: *id013
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 14
+    effects:
+    - type: SPEED
+      ticks: *id038
+      amplifier: 0
+  greater_momentum_guard_greaves:
+    name: Greater Momentum Guard Greaves
+    description: Your greaves resonates with momentum guard.
+    rarity: RARE
+    category: ARMOR
+    pool: rare
+    trigger: ON_JUMP
+    equipment: *id015
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 14
+    effects:
+    - type: SPEED
+      ticks: *id038
+      amplifier: 0
+  greater_momentum_guard_treads:
+    name: Greater Momentum Guard Treads
+    description: Your treads resonates with momentum guard.
+    rarity: RARE
+    category: ARMOR
+    pool: rare
+    trigger: ON_JUMP
+    equipment: *id016
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 14
+    effects:
+    - type: SPEED
+      ticks: *id038
+      amplifier: 0
+  greater_mending_light_helm:
+    name: Greater Mending Light Helm
+    description: Your helm resonates with mending light.
+    rarity: RARE
+    category: ARMOR
+    pool: rare
+    trigger: ON_HEAL
+    equipment: *id012
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 14
+    effects:
+    - type: REGENERATION
+      ticks: &id039
+        base: 40
+        per-level: 8
+      amplifier: 1
+  greater_mending_light_plate:
+    name: Greater Mending Light Plate
+    description: Your plate resonates with mending light.
+    rarity: RARE
+    category: ARMOR
+    pool: rare
+    trigger: ON_HEAL
+    equipment: *id013
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 14
+    effects:
+    - type: REGENERATION
+      ticks: *id039
+      amplifier: 1
+  greater_mending_light_greaves:
+    name: Greater Mending Light Greaves
+    description: Your greaves resonates with mending light.
+    rarity: RARE
+    category: ARMOR
+    pool: rare
+    trigger: ON_HEAL
+    equipment: *id015
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 14
+    effects:
+    - type: REGENERATION
+      ticks: *id039
+      amplifier: 1
+  greater_mending_light_treads:
+    name: Greater Mending Light Treads
+    description: Your treads resonates with mending light.
+    rarity: RARE
+    category: ARMOR
+    pool: rare
+    trigger: ON_HEAL
+    equipment: *id016
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 14
+    effects:
+    - type: REGENERATION
+      ticks: *id039
+      amplifier: 1
+  greater_recall:
+    name: Greater Recall
+    description: A utility rune themed around recall.
+    rarity: RARE
+    category: UTILITY
+    pool: rare
+    trigger: ON_SPRINT
+    equipment:
+    - ANY
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 16
+      per-level: 2.5
+    cooldown:
+      base: 10
+      per-level: -0.5
+    effects:
+    - type: TELEPORT
+      mode: random-nearby
+      radius: 6
+  greater_magpie:
+    name: Greater Magpie
+    description: A utility rune themed around magpie.
+    rarity: RARE
+    category: UTILITY
+    pool: rare
+    trigger: ON_BLOCK_BREAK
+    equipment:
+    - PICKAXE
+    - SHOVEL
+    - AXE
+    - HOE
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 16
+      per-level: 2.5
+    cooldown:
+      base: 10
+      per-level: -0.5
+    effects:
+    - type: PULL
+      target: AREA
+      radius: 5
+      strength: 0.5
+  greater_windfall:
+    name: Greater Windfall
+    description: A utility rune themed around windfall.
+    rarity: RARE
+    category: UTILITY
+    pool: rare
+    trigger: ON_KILL
+    equipment:
+    - SWORD
+    - AXE
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 16
+      per-level: 2.5
+    cooldown:
+      base: 10
+      per-level: -0.5
+    effects:
+    - type: PUSH
+      target: NEARBY_MOBS
+      strength: 1.2
+  greater_prospectors_call:
+    name: Greater Prospector's Call
+    description: A utility rune themed around prospector's call.
+    rarity: RARE
+    category: UTILITY
+    pool: rare
+    trigger: ON_BLOCK_BREAK
+    equipment:
+    - PICKAXE
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 16
+      per-level: 2.5
+    cooldown:
+      base: 10
+      per-level: -0.5
+    effects:
+    - type: ACTIONBAR
+      text: <gray>You sense something nearby...
+  greater_riptide:
+    name: Greater Riptide
+    description: A combat rune built around riptide.
+    rarity: RARE
+    category: COMBAT
+    pool: rare
+    trigger: ON_ATTACK
+    equipment:
+    - TRIDENT
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 14
+      per-level: 2
+    cooldown:
+      base: 6
+      per-level: -0.3
+    effects:
+    - type: PUSH
+      target: SELF
+      strength:
+        base: 1
+        per-level: 0.2
+  greater_overcharge:
+    name: Greater Overcharge
+    description: A combat rune built around overcharge.
+    rarity: RARE
+    category: WEAPONS
+    pool: rare
+    trigger: ON_CRITICAL
+    equipment:
+    - SWORD
+    - AXE
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 14
+      per-level: 2
+    cooldown:
+      base: 6
+      per-level: -0.3
+    effects:
+    - type: STRENGTH
+      ticks:
+        base: 40
+        per-level: 8
+      amplifier: 1
+  greater_backdraft:
+    name: Greater Backdraft
+    description: A combat rune built around backdraft.
+    rarity: RARE
+    category: COMBAT
+    pool: rare
+    trigger: ON_KILL
+    equipment:
+    - SWORD
+    - AXE
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 14
+      per-level: 2
+    cooldown:
+      base: 6
+      per-level: -0.3
+    effects:
+    - type: FIRE
+      target: NEARBY_MOBS
+      ticks:
+        base: 30
+        per-level: 6
+  greater_static_field:
+    name: Greater Static Field
+    description: A combat rune built around static field.
+    rarity: RARE
+    category: COMBAT
+    pool: rare
+    trigger: ON_ATTACK
+    equipment:
+    - TRIDENT
+    - SWORD
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 14
+      per-level: 2
+    cooldown:
+      base: 6
+      per-level: -0.3
+    effects:
+    - type: SLOW
+      target: NEARBY_MOBS
+      ticks:
+        base: 30
+        per-level: 6
+      amplifier: 0

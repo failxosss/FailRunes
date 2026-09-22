@@ -1,0 +1,44 @@
+# FailRunes zprávy (čeština). Vše je konfigurovatelné - žádný text není napevno v Javě.
+message:
+  rune-activated: "{rune} <gray>aktivována!"
+  apply-success: "<green>Runa úspěšně aplikována: {rune}<green>!"
+  apply-fail: "<yellow>Aplikace runy selhala: {rune}<yellow>. Předmět zůstává zachován."
+  apply-critical: "<red>KRITICKÉ SELHÁNÍ při aplikaci {rune}<red>!"
+  apply-missing-items: "<red>Nejprve vlož předmět a runu."
+  apply-invalid.wrong_equipment: "<red>Tuto runu nelze na tento typ vybavení aplikovat."
+  apply-invalid.level_too_high: "<red>Úroveň této runy je pro tento předmět příliš vysoká."
+  apply-invalid.conflict: "<red>Tato runa koliduje s jinou runou již na předmětu."
+  apply-invalid.duplicate_max: "<red>Tento předmět už tuto runu má."
+  apply-invalid.zone_blocked: "<red>Aplikace run je v této zóně zakázána."
+  apply-invalid.protected_item: "<red>Tento předmět je chráněn a nelze jej upravit."
+  not-enough-xp: "<red>Nemáš dostatek XP."
+  tome-purchased: "<green>Runová kniha zakoupena!"
+  gems-purchased: "<green>Zakoupeno {amount} Šťastných drahokamů!"
+  wand-purchased: "<green>Očistná hůlka zakoupena!"
+  identifier-empty: "<red>Nejprve vlož Neidentifikovanou runu."
+  identify-failed: "<red>Identifikace selhala. Zkus to znovu."
+  identify-success: "<green>Runa identifikována!"
+  incinerator-empty: "<red>Nejprve vlož runu k spálení."
+  detector-find: "<yellow>✦ Tvůj Detektor run něco našel!"
+  search-prompt: "<gray>Napiš hledaný výraz do chatu..."
+  no-permission: "<red>Nemáš oprávnění k této akci."
+  admin-reloaded: "<green>Konfigurace FailRunes byla znovu načtena."
+  admin-debug-toggled: "<gray>Ladicí režim: {state}"
+  admin-list: "<gray>Aktuálně načteno {count} run."
+  admin-not-found: "<red>Hráč nebo runa nenalezena."
+  admin-given: "<green>Runa předána."
+  admin-inspect: "<gray>Runy na drženém předmětu: {runes}"
+
+item:
+  unidentified:
+    name: "Neidentifikovaná runa"
+    lore:
+      - "Tato runa musí být identifikována."
+      - "Použij Identifikátor run."
+  wand:
+    lore:
+      - "Odstraní jednu runu z předmětu."
+      - "Spotřebuje se použitím."
+
+damage-history:
+  death-link: "<gray>[<aqua>Klikni pro zobrazení historie poškození<gray>]"

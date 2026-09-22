@@ -1,0 +1,83 @@
+# Auto-generated rune definitions for pool 'seasonal_easter'. Safe to hand-edit; /runeadmin reload picks up changes.
+runes:
+  seasonal_easter_bunnys_charm:
+    name: Bunny's Charm
+    description: A seasonal relic (Easter) with festive flair.
+    rarity: RARE
+    category: SEASONAL
+    pool: seasonal_easter
+    trigger: ON_HIT
+    equipment:
+    - SWORD
+    - AXE
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 15
+      per-level: 2
+    effects:
+    - type: PARTICLE
+      particle: HEART
+      count: 8
+  seasonal_easter_basket_ward:
+    name: Basket Ward
+    description: A seasonal relic (Easter) with festive flair.
+    rarity: LEGENDARY
+    category: SEASONAL
+    pool: seasonal_easter
+    trigger: ON_ARMOR_EQUIP
+    equipment:
+    - ARMOR
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+      per-level: 2
+    effects:
+    - type: PARTICLE
+      particle: WITCH
+      count: 6
+  seasonal_easter_blossom_fortune:
+    name: Blossom Fortune
+    description: A seasonal relic (Easter) with festive flair.
+    rarity: RARE
+    category: SEASONAL
+    pool: seasonal_easter
+    trigger: ON_BLOCK_BREAK
+    equipment:
+    - PICKAXE
+    - HOE
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 15
+      per-level: 2
+    effects:
+    - type: ITEM_DROP
+      material: EMERALD
+      amount: 1
+  seasonal_easter_eggshell_rod:
+    name: Eggshell Rod
+    description: A seasonal relic (Easter) with festive flair.
+    rarity: LEGENDARY
+    category: SEASONAL
+    pool: seasonal_easter
+    trigger: ON_FISH
+    equipment:
+    - FISHING_ROD
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 10
+      per-level: 2
+    effects:
+    - type: XP
+      amount: 3

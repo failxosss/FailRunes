@@ -1,0 +1,10 @@
+# Requirement #21: default preference flags for new players. Players change their own via /runeprefs.
+defaults:
+  sounds: true
+  particles: true
+  messages: true
+  cooldown-popups: true
+  action-bar: false
+  titles: false
+  chat: true
+  visual: true

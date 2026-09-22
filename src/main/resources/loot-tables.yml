@@ -1,0 +1,8 @@
+# Requirement #64/#7: loot tables are built automatically at load time from each pool's runes and their
+# `weight` field in runes.yml (see PoolManager#buildLoot). This file documents the mechanism and lets you
+# override the weight of any single rune within its pool without touching its own definition file.
+#
+# Example override:
+# overrides:
+#   thunder: 25   # increases Thunder's pull within the 'rare' pool's tome/loot rolls
+overrides: {}

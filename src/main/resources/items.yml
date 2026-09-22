@@ -1,0 +1,15 @@
+# Requirement #55: ItemsAdder namespace + item IDs. All optional - vanilla fallback materials are used when
+# ItemsAdder is absent or an ID here has no matching custom item configured.
+namespace: failrunes
+items:
+  common_rune: failrunes:common_rune
+  rare_rune: failrunes:rare_rune
+  legendary_rune: failrunes:legendary_rune
+  mythical_rune: failrunes:mythical_rune
+  unidentified_rune: failrunes:unidentified_rune
+  lucky_gem: failrunes:lucky_gem
+  rune_identifier: failrunes:rune_identifier
+  cleansing_wand: failrunes:cleansing_wand
+  rune_incinerator: failrunes:rune_incinerator
+  rune_detector: failrunes:rune_detector
+  hidden_treasure: failrunes:hidden_treasure

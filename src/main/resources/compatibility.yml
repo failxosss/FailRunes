@@ -1,0 +1,7 @@
+# Toggle optional integrations independently of whether the plugin is installed (requirement #66).
+mcmmo: true
+worldguard: true
+vault: false
+itemsadder: true
+placeholderapi: true
+mythicmobs: true

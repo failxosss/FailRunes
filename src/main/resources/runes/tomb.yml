@@ -1,0 +1,160 @@
+# Auto-generated rune definitions for pool 'tomb'. Safe to hand-edit; /runeadmin reload picks up changes.
+runes:
+  sandbound_rare_relic:
+    name: Sandbound Relic
+    description: A relic of Pharaoh's Tomb that binds foes in ancient sand.
+    rarity: RARE
+    category: COMBAT
+    pool: tomb
+    trigger: ON_HIT
+    equipment: &id001
+    - SWORD
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 15
+      per-level: 2.5
+    effects:
+    - type: SLOW
+      ticks: 40
+      amplifier: 0
+  sandbound_legendary_relic:
+    name: Sandbound Relic
+    description: A relic of Pharaoh's Tomb that binds foes in ancient sand.
+    rarity: LEGENDARY
+    category: COMBAT
+    pool: tomb
+    trigger: ON_HIT
+    equipment: *id001
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 10
+      per-level: 2.5
+    effects:
+    - type: SLOW
+      ticks: 40
+      amplifier: 0
+  sarcophagal_rare_relic:
+    name: Sarcophagal Relic
+    description: A relic of Pharaoh's Tomb that wraps you in tomb-forged wards.
+    rarity: RARE
+    category: ARMOR
+    pool: tomb
+    trigger: ON_DAMAGE
+    equipment: &id002
+    - ARMOR
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 15
+      per-level: 2.5
+    effects:
+    - type: ABSORPTION
+      ticks: 60
+      amplifier: 0
+  sarcophagal_legendary_relic:
+    name: Sarcophagal Relic
+    description: A relic of Pharaoh's Tomb that wraps you in tomb-forged wards.
+    rarity: LEGENDARY
+    category: ARMOR
+    pool: tomb
+    trigger: ON_DAMAGE
+    equipment: *id002
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 10
+      per-level: 2.5
+    effects:
+    - type: ABSORPTION
+      ticks: 60
+      amplifier: 0
+  scarab_rare_relic:
+    name: Scarab Relic
+    description: A relic of Pharaoh's Tomb that scarabs skitter loose gold from the ruins.
+    rarity: RARE
+    category: LOOT
+    pool: tomb
+    trigger: ON_BLOCK_BREAK
+    equipment: &id003
+    - PICKAXE
+    - SHOVEL
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 15
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: GOLD_NUGGET
+      amount: 1
+  scarab_legendary_relic:
+    name: Scarab Relic
+    description: A relic of Pharaoh's Tomb that scarabs skitter loose gold from the ruins.
+    rarity: LEGENDARY
+    category: LOOT
+    pool: tomb
+    trigger: ON_BLOCK_BREAK
+    equipment: *id003
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 10
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: GOLD_NUGGET
+      amount: 1
+  pharaoh_rare_relic:
+    name: Pharaoh's Relic
+    description: A relic of Pharaoh's Tomb that channels a pharaoh's dying curse into XP.
+    rarity: RARE
+    category: COMBAT
+    pool: tomb
+    trigger: ON_KILL
+    equipment: &id004
+    - SWORD
+    - AXE
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 15
+      per-level: 2.5
+    effects:
+    - type: XP
+      amount: &id005
+        base: 4
+        per-level: 1
+  pharaoh_legendary_relic:
+    name: Pharaoh's Relic
+    description: A relic of Pharaoh's Tomb that channels a pharaoh's dying curse into XP.
+    rarity: LEGENDARY
+    category: COMBAT
+    pool: tomb
+    trigger: ON_KILL
+    equipment: *id004
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 10
+      per-level: 2.5
+    effects:
+    - type: XP
+      amount: *id005

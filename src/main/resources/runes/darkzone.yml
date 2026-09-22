@@ -1,0 +1,120 @@
+# Auto-generated rune definitions for pool 'darkzone'. Safe to hand-edit; /runeadmin reload picks up changes.
+runes:
+  voidforged_legendary_dark:
+    name: Voidforged Dark Relic
+    description: A relic of the Darkzone that corrupts foes with void rot.
+    rarity: LEGENDARY
+    category: COMBAT
+    pool: darkzone
+    trigger: ON_HIT
+    equipment: &id001
+    - SWORD
+    - AXE
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 8
+      per-level: 1.5
+    effects:
+    - type: WITHER
+      ticks: 40
+      amplifier: 0
+  voidforged_mythical_dark:
+    name: Voidforged Dark Relic
+    description: A relic of the Darkzone that corrupts foes with void rot.
+    rarity: MYTHICAL
+    category: COMBAT
+    pool: darkzone
+    trigger: ON_HIT
+    equipment: *id001
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 4
+      per-level: 1.5
+    effects:
+    - type: WITHER
+      ticks: 40
+      amplifier: 0
+  nightmare_legendary_dark:
+    name: Nightmare Dark Relic
+    description: A relic of the Darkzone that feeds on fear when you're near death.
+    rarity: LEGENDARY
+    category: ARMOR
+    pool: darkzone
+    trigger: ON_LOW_HEALTH
+    equipment: &id002
+    - ARMOR
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 8
+      per-level: 1.5
+    effects:
+    - type: STRENGTH
+      ticks: 60
+      amplifier: 1
+  nightmare_mythical_dark:
+    name: Nightmare Dark Relic
+    description: A relic of the Darkzone that feeds on fear when you're near death.
+    rarity: MYTHICAL
+    category: ARMOR
+    pool: darkzone
+    trigger: ON_LOW_HEALTH
+    equipment: *id002
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 4
+      per-level: 1.5
+    effects:
+    - type: STRENGTH
+      ticks: 60
+      amplifier: 1
+  umbral_legendary_dark:
+    name: Umbral Dark Relic
+    description: A relic of the Darkzone that scavenges shadow-touched scraps from the fallen.
+    rarity: LEGENDARY
+    category: LOOT
+    pool: darkzone
+    trigger: ON_MOB_KILL
+    equipment: &id003
+    - SWORD
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 8
+      per-level: 1.5
+    effects:
+    - type: ITEM_DROP
+      material: NETHERITE_SCRAP
+      amount: 1
+  umbral_mythical_dark:
+    name: Umbral Dark Relic
+    description: A relic of the Darkzone that scavenges shadow-touched scraps from the fallen.
+    rarity: MYTHICAL
+    category: LOOT
+    pool: darkzone
+    trigger: ON_MOB_KILL
+    equipment: *id003
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 4
+      per-level: 1.5
+    effects:
+    - type: ITEM_DROP
+      material: NETHERITE_SCRAP
+      amount: 1

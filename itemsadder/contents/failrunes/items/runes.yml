@@ -1,0 +1,7 @@
+# Example CustomStack definitions - duplicate this block per icon id in items.yml / runes/*.yml.
+items:
+  common_rune:
+    resource:
+      material: PAPER
+      generate: true
+    display_name: "&7Common Rune"

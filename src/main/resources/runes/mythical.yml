@@ -1,0 +1,3548 @@
+# Auto-generated rune definitions for pool 'mythical'. Safe to hand-edit; /runeadmin reload picks up changes.
+runes:
+  firestorm:
+    name: Firestorm
+    description: Erupts a storm of fire around you, burning every nearby enemy.
+    rarity: MYTHICAL
+    category: COMBAT
+    pool: mythical
+    trigger: ON_ATTACK
+    equipment:
+    - SWORD
+    - AXE
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: true
+    chance:
+      base: 6
+      per-level: 1
+    cooldown:
+      base: 15
+      per-level: -1
+    effects:
+    - type: EXPLOSION
+      power: 0
+      fire: true
+      break-blocks: false
+    - type: FIRE
+      target: NEARBY_MOBS
+      ticks:
+        base: 100
+        per-level: 20
+  reaper:
+    name: Reaper
+    description: Every mob you slay feeds your blade's hunger for more.
+    rarity: MYTHICAL
+    category: COMBAT
+    pool: mythical
+    trigger: ON_MOB_KILL
+    equipment:
+    - SWORD
+    - AXE
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: true
+    chance:
+      base: 100
+    cooldown:
+      base: 2
+    effects:
+    - type: STRENGTH
+      ticks:
+        base: 40
+        per-level: 8
+      amplifier: 0
+    - type: XP
+      amount:
+        base: 3
+        per-level: 1
+  dragon_slayer:
+    name: Dragon Slayer
+    description: Massive bonus damage against dragons and wardens.
+    rarity: MYTHICAL
+    category: COMBAT
+    pool: mythical
+    trigger: ON_HIT
+    equipment:
+    - SWORD
+    - AXE
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: true
+    chance:
+      base: 100
+    effects:
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 25
+        per-level: 6
+    conditions:
+    - target-type:ENDER_DRAGON
+  arrow_storm:
+    name: Arrow Storm
+    description: Unleashes a torrential volley of arrows in a wide arc.
+    rarity: MYTHICAL
+    category: WEAPONS
+    pool: mythical
+    trigger: ON_ATTACK
+    equipment:
+    - BOW
+    - CROSSBOW
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: true
+    chance:
+      base: 100
+    cooldown:
+      base: 18
+      per-level: -1.5
+    effects:
+    - type: MULTI_PROJECTILE
+      projectile: ARROW
+      count:
+        base: 8
+        per-level: 1
+      spread-degrees: 45
+    - type: SOUND
+      sound: ENTITY_ARROW_SHOOT
+      volume: 1.5
+  phoenix:
+    name: Phoenix
+    description: Rise from near-death with a burst of healing flame.
+    rarity: MYTHICAL
+    category: ARMOR
+    pool: mythical
+    trigger: ON_LOW_HEALTH
+    equipment:
+    - ARMOR
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: true
+    chance:
+      base: 100
+    cooldown:
+      base: 300
+    effects:
+    - type: HEAL
+      amount:
+        base: 8
+        per-level: 2
+    - type: FIRE
+      target: NEARBY_MOBS
+      ticks: 60
+    - type: TITLE
+      title: <gold>REBORN
+      subtitle: <gray>The Phoenix rises
+    conditions:
+    - health-below:10
+  second_chance:
+    name: Second Chance
+    description: Grants a shield of absorption hearts once your health is critical.
+    rarity: MYTHICAL
+    category: ARMOR
+    pool: mythical
+    trigger: ON_LOW_HEALTH
+    equipment:
+    - ARMOR
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: true
+    chance:
+      base: 100
+    cooldown:
+      base: 240
+    effects:
+    - type: ABSORPTION
+      ticks:
+        base: 200
+        per-level: 40
+      amplifier:
+        base: 1
+        per-level: 0.5
+    conditions:
+    - health-below:15
+  ancient_pickaxe:
+    name: Ancient Pickaxe
+    description: A relic pickaxe that occasionally unearths forgotten treasure.
+    rarity: MYTHICAL
+    category: MINING
+    pool: mythical
+    trigger: ON_BLOCK_BREAK
+    equipment:
+    - PICKAXE
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: true
+    chance:
+      base: 4
+      per-level: 0.8
+    effects:
+    - type: LOOT
+      pool: tomb
+  demonic_axe:
+    name: Demonic Axe
+    description: Infernal power surges through this axe with every swing.
+    rarity: MYTHICAL
+    category: LOGGING
+    pool: mythical
+    trigger: ON_BLOCK_BREAK
+    equipment:
+    - AXE
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: true
+    chance:
+      base: 5
+      per-level: 1
+    effects:
+    - type: ITEM_DROP
+      material: COAL
+      amount:
+        base: 2
+        per-level: 1
+    - type: PARTICLE
+      particle: SMOKE
+      count: 8
+  holy_cultivation:
+    name: Holy Cultivation
+    description: Blesses your farmland, greatly boosting crop yield.
+    rarity: MYTHICAL
+    category: FARMING
+    pool: mythical
+    trigger: ON_BLOCK_BREAK
+    equipment:
+    - HOE
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: true
+    chance:
+      base: 100
+    cooldown:
+      base: 3
+    effects:
+    - type: ITEM_DROP
+      material: WHEAT
+      amount:
+        base: 4
+        per-level: 1
+    - type: PARTICLE
+      particle: END_ROD
+      count: 10
+  miners_luck:
+    name: Miner's Luck
+    description: Blesses your pickaxe with extraordinary fortune.
+    rarity: MYTHICAL
+    category: MINING
+    pool: mythical
+    trigger: ON_BLOCK_BREAK
+    equipment:
+    - PICKAXE
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: true
+    chance:
+      base: 100
+    cooldown:
+      base: 2
+    effects:
+    - type: LOOT
+      pool: legendary
+  confidential_contraband:
+    name: Confidential Contraband
+    description: Rumor has it something valuable slips into your pocket now and then.
+    rarity: MYTHICAL
+    category: ECONOMY
+    pool: mythical
+    trigger: ON_BLOCK_BREAK
+    equipment:
+    - PICKAXE
+    - SHOVEL
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: true
+    chance:
+      base: 3
+      per-level: 0.6
+    effects:
+    - type: MONEY
+      amount:
+        base: 50
+        per-level: 15
+  celestial_pickaxe:
+    name: Celestial Pickaxe
+    description: Blessed by the stars; blocks shatter in a shower of light.
+    rarity: MYTHICAL
+    category: MINING
+    pool: mythical
+    trigger: ON_BLOCK_BREAK
+    equipment:
+    - PICKAXE
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: true
+    chance:
+      base: 100
+    effects:
+    - type: PARTICLE
+      particle: END_ROD
+      count: 12
+    - type: ITEM_DROP
+      material: AMETHYST_SHARD
+      amount:
+        base: 1
+        per-level: 0.5
+  phantom_blocks:
+    name: Phantom Blocks
+    description: Placed blocks briefly turn intangible to allies.
+    rarity: MYTHICAL
+    category: UTILITY
+    pool: mythical
+    trigger: ON_BLOCK_PLACE
+    equipment:
+    - ANY
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: true
+    chance:
+      base: 100
+    effects:
+    - type: PARTICLE
+      particle: PORTAL
+      count: 10
+  midas_touch:
+    name: Midas Touch
+    description: Everything you mine has a chance to turn to gold.
+    rarity: MYTHICAL
+    category: ECONOMY
+    pool: mythical
+    trigger: ON_BLOCK_BREAK
+    equipment:
+    - PICKAXE
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: true
+    chance:
+      base: 4
+      per-level: 0.8
+    effects:
+    - type: ITEM_DROP
+      material: GOLD_NUGGET
+      amount:
+        base: 3
+        per-level: 1
+  void_touched:
+    name: Void Touched
+    description: The End's strange energies cling to your pickaxe.
+    rarity: MYTHICAL
+    category: MINING
+    pool: mythical
+    trigger: ON_BLOCK_BREAK
+    equipment:
+    - PICKAXE
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: true
+    chance:
+      base: 5
+      per-level: 1
+    effects:
+    - type: ITEM_DROP
+      material: CHORUS_FRUIT
+      amount: 1
+    conditions:
+    - world-type-end
+  obliterate:
+    name: Obliterate
+    description: Critical hits detonate outward in a shockwave.
+    rarity: MYTHICAL
+    category: COMBAT
+    pool: mythical
+    trigger: ON_CRITICAL
+    equipment:
+    - SWORD
+    - AXE
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: true
+    chance:
+      base: 100
+    cooldown:
+      base: 10
+    effects:
+    - type: EXPLOSION
+      power: 0
+      fire: false
+      break-blocks: false
+    - type: AREA_DAMAGE
+      amount:
+        base: 5
+        per-level: 1.2
+      radius: 4
+  last_word:
+    name: Last Word
+    description: Detonates a final explosive strike upon your own death.
+    rarity: MYTHICAL
+    category: COMBAT
+    pool: mythical
+    trigger: ON_DEATH
+    equipment:
+    - SWORD
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: true
+    chance:
+      base: 100
+    effects:
+    - type: AREA_DAMAGE
+      amount:
+        base: 10
+        per-level: 2
+      radius: 5
+    - type: EXPLOSION
+      power: 0
+      fire: false
+      break-blocks: false
+  ascended_ember_blade:
+    name: Ascended Ember Blade
+    description: Your blade burns enemies with ember energy on hit.
+    rarity: MYTHICAL
+    category: WEAPONS
+    pool: mythical
+    trigger: ON_HIT
+    equipment: &id002
+    - SWORD
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 10
+      per-level: 3
+    effects:
+    - type: FIRE
+      ticks: &id001
+        base: 40
+        per-level: 8
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 6
+        per-level: 1.5
+  ascended_ember_axe:
+    name: Ascended Ember Axe
+    description: Your axe burns enemies with ember energy on hit.
+    rarity: MYTHICAL
+    category: WEAPONS
+    pool: mythical
+    trigger: ON_HIT
+    equipment: &id003
+    - AXE
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 10
+      per-level: 3
+    effects:
+    - type: FIRE
+      ticks: *id001
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 6
+        per-level: 1.5
+  ascended_ember_bow:
+    name: Ascended Ember Bow
+    description: Your bow burns enemies with ember energy on hit.
+    rarity: MYTHICAL
+    category: WEAPONS
+    pool: mythical
+    trigger: ON_ATTACK
+    equipment: &id006
+    - BOW
+    - CROSSBOW
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 10
+      per-level: 3
+    effects:
+    - type: FIRE
+      ticks: *id001
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 6
+        per-level: 1.5
+  ascended_ember_trident:
+    name: Ascended Ember Trident
+    description: Your trident burns enemies with ember energy on hit.
+    rarity: MYTHICAL
+    category: WEAPONS
+    pool: mythical
+    trigger: ON_HIT
+    equipment: &id007
+    - TRIDENT
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 10
+      per-level: 3
+    effects:
+    - type: FIRE
+      ticks: *id001
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 6
+        per-level: 1.5
+  ascended_frost_blade:
+    name: Ascended Frost Blade
+    description: Your blade chills enemies with frost energy on hit.
+    rarity: MYTHICAL
+    category: WEAPONS
+    pool: mythical
+    trigger: ON_HIT
+    equipment: *id002
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 10
+      per-level: 3
+    effects:
+    - type: SLOW
+      ticks: &id004
+        base: 40
+        per-level: 8
+      amplifier: &id005
+        base: 0
+        per-level: 0.2
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 6
+        per-level: 1.5
+  ascended_frost_axe:
+    name: Ascended Frost Axe
+    description: Your axe chills enemies with frost energy on hit.
+    rarity: MYTHICAL
+    category: WEAPONS
+    pool: mythical
+    trigger: ON_HIT
+    equipment: *id003
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 10
+      per-level: 3
+    effects:
+    - type: SLOW
+      ticks: *id004
+      amplifier: *id005
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 6
+        per-level: 1.5
+  ascended_frost_bow:
+    name: Ascended Frost Bow
+    description: Your bow chills enemies with frost energy on hit.
+    rarity: MYTHICAL
+    category: WEAPONS
+    pool: mythical
+    trigger: ON_ATTACK
+    equipment: *id006
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 10
+      per-level: 3
+    effects:
+    - type: SLOW
+      ticks: *id004
+      amplifier: *id005
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 6
+        per-level: 1.5
+  ascended_frost_trident:
+    name: Ascended Frost Trident
+    description: Your trident chills enemies with frost energy on hit.
+    rarity: MYTHICAL
+    category: WEAPONS
+    pool: mythical
+    trigger: ON_HIT
+    equipment: *id007
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 10
+      per-level: 3
+    effects:
+    - type: SLOW
+      ticks: *id004
+      amplifier: *id005
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 6
+        per-level: 1.5
+  ascended_toxic_blade:
+    name: Ascended Toxic Blade
+    description: Your blade poisons enemies with toxic energy on hit.
+    rarity: MYTHICAL
+    category: WEAPONS
+    pool: mythical
+    trigger: ON_HIT
+    equipment: *id002
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 10
+      per-level: 3
+    effects:
+    - type: POISON
+      ticks: &id008
+        base: 40
+        per-level: 8
+      amplifier: 0
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 6
+        per-level: 1.5
+  ascended_toxic_axe:
+    name: Ascended Toxic Axe
+    description: Your axe poisons enemies with toxic energy on hit.
+    rarity: MYTHICAL
+    category: WEAPONS
+    pool: mythical
+    trigger: ON_HIT
+    equipment: *id003
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 10
+      per-level: 3
+    effects:
+    - type: POISON
+      ticks: *id008
+      amplifier: 0
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 6
+        per-level: 1.5
+  ascended_toxic_bow:
+    name: Ascended Toxic Bow
+    description: Your bow poisons enemies with toxic energy on hit.
+    rarity: MYTHICAL
+    category: WEAPONS
+    pool: mythical
+    trigger: ON_ATTACK
+    equipment: *id006
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 10
+      per-level: 3
+    effects:
+    - type: POISON
+      ticks: *id008
+      amplifier: 0
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 6
+        per-level: 1.5
+  ascended_toxic_trident:
+    name: Ascended Toxic Trident
+    description: Your trident poisons enemies with toxic energy on hit.
+    rarity: MYTHICAL
+    category: WEAPONS
+    pool: mythical
+    trigger: ON_HIT
+    equipment: *id007
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 10
+      per-level: 3
+    effects:
+    - type: POISON
+      ticks: *id008
+      amplifier: 0
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 6
+        per-level: 1.5
+  ascended_wither_blade:
+    name: Ascended Wither Blade
+    description: Your blade withers enemies with wither energy on hit.
+    rarity: MYTHICAL
+    category: WEAPONS
+    pool: mythical
+    trigger: ON_HIT
+    equipment: *id002
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 10
+      per-level: 3
+    effects:
+    - type: WITHER
+      ticks: &id009
+        base: 30
+        per-level: 6
+      amplifier: 0
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 6
+        per-level: 1.5
+  ascended_wither_axe:
+    name: Ascended Wither Axe
+    description: Your axe withers enemies with wither energy on hit.
+    rarity: MYTHICAL
+    category: WEAPONS
+    pool: mythical
+    trigger: ON_HIT
+    equipment: *id003
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 10
+      per-level: 3
+    effects:
+    - type: WITHER
+      ticks: *id009
+      amplifier: 0
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 6
+        per-level: 1.5
+  ascended_wither_bow:
+    name: Ascended Wither Bow
+    description: Your bow withers enemies with wither energy on hit.
+    rarity: MYTHICAL
+    category: WEAPONS
+    pool: mythical
+    trigger: ON_ATTACK
+    equipment: *id006
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 10
+      per-level: 3
+    effects:
+    - type: WITHER
+      ticks: *id009
+      amplifier: 0
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 6
+        per-level: 1.5
+  ascended_wither_trident:
+    name: Ascended Wither Trident
+    description: Your trident withers enemies with wither energy on hit.
+    rarity: MYTHICAL
+    category: WEAPONS
+    pool: mythical
+    trigger: ON_HIT
+    equipment: *id007
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 10
+      per-level: 3
+    effects:
+    - type: WITHER
+      ticks: *id009
+      amplifier: 0
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 6
+        per-level: 1.5
+  ascended_void_blade:
+    name: Ascended Void Blade
+    description: Your blade warps enemies with void energy on hit.
+    rarity: MYTHICAL
+    category: WEAPONS
+    pool: mythical
+    trigger: ON_HIT
+    equipment: *id002
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 10
+      per-level: 3
+    effects:
+    - type: SLOW
+      ticks: &id010
+        base: 30
+        per-level: 6
+      amplifier: 1
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 6
+        per-level: 1.5
+  ascended_void_axe:
+    name: Ascended Void Axe
+    description: Your axe warps enemies with void energy on hit.
+    rarity: MYTHICAL
+    category: WEAPONS
+    pool: mythical
+    trigger: ON_HIT
+    equipment: *id003
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 10
+      per-level: 3
+    effects:
+    - type: SLOW
+      ticks: *id010
+      amplifier: 1
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 6
+        per-level: 1.5
+  ascended_void_bow:
+    name: Ascended Void Bow
+    description: Your bow warps enemies with void energy on hit.
+    rarity: MYTHICAL
+    category: WEAPONS
+    pool: mythical
+    trigger: ON_ATTACK
+    equipment: *id006
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 10
+      per-level: 3
+    effects:
+    - type: SLOW
+      ticks: *id010
+      amplifier: 1
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 6
+        per-level: 1.5
+  ascended_void_trident:
+    name: Ascended Void Trident
+    description: Your trident warps enemies with void energy on hit.
+    rarity: MYTHICAL
+    category: WEAPONS
+    pool: mythical
+    trigger: ON_HIT
+    equipment: *id007
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 10
+      per-level: 3
+    effects:
+    - type: SLOW
+      ticks: *id010
+      amplifier: 1
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 6
+        per-level: 1.5
+  ascended_storm_blade:
+    name: Ascended Storm Blade
+    description: Your blade shocks enemies with storm energy on hit.
+    rarity: MYTHICAL
+    category: WEAPONS
+    pool: mythical
+    trigger: ON_HIT
+    equipment: *id002
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 10
+      per-level: 3
+    effects:
+    - type: LIGHTNING
+      target: TARGET
+      damage-only: true
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 6
+        per-level: 1.5
+  ascended_storm_axe:
+    name: Ascended Storm Axe
+    description: Your axe shocks enemies with storm energy on hit.
+    rarity: MYTHICAL
+    category: WEAPONS
+    pool: mythical
+    trigger: ON_HIT
+    equipment: *id003
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 10
+      per-level: 3
+    effects:
+    - type: LIGHTNING
+      target: TARGET
+      damage-only: true
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 6
+        per-level: 1.5
+  ascended_storm_bow:
+    name: Ascended Storm Bow
+    description: Your bow shocks enemies with storm energy on hit.
+    rarity: MYTHICAL
+    category: WEAPONS
+    pool: mythical
+    trigger: ON_ATTACK
+    equipment: *id006
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 10
+      per-level: 3
+    effects:
+    - type: LIGHTNING
+      target: TARGET
+      damage-only: true
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 6
+        per-level: 1.5
+  ascended_storm_trident:
+    name: Ascended Storm Trident
+    description: Your trident shocks enemies with storm energy on hit.
+    rarity: MYTHICAL
+    category: WEAPONS
+    pool: mythical
+    trigger: ON_HIT
+    equipment: *id007
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 10
+      per-level: 3
+    effects:
+    - type: LIGHTNING
+      target: TARGET
+      damage-only: true
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 6
+        per-level: 1.5
+  master_ore:
+    name: Master Ore
+    description: Master proficiency grants bonus redstone while working.
+    rarity: MYTHICAL
+    category: MINING
+    pool: mythical
+    trigger: ON_BLOCK_BREAK
+    equipment:
+    - PICKAXE
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 10
+      per-level: 3
+    effects:
+    - type: ITEM_DROP
+      material: REDSTONE
+      amount:
+        base: 4
+        per-level: 1.0
+  master_timber:
+    name: Master Timber
+    description: Master proficiency grants bonus dark oak log while working.
+    rarity: MYTHICAL
+    category: LOGGING
+    pool: mythical
+    trigger: ON_BLOCK_BREAK
+    equipment:
+    - AXE
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 10
+      per-level: 3
+    effects:
+    - type: ITEM_DROP
+      material: DARK_OAK_LOG
+      amount:
+        base: 4
+        per-level: 1.0
+  master_harvest:
+    name: Master Harvest
+    description: Master proficiency grants bonus beetroot while working.
+    rarity: MYTHICAL
+    category: FARMING
+    pool: mythical
+    trigger: ON_BLOCK_BREAK
+    equipment:
+    - HOE
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 10
+      per-level: 3
+    effects:
+    - type: ITEM_DROP
+      material: BEETROOT
+      amount:
+        base: 4
+        per-level: 1.0
+  master_excavation:
+    name: Master Excavation
+    description: Master proficiency grants bonus sand while working.
+    rarity: MYTHICAL
+    category: DIGGING
+    pool: mythical
+    trigger: ON_BLOCK_BREAK
+    equipment:
+    - SHOVEL
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 10
+      per-level: 3
+    effects:
+    - type: ITEM_DROP
+      material: SAND
+      amount:
+        base: 4
+        per-level: 1.0
+  master_angler:
+    name: Master Angler
+    description: Master proficiency grants bonus ink sac while working.
+    rarity: MYTHICAL
+    category: FISHING
+    pool: mythical
+    trigger: ON_FISH
+    equipment:
+    - FISHING_ROD
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 10
+      per-level: 3
+    effects:
+    - type: ITEM_DROP
+      material: INK_SAC
+      amount:
+        base: 4
+        per-level: 1.0
+  ascended_vigor_helm:
+    name: Ascended Vigor Helm
+    description: Your helm channels vigor, triggered by combat and movement.
+    rarity: MYTHICAL
+    category: ARMOR
+    pool: mythical
+    trigger: ON_ARMOR_EQUIP
+    equipment: &id012
+    - HELMET
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 6
+    effects:
+    - type: STRENGTH
+      ticks: &id011
+        base: 60
+        per-level: 12
+      amplifier: 0
+  ascended_vigor_plate:
+    name: Ascended Vigor Plate
+    description: Your plate channels vigor, triggered by combat and movement.
+    rarity: MYTHICAL
+    category: ARMOR
+    pool: mythical
+    trigger: ON_ARMOR_EQUIP
+    equipment: &id013
+    - CHESTPLATE
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 6
+    effects:
+    - type: STRENGTH
+      ticks: *id011
+      amplifier: 0
+  ascended_vigor_greaves:
+    name: Ascended Vigor Greaves
+    description: Your greaves channels vigor, triggered by combat and movement.
+    rarity: MYTHICAL
+    category: ARMOR
+    pool: mythical
+    trigger: ON_ARMOR_EQUIP
+    equipment: &id015
+    - LEGGINGS
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 6
+    effects:
+    - type: STRENGTH
+      ticks: *id011
+      amplifier: 0
+  ascended_vigor_treads:
+    name: Ascended Vigor Treads
+    description: Your treads channels vigor, triggered by combat and movement.
+    rarity: MYTHICAL
+    category: ARMOR
+    pool: mythical
+    trigger: ON_ARMOR_EQUIP
+    equipment: &id016
+    - BOOTS
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 6
+    effects:
+    - type: STRENGTH
+      ticks: *id011
+      amplifier: 0
+  ascended_haste_helm:
+    name: Ascended Haste Helm
+    description: Your helm channels haste, triggered by combat and movement.
+    rarity: MYTHICAL
+    category: ARMOR
+    pool: mythical
+    trigger: ON_SPRINT
+    equipment: *id012
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 6
+    effects:
+    - type: SPEED
+      ticks: &id014
+        base: 60
+        per-level: 12
+      amplifier: 0
+  ascended_haste_plate:
+    name: Ascended Haste Plate
+    description: Your plate channels haste, triggered by combat and movement.
+    rarity: MYTHICAL
+    category: ARMOR
+    pool: mythical
+    trigger: ON_SPRINT
+    equipment: *id013
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 6
+    effects:
+    - type: SPEED
+      ticks: *id014
+      amplifier: 0
+  ascended_haste_greaves:
+    name: Ascended Haste Greaves
+    description: Your greaves channels haste, triggered by combat and movement.
+    rarity: MYTHICAL
+    category: ARMOR
+    pool: mythical
+    trigger: ON_SPRINT
+    equipment: *id015
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 6
+    effects:
+    - type: SPEED
+      ticks: *id014
+      amplifier: 0
+  ascended_haste_treads:
+    name: Ascended Haste Treads
+    description: Your treads channels haste, triggered by combat and movement.
+    rarity: MYTHICAL
+    category: ARMOR
+    pool: mythical
+    trigger: ON_SPRINT
+    equipment: *id016
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 6
+    effects:
+    - type: SPEED
+      ticks: *id014
+      amplifier: 0
+  ascended_resolve_helm:
+    name: Ascended Resolve Helm
+    description: Your helm channels resolve, triggered by combat and movement.
+    rarity: MYTHICAL
+    category: ARMOR
+    pool: mythical
+    trigger: ON_DAMAGE
+    equipment: *id012
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 6
+    effects:
+    - type: ABSORPTION
+      ticks: &id017
+        base: 60
+        per-level: 12
+      amplifier: 0
+  ascended_resolve_plate:
+    name: Ascended Resolve Plate
+    description: Your plate channels resolve, triggered by combat and movement.
+    rarity: MYTHICAL
+    category: ARMOR
+    pool: mythical
+    trigger: ON_DAMAGE
+    equipment: *id013
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 6
+    effects:
+    - type: ABSORPTION
+      ticks: *id017
+      amplifier: 0
+  ascended_resolve_greaves:
+    name: Ascended Resolve Greaves
+    description: Your greaves channels resolve, triggered by combat and movement.
+    rarity: MYTHICAL
+    category: ARMOR
+    pool: mythical
+    trigger: ON_DAMAGE
+    equipment: *id015
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 6
+    effects:
+    - type: ABSORPTION
+      ticks: *id017
+      amplifier: 0
+  ascended_resolve_treads:
+    name: Ascended Resolve Treads
+    description: Your treads channels resolve, triggered by combat and movement.
+    rarity: MYTHICAL
+    category: ARMOR
+    pool: mythical
+    trigger: ON_DAMAGE
+    equipment: *id016
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 6
+    effects:
+    - type: ABSORPTION
+      ticks: *id017
+      amplifier: 0
+  ascended_renewal_helm:
+    name: Ascended Renewal Helm
+    description: Your helm channels renewal, triggered by combat and movement.
+    rarity: MYTHICAL
+    category: ARMOR
+    pool: mythical
+    trigger: ON_LOW_HEALTH
+    equipment: *id012
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 6
+    effects:
+    - type: REGENERATION
+      ticks: &id018
+        base: 60
+        per-level: 12
+      amplifier: 0
+    conditions:
+    - health-below:40
+  ascended_renewal_plate:
+    name: Ascended Renewal Plate
+    description: Your plate channels renewal, triggered by combat and movement.
+    rarity: MYTHICAL
+    category: ARMOR
+    pool: mythical
+    trigger: ON_LOW_HEALTH
+    equipment: *id013
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 6
+    effects:
+    - type: REGENERATION
+      ticks: *id018
+      amplifier: 0
+    conditions:
+    - health-below:40
+  ascended_renewal_greaves:
+    name: Ascended Renewal Greaves
+    description: Your greaves channels renewal, triggered by combat and movement.
+    rarity: MYTHICAL
+    category: ARMOR
+    pool: mythical
+    trigger: ON_LOW_HEALTH
+    equipment: *id015
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 6
+    effects:
+    - type: REGENERATION
+      ticks: *id018
+      amplifier: 0
+    conditions:
+    - health-below:40
+  ascended_renewal_treads:
+    name: Ascended Renewal Treads
+    description: Your treads channels renewal, triggered by combat and movement.
+    rarity: MYTHICAL
+    category: ARMOR
+    pool: mythical
+    trigger: ON_LOW_HEALTH
+    equipment: *id016
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 6
+    effects:
+    - type: REGENERATION
+      ticks: *id018
+      amplifier: 0
+    conditions:
+    - health-below:40
+  ascended_scorching_pick:
+    name: Ascended Scorching Pick
+    description: Your pick leaves scorched bonus coal behind as you work.
+    rarity: MYTHICAL
+    category: MINING
+    pool: mythical
+    trigger: ON_BLOCK_BREAK
+    equipment: &id019
+    - PICKAXE
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 8
+      per-level: 3
+    effects:
+    - type: ITEM_DROP
+      material: COAL
+      amount: &id020
+        base: 1
+        per-level: 0.3
+  ascended_glacial_pick:
+    name: Ascended Glacial Pick
+    description: Your pick chills the surrounding area as you work.
+    rarity: MYTHICAL
+    category: MINING
+    pool: mythical
+    trigger: ON_BLOCK_BREAK
+    equipment: *id019
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 8
+      per-level: 3
+    effects:
+    - type: PARTICLE
+      particle: SNOWFLAKE
+      count: 6
+  ascended_verdant_pick:
+    name: Ascended Verdant Pick
+    description: Your pick channels nature's bounty into XP as you work.
+    rarity: MYTHICAL
+    category: MINING
+    pool: mythical
+    trigger: ON_BLOCK_BREAK
+    equipment: *id019
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 8
+      per-level: 3
+    effects:
+    - type: XP
+      amount: &id022
+        base: 2
+        per-level: 0.5
+  ascended_gilded_pick:
+    name: Ascended Gilded Pick
+    description: Your pick leaves a trace of gold value as you work.
+    rarity: MYTHICAL
+    category: MINING
+    pool: mythical
+    trigger: ON_BLOCK_BREAK
+    equipment: *id019
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 8
+      per-level: 3
+    effects:
+    - type: MONEY
+      amount: &id023
+        base: 2
+        per-level: 0.6
+  ascended_scorching_shovel:
+    name: Ascended Scorching Shovel
+    description: Your shovel leaves scorched bonus coal behind as you work.
+    rarity: MYTHICAL
+    category: DIGGING
+    pool: mythical
+    trigger: ON_BLOCK_BREAK
+    equipment: &id021
+    - SHOVEL
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 8
+      per-level: 3
+    effects:
+    - type: ITEM_DROP
+      material: COAL
+      amount: *id020
+  ascended_glacial_shovel:
+    name: Ascended Glacial Shovel
+    description: Your shovel chills the surrounding area as you work.
+    rarity: MYTHICAL
+    category: DIGGING
+    pool: mythical
+    trigger: ON_BLOCK_BREAK
+    equipment: *id021
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 8
+      per-level: 3
+    effects:
+    - type: PARTICLE
+      particle: SNOWFLAKE
+      count: 6
+  ascended_verdant_shovel:
+    name: Ascended Verdant Shovel
+    description: Your shovel channels nature's bounty into XP as you work.
+    rarity: MYTHICAL
+    category: DIGGING
+    pool: mythical
+    trigger: ON_BLOCK_BREAK
+    equipment: *id021
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 8
+      per-level: 3
+    effects:
+    - type: XP
+      amount: *id022
+  ascended_gilded_shovel:
+    name: Ascended Gilded Shovel
+    description: Your shovel leaves a trace of gold value as you work.
+    rarity: MYTHICAL
+    category: DIGGING
+    pool: mythical
+    trigger: ON_BLOCK_BREAK
+    equipment: *id021
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 8
+      per-level: 3
+    effects:
+    - type: MONEY
+      amount: *id023
+  ascended_scorching_hoe:
+    name: Ascended Scorching Hoe
+    description: Your hoe leaves scorched bonus coal behind as you work.
+    rarity: MYTHICAL
+    category: FARMING
+    pool: mythical
+    trigger: ON_BLOCK_BREAK
+    equipment: &id024
+    - HOE
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 8
+      per-level: 3
+    effects:
+    - type: ITEM_DROP
+      material: COAL
+      amount: *id020
+  ascended_glacial_hoe:
+    name: Ascended Glacial Hoe
+    description: Your hoe chills the surrounding area as you work.
+    rarity: MYTHICAL
+    category: FARMING
+    pool: mythical
+    trigger: ON_BLOCK_BREAK
+    equipment: *id024
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 8
+      per-level: 3
+    effects:
+    - type: PARTICLE
+      particle: SNOWFLAKE
+      count: 6
+  ascended_verdant_hoe:
+    name: Ascended Verdant Hoe
+    description: Your hoe channels nature's bounty into XP as you work.
+    rarity: MYTHICAL
+    category: FARMING
+    pool: mythical
+    trigger: ON_BLOCK_BREAK
+    equipment: *id024
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 8
+      per-level: 3
+    effects:
+    - type: XP
+      amount: *id022
+  ascended_gilded_hoe:
+    name: Ascended Gilded Hoe
+    description: Your hoe leaves a trace of gold value as you work.
+    rarity: MYTHICAL
+    category: FARMING
+    pool: mythical
+    trigger: ON_BLOCK_BREAK
+    equipment: *id024
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 8
+      per-level: 3
+    effects:
+    - type: MONEY
+      amount: *id023
+  ascended_scorching_rod:
+    name: Ascended Scorching Rod
+    description: Your rod leaves scorched bonus coal behind as you work.
+    rarity: MYTHICAL
+    category: FISHING
+    pool: mythical
+    trigger: ON_FISH
+    equipment: &id025
+    - FISHING_ROD
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 8
+      per-level: 3
+    effects:
+    - type: ITEM_DROP
+      material: COAL
+      amount: *id020
+  ascended_glacial_rod:
+    name: Ascended Glacial Rod
+    description: Your rod chills the surrounding area as you work.
+    rarity: MYTHICAL
+    category: FISHING
+    pool: mythical
+    trigger: ON_FISH
+    equipment: *id025
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 8
+      per-level: 3
+    effects:
+    - type: PARTICLE
+      particle: SNOWFLAKE
+      count: 6
+  ascended_verdant_rod:
+    name: Ascended Verdant Rod
+    description: Your rod channels nature's bounty into XP as you work.
+    rarity: MYTHICAL
+    category: FISHING
+    pool: mythical
+    trigger: ON_FISH
+    equipment: *id025
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 8
+      per-level: 3
+    effects:
+    - type: XP
+      amount: *id022
+  ascended_gilded_rod:
+    name: Ascended Gilded Rod
+    description: Your rod leaves a trace of gold value as you work.
+    rarity: MYTHICAL
+    category: FISHING
+    pool: mythical
+    trigger: ON_FISH
+    equipment: *id025
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 8
+      per-level: 3
+    effects:
+    - type: MONEY
+      amount: *id023
+  virtuoso_coal_finder:
+    name: Virtuoso's Coal Finder
+    description: A virtuoso's touch yields bonus coal.
+    rarity: MYTHICAL
+    category: MINING
+    pool: mythical
+    trigger: ON_BLOCK_BREAK
+    equipment: &id026
+    - PICKAXE
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 7
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: COAL
+      amount:
+        base: 4
+        per-level: 0.8
+  virtuoso_iron_ore_finder:
+    name: Virtuoso's Iron Ore Finder
+    description: A virtuoso's touch yields bonus iron ore.
+    rarity: MYTHICAL
+    category: MINING
+    pool: mythical
+    trigger: ON_BLOCK_BREAK
+    equipment: *id026
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 7
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: IRON_ORE
+      amount:
+        base: 4
+        per-level: 0.8
+  virtuoso_gold_ore_finder:
+    name: Virtuoso's Gold Ore Finder
+    description: A virtuoso's touch yields bonus gold ore.
+    rarity: MYTHICAL
+    category: MINING
+    pool: mythical
+    trigger: ON_BLOCK_BREAK
+    equipment: *id026
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 7
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: GOLD_ORE
+      amount:
+        base: 4
+        per-level: 0.8
+  virtuoso_diamond_finder:
+    name: Virtuoso's Diamond Finder
+    description: A virtuoso's touch yields bonus diamond.
+    rarity: MYTHICAL
+    category: MINING
+    pool: mythical
+    trigger: ON_BLOCK_BREAK
+    equipment: *id026
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 7
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: DIAMOND
+      amount:
+        base: 4
+        per-level: 0.8
+  virtuoso_emerald_ore_finder:
+    name: Virtuoso's Emerald Ore Finder
+    description: A virtuoso's touch yields bonus emerald ore.
+    rarity: MYTHICAL
+    category: MINING
+    pool: mythical
+    trigger: ON_BLOCK_BREAK
+    equipment: *id026
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 7
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: EMERALD_ORE
+      amount:
+        base: 4
+        per-level: 0.8
+  virtuoso_redstone_finder:
+    name: Virtuoso's Redstone Finder
+    description: A virtuoso's touch yields bonus redstone.
+    rarity: MYTHICAL
+    category: MINING
+    pool: mythical
+    trigger: ON_BLOCK_BREAK
+    equipment: *id026
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 7
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: REDSTONE
+      amount:
+        base: 4
+        per-level: 0.8
+  virtuoso_lapis_ore_finder:
+    name: Virtuoso's Lapis Ore Finder
+    description: A virtuoso's touch yields bonus lapis ore.
+    rarity: MYTHICAL
+    category: MINING
+    pool: mythical
+    trigger: ON_BLOCK_BREAK
+    equipment: *id026
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 7
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: LAPIS_ORE
+      amount:
+        base: 4
+        per-level: 0.8
+  virtuoso_copper_ore_finder:
+    name: Virtuoso's Copper Ore Finder
+    description: A virtuoso's touch yields bonus copper ore.
+    rarity: MYTHICAL
+    category: MINING
+    pool: mythical
+    trigger: ON_BLOCK_BREAK
+    equipment: *id026
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 7
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: COPPER_ORE
+      amount:
+        base: 4
+        per-level: 0.8
+  virtuoso_oak_log_finder:
+    name: Virtuoso's Oak Log Finder
+    description: A virtuoso's touch yields bonus oak log.
+    rarity: MYTHICAL
+    category: LOGGING
+    pool: mythical
+    trigger: ON_BLOCK_BREAK
+    equipment: &id027
+    - AXE
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 7
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: OAK_LOG
+      amount:
+        base: 4
+        per-level: 0.8
+  virtuoso_spruce_log_finder:
+    name: Virtuoso's Spruce Log Finder
+    description: A virtuoso's touch yields bonus spruce log.
+    rarity: MYTHICAL
+    category: LOGGING
+    pool: mythical
+    trigger: ON_BLOCK_BREAK
+    equipment: *id027
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 7
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: SPRUCE_LOG
+      amount:
+        base: 4
+        per-level: 0.8
+  virtuoso_birch_log_finder:
+    name: Virtuoso's Birch Log Finder
+    description: A virtuoso's touch yields bonus birch log.
+    rarity: MYTHICAL
+    category: LOGGING
+    pool: mythical
+    trigger: ON_BLOCK_BREAK
+    equipment: *id027
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 7
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: BIRCH_LOG
+      amount:
+        base: 4
+        per-level: 0.8
+  virtuoso_jungle_log_finder:
+    name: Virtuoso's Jungle Log Finder
+    description: A virtuoso's touch yields bonus jungle log.
+    rarity: MYTHICAL
+    category: LOGGING
+    pool: mythical
+    trigger: ON_BLOCK_BREAK
+    equipment: *id027
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 7
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: JUNGLE_LOG
+      amount:
+        base: 4
+        per-level: 0.8
+  virtuoso_acacia_log_finder:
+    name: Virtuoso's Acacia Log Finder
+    description: A virtuoso's touch yields bonus acacia log.
+    rarity: MYTHICAL
+    category: LOGGING
+    pool: mythical
+    trigger: ON_BLOCK_BREAK
+    equipment: *id027
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 7
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: ACACIA_LOG
+      amount:
+        base: 4
+        per-level: 0.8
+  virtuoso_dark_oak_log_finder:
+    name: Virtuoso's Dark Oak Log Finder
+    description: A virtuoso's touch yields bonus dark oak log.
+    rarity: MYTHICAL
+    category: LOGGING
+    pool: mythical
+    trigger: ON_BLOCK_BREAK
+    equipment: *id027
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 7
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: DARK_OAK_LOG
+      amount:
+        base: 4
+        per-level: 0.8
+  virtuoso_mangrove_log_finder:
+    name: Virtuoso's Mangrove Log Finder
+    description: A virtuoso's touch yields bonus mangrove log.
+    rarity: MYTHICAL
+    category: LOGGING
+    pool: mythical
+    trigger: ON_BLOCK_BREAK
+    equipment: *id027
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 7
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: MANGROVE_LOG
+      amount:
+        base: 4
+        per-level: 0.8
+  virtuoso_cherry_log_finder:
+    name: Virtuoso's Cherry Log Finder
+    description: A virtuoso's touch yields bonus cherry log.
+    rarity: MYTHICAL
+    category: LOGGING
+    pool: mythical
+    trigger: ON_BLOCK_BREAK
+    equipment: *id027
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 7
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: CHERRY_LOG
+      amount:
+        base: 4
+        per-level: 0.8
+  virtuoso_wheat_finder:
+    name: Virtuoso's Wheat Finder
+    description: A virtuoso's touch yields bonus wheat.
+    rarity: MYTHICAL
+    category: FARMING
+    pool: mythical
+    trigger: ON_BLOCK_BREAK
+    equipment: &id028
+    - HOE
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 7
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: WHEAT
+      amount:
+        base: 4
+        per-level: 0.8
+  virtuoso_carrot_finder:
+    name: Virtuoso's Carrot Finder
+    description: A virtuoso's touch yields bonus carrot.
+    rarity: MYTHICAL
+    category: FARMING
+    pool: mythical
+    trigger: ON_BLOCK_BREAK
+    equipment: *id028
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 7
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: CARROT
+      amount:
+        base: 4
+        per-level: 0.8
+  virtuoso_potato_finder:
+    name: Virtuoso's Potato Finder
+    description: A virtuoso's touch yields bonus potato.
+    rarity: MYTHICAL
+    category: FARMING
+    pool: mythical
+    trigger: ON_BLOCK_BREAK
+    equipment: *id028
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 7
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: POTATO
+      amount:
+        base: 4
+        per-level: 0.8
+  virtuoso_beetroot_finder:
+    name: Virtuoso's Beetroot Finder
+    description: A virtuoso's touch yields bonus beetroot.
+    rarity: MYTHICAL
+    category: FARMING
+    pool: mythical
+    trigger: ON_BLOCK_BREAK
+    equipment: *id028
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 7
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: BEETROOT
+      amount:
+        base: 4
+        per-level: 0.8
+  virtuoso_pumpkin_finder:
+    name: Virtuoso's Pumpkin Finder
+    description: A virtuoso's touch yields bonus pumpkin.
+    rarity: MYTHICAL
+    category: FARMING
+    pool: mythical
+    trigger: ON_BLOCK_BREAK
+    equipment: *id028
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 7
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: PUMPKIN
+      amount:
+        base: 4
+        per-level: 0.8
+  virtuoso_melon_slice_finder:
+    name: Virtuoso's Melon Slice Finder
+    description: A virtuoso's touch yields bonus melon slice.
+    rarity: MYTHICAL
+    category: FARMING
+    pool: mythical
+    trigger: ON_BLOCK_BREAK
+    equipment: *id028
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 7
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: MELON_SLICE
+      amount:
+        base: 4
+        per-level: 0.8
+  virtuoso_sugar_cane_finder:
+    name: Virtuoso's Sugar Cane Finder
+    description: A virtuoso's touch yields bonus sugar cane.
+    rarity: MYTHICAL
+    category: FARMING
+    pool: mythical
+    trigger: ON_BLOCK_BREAK
+    equipment: *id028
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 7
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: SUGAR_CANE
+      amount:
+        base: 4
+        per-level: 0.8
+  virtuoso_nether_wart_finder:
+    name: Virtuoso's Nether Wart Finder
+    description: A virtuoso's touch yields bonus nether wart.
+    rarity: MYTHICAL
+    category: FARMING
+    pool: mythical
+    trigger: ON_BLOCK_BREAK
+    equipment: *id028
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 7
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: NETHER_WART
+      amount:
+        base: 4
+        per-level: 0.8
+  virtuoso_sand_finder:
+    name: Virtuoso's Sand Finder
+    description: A virtuoso's touch yields bonus sand.
+    rarity: MYTHICAL
+    category: DIGGING
+    pool: mythical
+    trigger: ON_BLOCK_BREAK
+    equipment: &id029
+    - SHOVEL
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 7
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: SAND
+      amount:
+        base: 4
+        per-level: 0.8
+  virtuoso_gravel_finder:
+    name: Virtuoso's Gravel Finder
+    description: A virtuoso's touch yields bonus gravel.
+    rarity: MYTHICAL
+    category: DIGGING
+    pool: mythical
+    trigger: ON_BLOCK_BREAK
+    equipment: *id029
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 7
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: GRAVEL
+      amount:
+        base: 4
+        per-level: 0.8
+  virtuoso_clay_ball_finder:
+    name: Virtuoso's Clay Ball Finder
+    description: A virtuoso's touch yields bonus clay ball.
+    rarity: MYTHICAL
+    category: DIGGING
+    pool: mythical
+    trigger: ON_BLOCK_BREAK
+    equipment: *id029
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 7
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: CLAY_BALL
+      amount:
+        base: 4
+        per-level: 0.8
+  virtuoso_dirt_finder:
+    name: Virtuoso's Dirt Finder
+    description: A virtuoso's touch yields bonus dirt.
+    rarity: MYTHICAL
+    category: DIGGING
+    pool: mythical
+    trigger: ON_BLOCK_BREAK
+    equipment: *id029
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 7
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: DIRT
+      amount:
+        base: 4
+        per-level: 0.8
+  virtuoso_soul_sand_finder:
+    name: Virtuoso's Soul Sand Finder
+    description: A virtuoso's touch yields bonus soul sand.
+    rarity: MYTHICAL
+    category: DIGGING
+    pool: mythical
+    trigger: ON_BLOCK_BREAK
+    equipment: *id029
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 7
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: SOUL_SAND
+      amount:
+        base: 4
+        per-level: 0.8
+  virtuoso_red_sand_finder:
+    name: Virtuoso's Red Sand Finder
+    description: A virtuoso's touch yields bonus red sand.
+    rarity: MYTHICAL
+    category: DIGGING
+    pool: mythical
+    trigger: ON_BLOCK_BREAK
+    equipment: *id029
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 7
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: RED_SAND
+      amount:
+        base: 4
+        per-level: 0.8
+  virtuoso_snowball_finder:
+    name: Virtuoso's Snowball Finder
+    description: A virtuoso's touch yields bonus snowball.
+    rarity: MYTHICAL
+    category: DIGGING
+    pool: mythical
+    trigger: ON_BLOCK_BREAK
+    equipment: *id029
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 7
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: SNOWBALL
+      amount:
+        base: 4
+        per-level: 0.8
+  virtuoso_mud_finder:
+    name: Virtuoso's Mud Finder
+    description: A virtuoso's touch yields bonus mud.
+    rarity: MYTHICAL
+    category: DIGGING
+    pool: mythical
+    trigger: ON_BLOCK_BREAK
+    equipment: *id029
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 7
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: MUD
+      amount:
+        base: 4
+        per-level: 0.8
+  virtuoso_cod_finder:
+    name: Virtuoso's Cod Finder
+    description: A virtuoso's touch yields bonus cod.
+    rarity: MYTHICAL
+    category: FISHING
+    pool: mythical
+    trigger: ON_FISH
+    equipment: &id030
+    - FISHING_ROD
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 7
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: COD
+      amount:
+        base: 4
+        per-level: 0.8
+  virtuoso_salmon_finder:
+    name: Virtuoso's Salmon Finder
+    description: A virtuoso's touch yields bonus salmon.
+    rarity: MYTHICAL
+    category: FISHING
+    pool: mythical
+    trigger: ON_FISH
+    equipment: *id030
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 7
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: SALMON
+      amount:
+        base: 4
+        per-level: 0.8
+  virtuoso_tropical_fish_finder:
+    name: Virtuoso's Tropical Fish Finder
+    description: A virtuoso's touch yields bonus tropical fish.
+    rarity: MYTHICAL
+    category: FISHING
+    pool: mythical
+    trigger: ON_FISH
+    equipment: *id030
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 7
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: TROPICAL_FISH
+      amount:
+        base: 4
+        per-level: 0.8
+  virtuoso_pufferfish_finder:
+    name: Virtuoso's Pufferfish Finder
+    description: A virtuoso's touch yields bonus pufferfish.
+    rarity: MYTHICAL
+    category: FISHING
+    pool: mythical
+    trigger: ON_FISH
+    equipment: *id030
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 7
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: PUFFERFISH
+      amount:
+        base: 4
+        per-level: 0.8
+  virtuoso_ink_sac_finder:
+    name: Virtuoso's Ink Sac Finder
+    description: A virtuoso's touch yields bonus ink sac.
+    rarity: MYTHICAL
+    category: FISHING
+    pool: mythical
+    trigger: ON_FISH
+    equipment: *id030
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 7
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: INK_SAC
+      amount:
+        base: 4
+        per-level: 0.8
+  virtuoso_prismarine_shard_finder:
+    name: Virtuoso's Prismarine Shard Finder
+    description: A virtuoso's touch yields bonus prismarine shard.
+    rarity: MYTHICAL
+    category: FISHING
+    pool: mythical
+    trigger: ON_FISH
+    equipment: *id030
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 7
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: PRISMARINE_SHARD
+      amount:
+        base: 4
+        per-level: 0.8
+  virtuoso_nautilus_shell_finder:
+    name: Virtuoso's Nautilus Shell Finder
+    description: A virtuoso's touch yields bonus nautilus shell.
+    rarity: MYTHICAL
+    category: FISHING
+    pool: mythical
+    trigger: ON_FISH
+    equipment: *id030
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 7
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: NAUTILUS_SHELL
+      amount:
+        base: 4
+        per-level: 0.8
+  virtuoso_bone_finder:
+    name: Virtuoso's Bone Finder
+    description: A virtuoso's touch yields bonus bone.
+    rarity: MYTHICAL
+    category: FISHING
+    pool: mythical
+    trigger: ON_FISH
+    equipment: *id030
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 7
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: BONE
+      amount:
+        base: 4
+        per-level: 0.8
+  ascended_vampiric_blade:
+    name: Ascended Vampiric Blade
+    description: This blade drains life force on hit.
+    rarity: MYTHICAL
+    category: COMBAT
+    pool: mythical
+    trigger: ON_HIT
+    equipment: *id002
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 8
+      per-level: 2.5
+    effects:
+    - type: HEAL
+      amount: &id031
+        base: 1.5
+        per-level: 0.4
+  ascended_vampiric_axe:
+    name: Ascended Vampiric Axe
+    description: This axe drains life force on hit.
+    rarity: MYTHICAL
+    category: COMBAT
+    pool: mythical
+    trigger: ON_HIT
+    equipment: *id003
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 8
+      per-level: 2.5
+    effects:
+    - type: HEAL
+      amount: *id031
+  ascended_vampiric_bow:
+    name: Ascended Vampiric Bow
+    description: This bow drains life force on hit.
+    rarity: MYTHICAL
+    category: COMBAT
+    pool: mythical
+    trigger: ON_ATTACK
+    equipment: *id006
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 8
+      per-level: 2.5
+    effects:
+    - type: HEAL
+      amount: *id031
+  ascended_vampiric_trident:
+    name: Ascended Vampiric Trident
+    description: This trident drains life force on hit.
+    rarity: MYTHICAL
+    category: COMBAT
+    pool: mythical
+    trigger: ON_HIT
+    equipment: *id007
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 8
+      per-level: 2.5
+    effects:
+    - type: HEAL
+      amount: *id031
+  ascended_executing_blade:
+    name: Ascended Executing Blade
+    description: This blade seeks out weak points.
+    rarity: MYTHICAL
+    category: COMBAT
+    pool: mythical
+    trigger: ON_HIT
+    equipment: *id002
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 8
+      per-level: 2.5
+    effects:
+    - type: DAMAGE
+      target: TARGET
+      amount: &id032
+        base: 3
+        per-level: 0.8
+  ascended_executing_axe:
+    name: Ascended Executing Axe
+    description: This axe seeks out weak points.
+    rarity: MYTHICAL
+    category: COMBAT
+    pool: mythical
+    trigger: ON_HIT
+    equipment: *id003
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 8
+      per-level: 2.5
+    effects:
+    - type: DAMAGE
+      target: TARGET
+      amount: *id032
+  ascended_executing_bow:
+    name: Ascended Executing Bow
+    description: This bow seeks out weak points.
+    rarity: MYTHICAL
+    category: COMBAT
+    pool: mythical
+    trigger: ON_ATTACK
+    equipment: *id006
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 8
+      per-level: 2.5
+    effects:
+    - type: DAMAGE
+      target: TARGET
+      amount: *id032
+  ascended_executing_trident:
+    name: Ascended Executing Trident
+    description: This trident seeks out weak points.
+    rarity: MYTHICAL
+    category: COMBAT
+    pool: mythical
+    trigger: ON_HIT
+    equipment: *id007
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 8
+      per-level: 2.5
+    effects:
+    - type: DAMAGE
+      target: TARGET
+      amount: *id032
+  ascended_stunning_blade:
+    name: Ascended Stunning Blade
+    description: This blade stuns on impact.
+    rarity: MYTHICAL
+    category: COMBAT
+    pool: mythical
+    trigger: ON_HIT
+    equipment: *id002
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 8
+      per-level: 2.5
+    effects:
+    - type: SLOW
+      ticks: &id033
+        base: 30
+        per-level: 6
+      amplifier: 2
+  ascended_stunning_axe:
+    name: Ascended Stunning Axe
+    description: This axe stuns on impact.
+    rarity: MYTHICAL
+    category: COMBAT
+    pool: mythical
+    trigger: ON_HIT
+    equipment: *id003
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 8
+      per-level: 2.5
+    effects:
+    - type: SLOW
+      ticks: *id033
+      amplifier: 2
+  ascended_stunning_bow:
+    name: Ascended Stunning Bow
+    description: This bow stuns on impact.
+    rarity: MYTHICAL
+    category: COMBAT
+    pool: mythical
+    trigger: ON_ATTACK
+    equipment: *id006
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 8
+      per-level: 2.5
+    effects:
+    - type: SLOW
+      ticks: *id033
+      amplifier: 2
+  ascended_stunning_trident:
+    name: Ascended Stunning Trident
+    description: This trident stuns on impact.
+    rarity: MYTHICAL
+    category: COMBAT
+    pool: mythical
+    trigger: ON_HIT
+    equipment: *id007
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 8
+      per-level: 2.5
+    effects:
+    - type: SLOW
+      ticks: *id033
+      amplifier: 2
+  ascended_piercing_blade:
+    name: Ascended Piercing Blade
+    description: This blade pierces through to nearby foes.
+    rarity: MYTHICAL
+    category: COMBAT
+    pool: mythical
+    trigger: ON_HIT
+    equipment: *id002
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 8
+      per-level: 2.5
+    effects:
+    - type: AREA_DAMAGE
+      amount: &id034
+        base: 2
+        per-level: 0.5
+      radius: 2
+  ascended_piercing_axe:
+    name: Ascended Piercing Axe
+    description: This axe pierces through to nearby foes.
+    rarity: MYTHICAL
+    category: COMBAT
+    pool: mythical
+    trigger: ON_HIT
+    equipment: *id003
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 8
+      per-level: 2.5
+    effects:
+    - type: AREA_DAMAGE
+      amount: *id034
+      radius: 2
+  ascended_piercing_bow:
+    name: Ascended Piercing Bow
+    description: This bow pierces through to nearby foes.
+    rarity: MYTHICAL
+    category: COMBAT
+    pool: mythical
+    trigger: ON_ATTACK
+    equipment: *id006
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 8
+      per-level: 2.5
+    effects:
+    - type: AREA_DAMAGE
+      amount: *id034
+      radius: 2
+  ascended_piercing_trident:
+    name: Ascended Piercing Trident
+    description: This trident pierces through to nearby foes.
+    rarity: MYTHICAL
+    category: COMBAT
+    pool: mythical
+    trigger: ON_HIT
+    equipment: *id007
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 8
+      per-level: 2.5
+    effects:
+    - type: AREA_DAMAGE
+      amount: *id034
+      radius: 2
+  ascended_momentum_blade:
+    name: Ascended Momentum Blade
+    description: This blade knocks enemies back with force.
+    rarity: MYTHICAL
+    category: COMBAT
+    pool: mythical
+    trigger: ON_HIT
+    equipment: *id002
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 8
+      per-level: 2.5
+    effects:
+    - type: PUSH
+      strength: &id035
+        base: 0.8
+        per-level: 0.15
+  ascended_momentum_axe:
+    name: Ascended Momentum Axe
+    description: This axe knocks enemies back with force.
+    rarity: MYTHICAL
+    category: COMBAT
+    pool: mythical
+    trigger: ON_HIT
+    equipment: *id003
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 8
+      per-level: 2.5
+    effects:
+    - type: PUSH
+      strength: *id035
+  ascended_momentum_bow:
+    name: Ascended Momentum Bow
+    description: This bow knocks enemies back with force.
+    rarity: MYTHICAL
+    category: COMBAT
+    pool: mythical
+    trigger: ON_ATTACK
+    equipment: *id006
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 8
+      per-level: 2.5
+    effects:
+    - type: PUSH
+      strength: *id035
+  ascended_momentum_trident:
+    name: Ascended Momentum Trident
+    description: This trident knocks enemies back with force.
+    rarity: MYTHICAL
+    category: COMBAT
+    pool: mythical
+    trigger: ON_HIT
+    equipment: *id007
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 8
+      per-level: 2.5
+    effects:
+    - type: PUSH
+      strength: *id035
+  ascended_ferocity_helm:
+    name: Ascended Ferocity Helm
+    description: Your helm resonates with ferocity.
+    rarity: MYTHICAL
+    category: ARMOR
+    pool: mythical
+    trigger: ON_HIT
+    equipment: *id012
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 6
+    effects:
+    - type: STRENGTH
+      ticks: &id036
+        base: 40
+        per-level: 8
+      amplifier: 0
+  ascended_ferocity_plate:
+    name: Ascended Ferocity Plate
+    description: Your plate resonates with ferocity.
+    rarity: MYTHICAL
+    category: ARMOR
+    pool: mythical
+    trigger: ON_HIT
+    equipment: *id013
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 6
+    effects:
+    - type: STRENGTH
+      ticks: *id036
+      amplifier: 0
+  ascended_ferocity_greaves:
+    name: Ascended Ferocity Greaves
+    description: Your greaves resonates with ferocity.
+    rarity: MYTHICAL
+    category: ARMOR
+    pool: mythical
+    trigger: ON_HIT
+    equipment: *id015
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 6
+    effects:
+    - type: STRENGTH
+      ticks: *id036
+      amplifier: 0
+  ascended_ferocity_treads:
+    name: Ascended Ferocity Treads
+    description: Your treads resonates with ferocity.
+    rarity: MYTHICAL
+    category: ARMOR
+    pool: mythical
+    trigger: ON_HIT
+    equipment: *id016
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 6
+    effects:
+    - type: STRENGTH
+      ticks: *id036
+      amplifier: 0
+  ascended_ward_helm:
+    name: Ascended Ward Helm
+    description: Your helm resonates with ward.
+    rarity: MYTHICAL
+    category: ARMOR
+    pool: mythical
+    trigger: ON_ARMOR_EQUIP
+    equipment: *id012
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 6
+    effects:
+    - type: ABSORPTION
+      ticks: &id037
+        base: 40
+        per-level: 8
+      amplifier: 0
+  ascended_ward_plate:
+    name: Ascended Ward Plate
+    description: Your plate resonates with ward.
+    rarity: MYTHICAL
+    category: ARMOR
+    pool: mythical
+    trigger: ON_ARMOR_EQUIP
+    equipment: *id013
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 6
+    effects:
+    - type: ABSORPTION
+      ticks: *id037
+      amplifier: 0
+  ascended_ward_greaves:
+    name: Ascended Ward Greaves
+    description: Your greaves resonates with ward.
+    rarity: MYTHICAL
+    category: ARMOR
+    pool: mythical
+    trigger: ON_ARMOR_EQUIP
+    equipment: *id015
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 6
+    effects:
+    - type: ABSORPTION
+      ticks: *id037
+      amplifier: 0
+  ascended_ward_treads:
+    name: Ascended Ward Treads
+    description: Your treads resonates with ward.
+    rarity: MYTHICAL
+    category: ARMOR
+    pool: mythical
+    trigger: ON_ARMOR_EQUIP
+    equipment: *id016
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 6
+    effects:
+    - type: ABSORPTION
+      ticks: *id037
+      amplifier: 0
+  ascended_momentum_guard_helm:
+    name: Ascended Momentum Guard Helm
+    description: Your helm resonates with momentum guard.
+    rarity: MYTHICAL
+    category: ARMOR
+    pool: mythical
+    trigger: ON_JUMP
+    equipment: *id012
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 6
+    effects:
+    - type: SPEED
+      ticks: &id038
+        base: 40
+        per-level: 8
+      amplifier: 0
+  ascended_momentum_guard_plate:
+    name: Ascended Momentum Guard Plate
+    description: Your plate resonates with momentum guard.
+    rarity: MYTHICAL
+    category: ARMOR
+    pool: mythical
+    trigger: ON_JUMP
+    equipment: *id013
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 6
+    effects:
+    - type: SPEED
+      ticks: *id038
+      amplifier: 0
+  ascended_momentum_guard_greaves:
+    name: Ascended Momentum Guard Greaves
+    description: Your greaves resonates with momentum guard.
+    rarity: MYTHICAL
+    category: ARMOR
+    pool: mythical
+    trigger: ON_JUMP
+    equipment: *id015
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 6
+    effects:
+    - type: SPEED
+      ticks: *id038
+      amplifier: 0
+  ascended_momentum_guard_treads:
+    name: Ascended Momentum Guard Treads
+    description: Your treads resonates with momentum guard.
+    rarity: MYTHICAL
+    category: ARMOR
+    pool: mythical
+    trigger: ON_JUMP
+    equipment: *id016
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 6
+    effects:
+    - type: SPEED
+      ticks: *id038
+      amplifier: 0
+  ascended_mending_light_helm:
+    name: Ascended Mending Light Helm
+    description: Your helm resonates with mending light.
+    rarity: MYTHICAL
+    category: ARMOR
+    pool: mythical
+    trigger: ON_HEAL
+    equipment: *id012
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 6
+    effects:
+    - type: REGENERATION
+      ticks: &id039
+        base: 40
+        per-level: 8
+      amplifier: 1
+  ascended_mending_light_plate:
+    name: Ascended Mending Light Plate
+    description: Your plate resonates with mending light.
+    rarity: MYTHICAL
+    category: ARMOR
+    pool: mythical
+    trigger: ON_HEAL
+    equipment: *id013
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 6
+    effects:
+    - type: REGENERATION
+      ticks: *id039
+      amplifier: 1
+  ascended_mending_light_greaves:
+    name: Ascended Mending Light Greaves
+    description: Your greaves resonates with mending light.
+    rarity: MYTHICAL
+    category: ARMOR
+    pool: mythical
+    trigger: ON_HEAL
+    equipment: *id015
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 6
+    effects:
+    - type: REGENERATION
+      ticks: *id039
+      amplifier: 1
+  ascended_mending_light_treads:
+    name: Ascended Mending Light Treads
+    description: Your treads resonates with mending light.
+    rarity: MYTHICAL
+    category: ARMOR
+    pool: mythical
+    trigger: ON_HEAL
+    equipment: *id016
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 6
+    effects:
+    - type: REGENERATION
+      ticks: *id039
+      amplifier: 1
+  ascended_recall:
+    name: Ascended Recall
+    description: A utility rune themed around recall.
+    rarity: MYTHICAL
+    category: UTILITY
+    pool: mythical
+    trigger: ON_SPRINT
+    equipment:
+    - ANY
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 8
+      per-level: 2.5
+    cooldown:
+      base: 10
+      per-level: -0.5
+    effects:
+    - type: TELEPORT
+      mode: random-nearby
+      radius: 6
+  ascended_magpie:
+    name: Ascended Magpie
+    description: A utility rune themed around magpie.
+    rarity: MYTHICAL
+    category: UTILITY
+    pool: mythical
+    trigger: ON_BLOCK_BREAK
+    equipment:
+    - PICKAXE
+    - SHOVEL
+    - AXE
+    - HOE
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 8
+      per-level: 2.5
+    cooldown:
+      base: 10
+      per-level: -0.5
+    effects:
+    - type: PULL
+      target: AREA
+      radius: 5
+      strength: 0.5
+  ascended_windfall:
+    name: Ascended Windfall
+    description: A utility rune themed around windfall.
+    rarity: MYTHICAL
+    category: UTILITY
+    pool: mythical
+    trigger: ON_KILL
+    equipment:
+    - SWORD
+    - AXE
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 8
+      per-level: 2.5
+    cooldown:
+      base: 10
+      per-level: -0.5
+    effects:
+    - type: PUSH
+      target: NEARBY_MOBS
+      strength: 1.2
+  ascended_prospectors_call:
+    name: Ascended Prospector's Call
+    description: A utility rune themed around prospector's call.
+    rarity: MYTHICAL
+    category: UTILITY
+    pool: mythical
+    trigger: ON_BLOCK_BREAK
+    equipment:
+    - PICKAXE
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 8
+      per-level: 2.5
+    cooldown:
+      base: 10
+      per-level: -0.5
+    effects:
+    - type: ACTIONBAR
+      text: <gray>You sense something nearby...
+  ascended_riptide:
+    name: Ascended Riptide
+    description: A combat rune built around riptide.
+    rarity: MYTHICAL
+    category: COMBAT
+    pool: mythical
+    trigger: ON_ATTACK
+    equipment:
+    - TRIDENT
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 6
+      per-level: 2
+    cooldown:
+      base: 6
+      per-level: -0.3
+    effects:
+    - type: PUSH
+      target: SELF
+      strength:
+        base: 1
+        per-level: 0.2
+  ascended_overcharge:
+    name: Ascended Overcharge
+    description: A combat rune built around overcharge.
+    rarity: MYTHICAL
+    category: WEAPONS
+    pool: mythical
+    trigger: ON_CRITICAL
+    equipment:
+    - SWORD
+    - AXE
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 6
+      per-level: 2
+    cooldown:
+      base: 6
+      per-level: -0.3
+    effects:
+    - type: STRENGTH
+      ticks:
+        base: 40
+        per-level: 8
+      amplifier: 1
+  ascended_backdraft:
+    name: Ascended Backdraft
+    description: A combat rune built around backdraft.
+    rarity: MYTHICAL
+    category: COMBAT
+    pool: mythical
+    trigger: ON_KILL
+    equipment:
+    - SWORD
+    - AXE
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 6
+      per-level: 2
+    cooldown:
+      base: 6
+      per-level: -0.3
+    effects:
+    - type: FIRE
+      target: NEARBY_MOBS
+      ticks:
+        base: 30
+        per-level: 6
+  ascended_static_field:
+    name: Ascended Static Field
+    description: A combat rune built around static field.
+    rarity: MYTHICAL
+    category: COMBAT
+    pool: mythical
+    trigger: ON_ATTACK
+    equipment:
+    - TRIDENT
+    - SWORD
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 6
+      per-level: 2
+    cooldown:
+      base: 6
+      per-level: -0.3
+    effects:
+    - type: SLOW
+      target: NEARBY_MOBS
+      ticks:
+        base: 30
+        per-level: 6
+      amplifier: 0
+  keystone_of_failxos:
+    name: Keystone of Failxos
+    description: A signature relic bearing the mark of FailRunes' creator - the final piece of the collection.
+    rarity: MYTHICAL
+    category: SPECIAL
+    pool: mythical
+    trigger: ON_KILL
+    equipment:
+    - SWORD
+    - AXE
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: true
+    chance:
+      base: 100
+    cooldown:
+      base: 30
+    effects:
+    - type: XP
+      amount:
+        base: 20
+        per-level: 5
+    - type: PARTICLE
+      particle: TOTEM_OF_UNDYING
+      count: 15

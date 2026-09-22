@@ -1,0 +1,82 @@
+# Auto-generated rune definitions for pool 'crate_oni'. Safe to hand-edit; /runeadmin reload picks up changes.
+runes:
+  oni_mask:
+    name: Oni Mask
+    description: A crate-exclusive oni relic with a flair all its own.
+    rarity: MYTHICAL
+    category: CRATE
+    pool: crate_oni
+    trigger: ON_ARMOR_EQUIP
+    equipment:
+    - HELMET
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+      per-level: 0
+    effects:
+    - type: PARTICLE
+      particle: SOUL_FIRE_FLAME
+      count: 8
+  oni_robes:
+    name: Oni Robes
+    description: A crate-exclusive oni relic with a flair all its own.
+    rarity: MYTHICAL
+    category: CRATE
+    pool: crate_oni
+    trigger: ON_ARMOR_EQUIP
+    equipment:
+    - CHESTPLATE
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+      per-level: 0
+    effects:
+    - type: PARTICLE
+      particle: SOUL_FIRE_FLAME
+      count: 8
+  oni_fang:
+    name: Oni Fang
+    description: A crate-exclusive oni relic with a flair all its own.
+    rarity: MYTHICAL
+    category: CRATE
+    pool: crate_oni
+    trigger: ON_HIT
+    equipment:
+    - SWORD
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 15
+      per-level: 3
+    effects:
+    - type: PARTICLE
+      particle: SOUL_FIRE_FLAME
+      count: 8
+  oni_boots:
+    name: Oni Boots
+    description: A crate-exclusive oni relic with a flair all its own.
+    rarity: MYTHICAL
+    category: CRATE
+    pool: crate_oni
+    trigger: ON_ARMOR_EQUIP
+    equipment:
+    - BOOTS
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+      per-level: 0
+    effects:
+    - type: PARTICLE
+      particle: SOUL_FIRE_FLAME
+      count: 8

@@ -1,0 +1,6 @@
+# Informational: slot layout reference for the built-in GUIs (requirement #56). The actual layout is defined
+# in Java (dev.failxos.failrunes.gui.*) so pagination/back/close/search/filtering behave consistently everywhere.
+infuser:
+  size: 54
+  close-slot: 49
+  back-slot: 45

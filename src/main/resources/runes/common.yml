@@ -1,0 +1,3419 @@
+# Auto-generated rune definitions for pool 'common'. Safe to hand-edit; /runeadmin reload picks up changes.
+runes:
+  lifesteal:
+    name: Lifesteal
+    description: Heals you for a portion of the damage you deal.
+    rarity: COMMON
+    category: COMBAT
+    pool: common
+    trigger: ON_HIT
+    equipment:
+    - SWORD
+    - AXE
+    - TRIDENT
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: true
+    chance:
+      base: 20
+      per-level: 4
+    effects:
+    - type: HEAL
+      amount:
+        base: 1
+        per-level: 0.5
+  bleed:
+    name: Bleed
+    description: Inflicts a bleeding wound that deals damage over time.
+    rarity: COMMON
+    category: COMBAT
+    pool: common
+    trigger: ON_HIT
+    equipment:
+    - SWORD
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: true
+    chance:
+      base: 25
+      per-level: 5
+    effects:
+    - type: WITHER
+      ticks:
+        base: 40
+        per-level: 10
+      amplifier: 0
+  puffer:
+    name: Puffer
+    description: A chance to knock your target away with a burst of water pressure.
+    rarity: COMMON
+    category: WEAPONS
+    pool: common
+    trigger: ON_HIT
+    equipment:
+    - TRIDENT
+    - FISHING_ROD
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: true
+    chance:
+      base: 15
+      per-level: 3
+    effects:
+    - type: PUSH
+      strength:
+        base: 1
+        per-level: 0.2
+  fortify:
+    name: Fortify
+    description: Gain a brief burst of Resistance when you equip this piece.
+    rarity: COMMON
+    category: ARMOR
+    pool: common
+    trigger: ON_ARMOR_EQUIP
+    equipment:
+    - ARMOR
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: true
+    chance:
+      base: 100
+    effects:
+    - type: ABSORPTION
+      ticks:
+        base: 60
+        per-level: 12
+      amplifier: 0
+  dash:
+    name: Dash
+    description: A small chance to surge forward while sprinting.
+    rarity: COMMON
+    category: MOVEMENT
+    pool: common
+    trigger: ON_SPRINT
+    equipment:
+    - BOOTS
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: true
+    chance:
+      base: 15
+      per-level: 3
+    cooldown:
+      base: 6
+    effects:
+    - type: PUSH
+      strength:
+        base: -1.5
+        per-level: -0.2
+  rest:
+    name: Rest
+    description: Amplifies natural regeneration slightly.
+    rarity: COMMON
+    category: UTILITY
+    pool: common
+    trigger: ON_HEAL
+    equipment:
+    - ARMOR
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: true
+    chance:
+      base: 100
+    effects:
+    - type: HEAL
+      amount:
+        base: 0.5
+        per-level: 0.2
+  ore_magnet:
+    name: Ore Magnet
+    description: Automatically pulls nearby dropped ore toward you.
+    rarity: COMMON
+    category: MINING
+    pool: common
+    trigger: ON_BLOCK_BREAK
+    equipment:
+    - PICKAXE
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: true
+    chance:
+      base: 100
+    effects:
+    - type: PULL
+      target: AREA
+      radius: 4
+      strength: 0.5
+  greedy_greens:
+    name: Greedy Greens
+    description: Occasionally yields extra crops on harvest.
+    rarity: COMMON
+    category: FARMING
+    pool: common
+    trigger: ON_BLOCK_BREAK
+    equipment:
+    - HOE
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: true
+    chance:
+      base: 20
+      per-level: 4
+    effects:
+    - type: ITEM_DROP
+      material: WHEAT
+      amount:
+        base: 1
+        per-level: 0.4
+    conditions:
+    - mining
+  replant:
+    name: Replant
+    description: Automatically replants crops you harvest.
+    rarity: COMMON
+    category: FARMING
+    pool: common
+    trigger: ON_BLOCK_BREAK
+    equipment:
+    - HOE
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: true
+    chance:
+      base: 100
+    effects:
+    - type: BLOCK_PLACE
+      material: WHEAT
+  crop_magnet:
+    name: Crop Magnet
+    description: Pulls harvested crops directly toward you.
+    rarity: COMMON
+    category: FARMING
+    pool: common
+    trigger: ON_BLOCK_BREAK
+    equipment:
+    - HOE
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: true
+    chance:
+      base: 100
+    effects:
+    - type: PULL
+      target: AREA
+      radius: 3
+      strength: 0.4
+  fish_magnet:
+    name: Fish Magnet
+    description: Draws your catch straight into your inventory.
+    rarity: COMMON
+    category: FISHING
+    pool: common
+    trigger: ON_FISH
+    equipment:
+    - FISHING_ROD
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: true
+    chance:
+      base: 100
+    effects:
+    - type: PULL
+      target: AREA
+      radius: 3
+      strength: 0.5
+  scavenger:
+    name: Scavenger
+    description: A small chance for bonus loot from slain mobs.
+    rarity: COMMON
+    category: LOOT
+    pool: common
+    trigger: ON_MOB_KILL
+    equipment:
+    - SWORD
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: true
+    chance:
+      base: 15
+      per-level: 3
+    effects:
+    - type: ITEM_DROP
+      material: BONE
+      amount: 1
+  xp_hoarder:
+    name: XP Hoarder
+    description: Grants bonus XP from every kill.
+    rarity: COMMON
+    category: XP
+    pool: common
+    trigger: ON_MOB_KILL
+    equipment:
+    - SWORD
+    - AXE
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: true
+    chance:
+      base: 100
+    effects:
+    - type: XP
+      amount:
+        base: 2
+        per-level: 0.5
+  cavern_echo:
+    name: Cavern Echo
+    description: The echo of the cave occasionally reveals a nearby ore.
+    rarity: COMMON
+    category: MINING
+    pool: common
+    trigger: ON_BLOCK_BREAK
+    equipment:
+    - PICKAXE
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: true
+    chance:
+      base: 100
+    effects:
+    - type: PARTICLE
+      particle: SOUL_FIRE_FLAME
+      count: 4
+    conditions:
+    - 'world-type-nether:'
+  night_owl:
+    name: Night Owl
+    description: Bonus effectiveness while mining at night.
+    rarity: COMMON
+    category: UTILITY
+    pool: common
+    trigger: ON_BLOCK_BREAK
+    equipment:
+    - PICKAXE
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: true
+    chance:
+      base: 15
+      per-level: 3
+    effects:
+    - type: ITEM_DROP
+      material: COAL
+      amount: 1
+    conditions:
+    - time-night
+  ember_blade:
+    name: Ember Blade
+    description: Your blade burns enemies with ember energy on hit.
+    rarity: COMMON
+    category: WEAPONS
+    pool: common
+    trigger: ON_HIT
+    equipment: &id002
+    - SWORD
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 22
+      per-level: 3
+    effects:
+    - type: FIRE
+      ticks: &id001
+        base: 40
+        per-level: 8
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 1.5
+        per-level: 0.375
+  ember_axe:
+    name: Ember Axe
+    description: Your axe burns enemies with ember energy on hit.
+    rarity: COMMON
+    category: WEAPONS
+    pool: common
+    trigger: ON_HIT
+    equipment: &id003
+    - AXE
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 22
+      per-level: 3
+    effects:
+    - type: FIRE
+      ticks: *id001
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 1.5
+        per-level: 0.375
+  ember_bow:
+    name: Ember Bow
+    description: Your bow burns enemies with ember energy on hit.
+    rarity: COMMON
+    category: WEAPONS
+    pool: common
+    trigger: ON_ATTACK
+    equipment: &id006
+    - BOW
+    - CROSSBOW
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 22
+      per-level: 3
+    effects:
+    - type: FIRE
+      ticks: *id001
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 1.5
+        per-level: 0.375
+  ember_trident:
+    name: Ember Trident
+    description: Your trident burns enemies with ember energy on hit.
+    rarity: COMMON
+    category: WEAPONS
+    pool: common
+    trigger: ON_HIT
+    equipment: &id007
+    - TRIDENT
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 22
+      per-level: 3
+    effects:
+    - type: FIRE
+      ticks: *id001
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 1.5
+        per-level: 0.375
+  frost_blade:
+    name: Frost Blade
+    description: Your blade chills enemies with frost energy on hit.
+    rarity: COMMON
+    category: WEAPONS
+    pool: common
+    trigger: ON_HIT
+    equipment: *id002
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 22
+      per-level: 3
+    effects:
+    - type: SLOW
+      ticks: &id004
+        base: 40
+        per-level: 8
+      amplifier: &id005
+        base: 0
+        per-level: 0.2
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 1.5
+        per-level: 0.375
+  frost_axe:
+    name: Frost Axe
+    description: Your axe chills enemies with frost energy on hit.
+    rarity: COMMON
+    category: WEAPONS
+    pool: common
+    trigger: ON_HIT
+    equipment: *id003
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 22
+      per-level: 3
+    effects:
+    - type: SLOW
+      ticks: *id004
+      amplifier: *id005
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 1.5
+        per-level: 0.375
+  frost_bow:
+    name: Frost Bow
+    description: Your bow chills enemies with frost energy on hit.
+    rarity: COMMON
+    category: WEAPONS
+    pool: common
+    trigger: ON_ATTACK
+    equipment: *id006
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 22
+      per-level: 3
+    effects:
+    - type: SLOW
+      ticks: *id004
+      amplifier: *id005
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 1.5
+        per-level: 0.375
+  frost_trident:
+    name: Frost Trident
+    description: Your trident chills enemies with frost energy on hit.
+    rarity: COMMON
+    category: WEAPONS
+    pool: common
+    trigger: ON_HIT
+    equipment: *id007
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 22
+      per-level: 3
+    effects:
+    - type: SLOW
+      ticks: *id004
+      amplifier: *id005
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 1.5
+        per-level: 0.375
+  toxic_blade:
+    name: Toxic Blade
+    description: Your blade poisons enemies with toxic energy on hit.
+    rarity: COMMON
+    category: WEAPONS
+    pool: common
+    trigger: ON_HIT
+    equipment: *id002
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 22
+      per-level: 3
+    effects:
+    - type: POISON
+      ticks: &id008
+        base: 40
+        per-level: 8
+      amplifier: 0
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 1.5
+        per-level: 0.375
+  toxic_axe:
+    name: Toxic Axe
+    description: Your axe poisons enemies with toxic energy on hit.
+    rarity: COMMON
+    category: WEAPONS
+    pool: common
+    trigger: ON_HIT
+    equipment: *id003
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 22
+      per-level: 3
+    effects:
+    - type: POISON
+      ticks: *id008
+      amplifier: 0
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 1.5
+        per-level: 0.375
+  toxic_bow:
+    name: Toxic Bow
+    description: Your bow poisons enemies with toxic energy on hit.
+    rarity: COMMON
+    category: WEAPONS
+    pool: common
+    trigger: ON_ATTACK
+    equipment: *id006
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 22
+      per-level: 3
+    effects:
+    - type: POISON
+      ticks: *id008
+      amplifier: 0
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 1.5
+        per-level: 0.375
+  toxic_trident:
+    name: Toxic Trident
+    description: Your trident poisons enemies with toxic energy on hit.
+    rarity: COMMON
+    category: WEAPONS
+    pool: common
+    trigger: ON_HIT
+    equipment: *id007
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 22
+      per-level: 3
+    effects:
+    - type: POISON
+      ticks: *id008
+      amplifier: 0
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 1.5
+        per-level: 0.375
+  wither_blade:
+    name: Wither Blade
+    description: Your blade withers enemies with wither energy on hit.
+    rarity: COMMON
+    category: WEAPONS
+    pool: common
+    trigger: ON_HIT
+    equipment: *id002
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 22
+      per-level: 3
+    effects:
+    - type: WITHER
+      ticks: &id009
+        base: 30
+        per-level: 6
+      amplifier: 0
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 1.5
+        per-level: 0.375
+  wither_axe:
+    name: Wither Axe
+    description: Your axe withers enemies with wither energy on hit.
+    rarity: COMMON
+    category: WEAPONS
+    pool: common
+    trigger: ON_HIT
+    equipment: *id003
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 22
+      per-level: 3
+    effects:
+    - type: WITHER
+      ticks: *id009
+      amplifier: 0
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 1.5
+        per-level: 0.375
+  wither_bow:
+    name: Wither Bow
+    description: Your bow withers enemies with wither energy on hit.
+    rarity: COMMON
+    category: WEAPONS
+    pool: common
+    trigger: ON_ATTACK
+    equipment: *id006
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 22
+      per-level: 3
+    effects:
+    - type: WITHER
+      ticks: *id009
+      amplifier: 0
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 1.5
+        per-level: 0.375
+  wither_trident:
+    name: Wither Trident
+    description: Your trident withers enemies with wither energy on hit.
+    rarity: COMMON
+    category: WEAPONS
+    pool: common
+    trigger: ON_HIT
+    equipment: *id007
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 22
+      per-level: 3
+    effects:
+    - type: WITHER
+      ticks: *id009
+      amplifier: 0
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 1.5
+        per-level: 0.375
+  void_blade:
+    name: Void Blade
+    description: Your blade warps enemies with void energy on hit.
+    rarity: COMMON
+    category: WEAPONS
+    pool: common
+    trigger: ON_HIT
+    equipment: *id002
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 22
+      per-level: 3
+    effects:
+    - type: SLOW
+      ticks: &id010
+        base: 30
+        per-level: 6
+      amplifier: 1
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 1.5
+        per-level: 0.375
+  void_axe:
+    name: Void Axe
+    description: Your axe warps enemies with void energy on hit.
+    rarity: COMMON
+    category: WEAPONS
+    pool: common
+    trigger: ON_HIT
+    equipment: *id003
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 22
+      per-level: 3
+    effects:
+    - type: SLOW
+      ticks: *id010
+      amplifier: 1
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 1.5
+        per-level: 0.375
+  void_bow:
+    name: Void Bow
+    description: Your bow warps enemies with void energy on hit.
+    rarity: COMMON
+    category: WEAPONS
+    pool: common
+    trigger: ON_ATTACK
+    equipment: *id006
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 22
+      per-level: 3
+    effects:
+    - type: SLOW
+      ticks: *id010
+      amplifier: 1
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 1.5
+        per-level: 0.375
+  void_trident:
+    name: Void Trident
+    description: Your trident warps enemies with void energy on hit.
+    rarity: COMMON
+    category: WEAPONS
+    pool: common
+    trigger: ON_HIT
+    equipment: *id007
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 22
+      per-level: 3
+    effects:
+    - type: SLOW
+      ticks: *id010
+      amplifier: 1
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 1.5
+        per-level: 0.375
+  storm_blade:
+    name: Storm Blade
+    description: Your blade shocks enemies with storm energy on hit.
+    rarity: COMMON
+    category: WEAPONS
+    pool: common
+    trigger: ON_HIT
+    equipment: *id002
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 22
+      per-level: 3
+    effects:
+    - type: LIGHTNING
+      target: TARGET
+      damage-only: true
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 1.5
+        per-level: 0.375
+  storm_axe:
+    name: Storm Axe
+    description: Your axe shocks enemies with storm energy on hit.
+    rarity: COMMON
+    category: WEAPONS
+    pool: common
+    trigger: ON_HIT
+    equipment: *id003
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 22
+      per-level: 3
+    effects:
+    - type: LIGHTNING
+      target: TARGET
+      damage-only: true
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 1.5
+        per-level: 0.375
+  storm_bow:
+    name: Storm Bow
+    description: Your bow shocks enemies with storm energy on hit.
+    rarity: COMMON
+    category: WEAPONS
+    pool: common
+    trigger: ON_ATTACK
+    equipment: *id006
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 22
+      per-level: 3
+    effects:
+    - type: LIGHTNING
+      target: TARGET
+      damage-only: true
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 1.5
+        per-level: 0.375
+  storm_trident:
+    name: Storm Trident
+    description: Your trident shocks enemies with storm energy on hit.
+    rarity: COMMON
+    category: WEAPONS
+    pool: common
+    trigger: ON_HIT
+    equipment: *id007
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 22
+      per-level: 3
+    effects:
+    - type: LIGHTNING
+      target: TARGET
+      damage-only: true
+    - type: DAMAGE
+      target: TARGET
+      amount:
+        base: 1.5
+        per-level: 0.375
+  novice_ore:
+    name: Novice Ore
+    description: Novice proficiency grants bonus iron ore while working.
+    rarity: COMMON
+    category: MINING
+    pool: common
+    trigger: ON_BLOCK_BREAK
+    equipment:
+    - PICKAXE
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 20
+      per-level: 3
+    effects:
+    - type: ITEM_DROP
+      material: IRON_ORE
+      amount:
+        base: 1
+        per-level: 0.25
+  novice_timber:
+    name: Novice Timber
+    description: Novice proficiency grants bonus oak log while working.
+    rarity: COMMON
+    category: LOGGING
+    pool: common
+    trigger: ON_BLOCK_BREAK
+    equipment:
+    - AXE
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 20
+      per-level: 3
+    effects:
+    - type: ITEM_DROP
+      material: OAK_LOG
+      amount:
+        base: 1
+        per-level: 0.25
+  novice_harvest:
+    name: Novice Harvest
+    description: Novice proficiency grants bonus wheat while working.
+    rarity: COMMON
+    category: FARMING
+    pool: common
+    trigger: ON_BLOCK_BREAK
+    equipment:
+    - HOE
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 20
+      per-level: 3
+    effects:
+    - type: ITEM_DROP
+      material: WHEAT
+      amount:
+        base: 1
+        per-level: 0.25
+  novice_excavation:
+    name: Novice Excavation
+    description: Novice proficiency grants bonus clay ball while working.
+    rarity: COMMON
+    category: DIGGING
+    pool: common
+    trigger: ON_BLOCK_BREAK
+    equipment:
+    - SHOVEL
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 20
+      per-level: 3
+    effects:
+    - type: ITEM_DROP
+      material: CLAY_BALL
+      amount:
+        base: 1
+        per-level: 0.25
+  novice_angler:
+    name: Novice Angler
+    description: Novice proficiency grants bonus cod while working.
+    rarity: COMMON
+    category: FISHING
+    pool: common
+    trigger: ON_FISH
+    equipment:
+    - FISHING_ROD
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 20
+      per-level: 3
+    effects:
+    - type: ITEM_DROP
+      material: COD
+      amount:
+        base: 1
+        per-level: 0.25
+  vigor_helm:
+    name: Vigor Helm
+    description: Your helm channels vigor, triggered by combat and movement.
+    rarity: COMMON
+    category: ARMOR
+    pool: common
+    trigger: ON_ARMOR_EQUIP
+    equipment: &id012
+    - HELMET
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 20
+    effects:
+    - type: STRENGTH
+      ticks: &id011
+        base: 60
+        per-level: 12
+      amplifier: 0
+  vigor_plate:
+    name: Vigor Plate
+    description: Your plate channels vigor, triggered by combat and movement.
+    rarity: COMMON
+    category: ARMOR
+    pool: common
+    trigger: ON_ARMOR_EQUIP
+    equipment: &id013
+    - CHESTPLATE
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 20
+    effects:
+    - type: STRENGTH
+      ticks: *id011
+      amplifier: 0
+  vigor_greaves:
+    name: Vigor Greaves
+    description: Your greaves channels vigor, triggered by combat and movement.
+    rarity: COMMON
+    category: ARMOR
+    pool: common
+    trigger: ON_ARMOR_EQUIP
+    equipment: &id015
+    - LEGGINGS
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 20
+    effects:
+    - type: STRENGTH
+      ticks: *id011
+      amplifier: 0
+  vigor_treads:
+    name: Vigor Treads
+    description: Your treads channels vigor, triggered by combat and movement.
+    rarity: COMMON
+    category: ARMOR
+    pool: common
+    trigger: ON_ARMOR_EQUIP
+    equipment: &id016
+    - BOOTS
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 20
+    effects:
+    - type: STRENGTH
+      ticks: *id011
+      amplifier: 0
+  haste_helm:
+    name: Haste Helm
+    description: Your helm channels haste, triggered by combat and movement.
+    rarity: COMMON
+    category: ARMOR
+    pool: common
+    trigger: ON_SPRINT
+    equipment: *id012
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 20
+    effects:
+    - type: SPEED
+      ticks: &id014
+        base: 60
+        per-level: 12
+      amplifier: 0
+  haste_plate:
+    name: Haste Plate
+    description: Your plate channels haste, triggered by combat and movement.
+    rarity: COMMON
+    category: ARMOR
+    pool: common
+    trigger: ON_SPRINT
+    equipment: *id013
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 20
+    effects:
+    - type: SPEED
+      ticks: *id014
+      amplifier: 0
+  haste_greaves:
+    name: Haste Greaves
+    description: Your greaves channels haste, triggered by combat and movement.
+    rarity: COMMON
+    category: ARMOR
+    pool: common
+    trigger: ON_SPRINT
+    equipment: *id015
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 20
+    effects:
+    - type: SPEED
+      ticks: *id014
+      amplifier: 0
+  haste_treads:
+    name: Haste Treads
+    description: Your treads channels haste, triggered by combat and movement.
+    rarity: COMMON
+    category: ARMOR
+    pool: common
+    trigger: ON_SPRINT
+    equipment: *id016
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 20
+    effects:
+    - type: SPEED
+      ticks: *id014
+      amplifier: 0
+  resolve_helm:
+    name: Resolve Helm
+    description: Your helm channels resolve, triggered by combat and movement.
+    rarity: COMMON
+    category: ARMOR
+    pool: common
+    trigger: ON_DAMAGE
+    equipment: *id012
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 20
+    effects:
+    - type: ABSORPTION
+      ticks: &id017
+        base: 60
+        per-level: 12
+      amplifier: 0
+  resolve_plate:
+    name: Resolve Plate
+    description: Your plate channels resolve, triggered by combat and movement.
+    rarity: COMMON
+    category: ARMOR
+    pool: common
+    trigger: ON_DAMAGE
+    equipment: *id013
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 20
+    effects:
+    - type: ABSORPTION
+      ticks: *id017
+      amplifier: 0
+  resolve_greaves:
+    name: Resolve Greaves
+    description: Your greaves channels resolve, triggered by combat and movement.
+    rarity: COMMON
+    category: ARMOR
+    pool: common
+    trigger: ON_DAMAGE
+    equipment: *id015
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 20
+    effects:
+    - type: ABSORPTION
+      ticks: *id017
+      amplifier: 0
+  resolve_treads:
+    name: Resolve Treads
+    description: Your treads channels resolve, triggered by combat and movement.
+    rarity: COMMON
+    category: ARMOR
+    pool: common
+    trigger: ON_DAMAGE
+    equipment: *id016
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 20
+    effects:
+    - type: ABSORPTION
+      ticks: *id017
+      amplifier: 0
+  renewal_helm:
+    name: Renewal Helm
+    description: Your helm channels renewal, triggered by combat and movement.
+    rarity: COMMON
+    category: ARMOR
+    pool: common
+    trigger: ON_LOW_HEALTH
+    equipment: *id012
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 20
+    effects:
+    - type: REGENERATION
+      ticks: &id018
+        base: 60
+        per-level: 12
+      amplifier: 0
+    conditions:
+    - health-below:40
+  renewal_plate:
+    name: Renewal Plate
+    description: Your plate channels renewal, triggered by combat and movement.
+    rarity: COMMON
+    category: ARMOR
+    pool: common
+    trigger: ON_LOW_HEALTH
+    equipment: *id013
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 20
+    effects:
+    - type: REGENERATION
+      ticks: *id018
+      amplifier: 0
+    conditions:
+    - health-below:40
+  renewal_greaves:
+    name: Renewal Greaves
+    description: Your greaves channels renewal, triggered by combat and movement.
+    rarity: COMMON
+    category: ARMOR
+    pool: common
+    trigger: ON_LOW_HEALTH
+    equipment: *id015
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 20
+    effects:
+    - type: REGENERATION
+      ticks: *id018
+      amplifier: 0
+    conditions:
+    - health-below:40
+  renewal_treads:
+    name: Renewal Treads
+    description: Your treads channels renewal, triggered by combat and movement.
+    rarity: COMMON
+    category: ARMOR
+    pool: common
+    trigger: ON_LOW_HEALTH
+    equipment: *id016
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 20
+    effects:
+    - type: REGENERATION
+      ticks: *id018
+      amplifier: 0
+    conditions:
+    - health-below:40
+  scorching_pick:
+    name: Scorching Pick
+    description: Your pick leaves scorched bonus coal behind as you work.
+    rarity: COMMON
+    category: MINING
+    pool: common
+    trigger: ON_BLOCK_BREAK
+    equipment: &id019
+    - PICKAXE
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 20
+      per-level: 3
+    effects:
+    - type: ITEM_DROP
+      material: COAL
+      amount: &id020
+        base: 1
+        per-level: 0.3
+  glacial_pick:
+    name: Glacial Pick
+    description: Your pick chills the surrounding area as you work.
+    rarity: COMMON
+    category: MINING
+    pool: common
+    trigger: ON_BLOCK_BREAK
+    equipment: *id019
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 20
+      per-level: 3
+    effects:
+    - type: PARTICLE
+      particle: SNOWFLAKE
+      count: 6
+  verdant_pick:
+    name: Verdant Pick
+    description: Your pick channels nature's bounty into XP as you work.
+    rarity: COMMON
+    category: MINING
+    pool: common
+    trigger: ON_BLOCK_BREAK
+    equipment: *id019
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 20
+      per-level: 3
+    effects:
+    - type: XP
+      amount: &id022
+        base: 2
+        per-level: 0.5
+  gilded_pick:
+    name: Gilded Pick
+    description: Your pick leaves a trace of gold value as you work.
+    rarity: COMMON
+    category: MINING
+    pool: common
+    trigger: ON_BLOCK_BREAK
+    equipment: *id019
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 20
+      per-level: 3
+    effects:
+    - type: MONEY
+      amount: &id023
+        base: 2
+        per-level: 0.6
+  scorching_shovel:
+    name: Scorching Shovel
+    description: Your shovel leaves scorched bonus coal behind as you work.
+    rarity: COMMON
+    category: DIGGING
+    pool: common
+    trigger: ON_BLOCK_BREAK
+    equipment: &id021
+    - SHOVEL
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 20
+      per-level: 3
+    effects:
+    - type: ITEM_DROP
+      material: COAL
+      amount: *id020
+  glacial_shovel:
+    name: Glacial Shovel
+    description: Your shovel chills the surrounding area as you work.
+    rarity: COMMON
+    category: DIGGING
+    pool: common
+    trigger: ON_BLOCK_BREAK
+    equipment: *id021
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 20
+      per-level: 3
+    effects:
+    - type: PARTICLE
+      particle: SNOWFLAKE
+      count: 6
+  verdant_shovel:
+    name: Verdant Shovel
+    description: Your shovel channels nature's bounty into XP as you work.
+    rarity: COMMON
+    category: DIGGING
+    pool: common
+    trigger: ON_BLOCK_BREAK
+    equipment: *id021
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 20
+      per-level: 3
+    effects:
+    - type: XP
+      amount: *id022
+  gilded_shovel:
+    name: Gilded Shovel
+    description: Your shovel leaves a trace of gold value as you work.
+    rarity: COMMON
+    category: DIGGING
+    pool: common
+    trigger: ON_BLOCK_BREAK
+    equipment: *id021
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 20
+      per-level: 3
+    effects:
+    - type: MONEY
+      amount: *id023
+  scorching_hoe:
+    name: Scorching Hoe
+    description: Your hoe leaves scorched bonus coal behind as you work.
+    rarity: COMMON
+    category: FARMING
+    pool: common
+    trigger: ON_BLOCK_BREAK
+    equipment: &id024
+    - HOE
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 20
+      per-level: 3
+    effects:
+    - type: ITEM_DROP
+      material: COAL
+      amount: *id020
+  glacial_hoe:
+    name: Glacial Hoe
+    description: Your hoe chills the surrounding area as you work.
+    rarity: COMMON
+    category: FARMING
+    pool: common
+    trigger: ON_BLOCK_BREAK
+    equipment: *id024
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 20
+      per-level: 3
+    effects:
+    - type: PARTICLE
+      particle: SNOWFLAKE
+      count: 6
+  verdant_hoe:
+    name: Verdant Hoe
+    description: Your hoe channels nature's bounty into XP as you work.
+    rarity: COMMON
+    category: FARMING
+    pool: common
+    trigger: ON_BLOCK_BREAK
+    equipment: *id024
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 20
+      per-level: 3
+    effects:
+    - type: XP
+      amount: *id022
+  gilded_hoe:
+    name: Gilded Hoe
+    description: Your hoe leaves a trace of gold value as you work.
+    rarity: COMMON
+    category: FARMING
+    pool: common
+    trigger: ON_BLOCK_BREAK
+    equipment: *id024
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 20
+      per-level: 3
+    effects:
+    - type: MONEY
+      amount: *id023
+  scorching_rod:
+    name: Scorching Rod
+    description: Your rod leaves scorched bonus coal behind as you work.
+    rarity: COMMON
+    category: FISHING
+    pool: common
+    trigger: ON_FISH
+    equipment: &id025
+    - FISHING_ROD
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 20
+      per-level: 3
+    effects:
+    - type: ITEM_DROP
+      material: COAL
+      amount: *id020
+  glacial_rod:
+    name: Glacial Rod
+    description: Your rod chills the surrounding area as you work.
+    rarity: COMMON
+    category: FISHING
+    pool: common
+    trigger: ON_FISH
+    equipment: *id025
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 20
+      per-level: 3
+    effects:
+    - type: PARTICLE
+      particle: SNOWFLAKE
+      count: 6
+  verdant_rod:
+    name: Verdant Rod
+    description: Your rod channels nature's bounty into XP as you work.
+    rarity: COMMON
+    category: FISHING
+    pool: common
+    trigger: ON_FISH
+    equipment: *id025
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 20
+      per-level: 3
+    effects:
+    - type: XP
+      amount: *id022
+  gilded_rod:
+    name: Gilded Rod
+    description: Your rod leaves a trace of gold value as you work.
+    rarity: COMMON
+    category: FISHING
+    pool: common
+    trigger: ON_FISH
+    equipment: *id025
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 20
+      per-level: 3
+    effects:
+    - type: MONEY
+      amount: *id023
+  prospector_coal_finder:
+    name: Prospector's Coal Finder
+    description: A prospector's touch yields bonus coal.
+    rarity: COMMON
+    category: MINING
+    pool: common
+    trigger: ON_BLOCK_BREAK
+    equipment: &id026
+    - PICKAXE
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 18
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: COAL
+      amount:
+        base: 1
+        per-level: 0.2
+  prospector_iron_ore_finder:
+    name: Prospector's Iron Ore Finder
+    description: A prospector's touch yields bonus iron ore.
+    rarity: COMMON
+    category: MINING
+    pool: common
+    trigger: ON_BLOCK_BREAK
+    equipment: *id026
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 18
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: IRON_ORE
+      amount:
+        base: 1
+        per-level: 0.2
+  prospector_gold_ore_finder:
+    name: Prospector's Gold Ore Finder
+    description: A prospector's touch yields bonus gold ore.
+    rarity: COMMON
+    category: MINING
+    pool: common
+    trigger: ON_BLOCK_BREAK
+    equipment: *id026
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 18
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: GOLD_ORE
+      amount:
+        base: 1
+        per-level: 0.2
+  prospector_diamond_finder:
+    name: Prospector's Diamond Finder
+    description: A prospector's touch yields bonus diamond.
+    rarity: COMMON
+    category: MINING
+    pool: common
+    trigger: ON_BLOCK_BREAK
+    equipment: *id026
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 18
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: DIAMOND
+      amount:
+        base: 1
+        per-level: 0.2
+  prospector_emerald_ore_finder:
+    name: Prospector's Emerald Ore Finder
+    description: A prospector's touch yields bonus emerald ore.
+    rarity: COMMON
+    category: MINING
+    pool: common
+    trigger: ON_BLOCK_BREAK
+    equipment: *id026
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 18
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: EMERALD_ORE
+      amount:
+        base: 1
+        per-level: 0.2
+  prospector_redstone_finder:
+    name: Prospector's Redstone Finder
+    description: A prospector's touch yields bonus redstone.
+    rarity: COMMON
+    category: MINING
+    pool: common
+    trigger: ON_BLOCK_BREAK
+    equipment: *id026
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 18
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: REDSTONE
+      amount:
+        base: 1
+        per-level: 0.2
+  prospector_lapis_ore_finder:
+    name: Prospector's Lapis Ore Finder
+    description: A prospector's touch yields bonus lapis ore.
+    rarity: COMMON
+    category: MINING
+    pool: common
+    trigger: ON_BLOCK_BREAK
+    equipment: *id026
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 18
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: LAPIS_ORE
+      amount:
+        base: 1
+        per-level: 0.2
+  prospector_copper_ore_finder:
+    name: Prospector's Copper Ore Finder
+    description: A prospector's touch yields bonus copper ore.
+    rarity: COMMON
+    category: MINING
+    pool: common
+    trigger: ON_BLOCK_BREAK
+    equipment: *id026
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 18
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: COPPER_ORE
+      amount:
+        base: 1
+        per-level: 0.2
+  prospector_oak_log_finder:
+    name: Prospector's Oak Log Finder
+    description: A prospector's touch yields bonus oak log.
+    rarity: COMMON
+    category: LOGGING
+    pool: common
+    trigger: ON_BLOCK_BREAK
+    equipment: &id027
+    - AXE
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 18
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: OAK_LOG
+      amount:
+        base: 1
+        per-level: 0.2
+  prospector_spruce_log_finder:
+    name: Prospector's Spruce Log Finder
+    description: A prospector's touch yields bonus spruce log.
+    rarity: COMMON
+    category: LOGGING
+    pool: common
+    trigger: ON_BLOCK_BREAK
+    equipment: *id027
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 18
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: SPRUCE_LOG
+      amount:
+        base: 1
+        per-level: 0.2
+  prospector_birch_log_finder:
+    name: Prospector's Birch Log Finder
+    description: A prospector's touch yields bonus birch log.
+    rarity: COMMON
+    category: LOGGING
+    pool: common
+    trigger: ON_BLOCK_BREAK
+    equipment: *id027
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 18
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: BIRCH_LOG
+      amount:
+        base: 1
+        per-level: 0.2
+  prospector_jungle_log_finder:
+    name: Prospector's Jungle Log Finder
+    description: A prospector's touch yields bonus jungle log.
+    rarity: COMMON
+    category: LOGGING
+    pool: common
+    trigger: ON_BLOCK_BREAK
+    equipment: *id027
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 18
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: JUNGLE_LOG
+      amount:
+        base: 1
+        per-level: 0.2
+  prospector_acacia_log_finder:
+    name: Prospector's Acacia Log Finder
+    description: A prospector's touch yields bonus acacia log.
+    rarity: COMMON
+    category: LOGGING
+    pool: common
+    trigger: ON_BLOCK_BREAK
+    equipment: *id027
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 18
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: ACACIA_LOG
+      amount:
+        base: 1
+        per-level: 0.2
+  prospector_dark_oak_log_finder:
+    name: Prospector's Dark Oak Log Finder
+    description: A prospector's touch yields bonus dark oak log.
+    rarity: COMMON
+    category: LOGGING
+    pool: common
+    trigger: ON_BLOCK_BREAK
+    equipment: *id027
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 18
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: DARK_OAK_LOG
+      amount:
+        base: 1
+        per-level: 0.2
+  prospector_mangrove_log_finder:
+    name: Prospector's Mangrove Log Finder
+    description: A prospector's touch yields bonus mangrove log.
+    rarity: COMMON
+    category: LOGGING
+    pool: common
+    trigger: ON_BLOCK_BREAK
+    equipment: *id027
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 18
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: MANGROVE_LOG
+      amount:
+        base: 1
+        per-level: 0.2
+  prospector_cherry_log_finder:
+    name: Prospector's Cherry Log Finder
+    description: A prospector's touch yields bonus cherry log.
+    rarity: COMMON
+    category: LOGGING
+    pool: common
+    trigger: ON_BLOCK_BREAK
+    equipment: *id027
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 18
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: CHERRY_LOG
+      amount:
+        base: 1
+        per-level: 0.2
+  prospector_wheat_finder:
+    name: Prospector's Wheat Finder
+    description: A prospector's touch yields bonus wheat.
+    rarity: COMMON
+    category: FARMING
+    pool: common
+    trigger: ON_BLOCK_BREAK
+    equipment: &id028
+    - HOE
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 18
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: WHEAT
+      amount:
+        base: 1
+        per-level: 0.2
+  prospector_carrot_finder:
+    name: Prospector's Carrot Finder
+    description: A prospector's touch yields bonus carrot.
+    rarity: COMMON
+    category: FARMING
+    pool: common
+    trigger: ON_BLOCK_BREAK
+    equipment: *id028
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 18
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: CARROT
+      amount:
+        base: 1
+        per-level: 0.2
+  prospector_potato_finder:
+    name: Prospector's Potato Finder
+    description: A prospector's touch yields bonus potato.
+    rarity: COMMON
+    category: FARMING
+    pool: common
+    trigger: ON_BLOCK_BREAK
+    equipment: *id028
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 18
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: POTATO
+      amount:
+        base: 1
+        per-level: 0.2
+  prospector_beetroot_finder:
+    name: Prospector's Beetroot Finder
+    description: A prospector's touch yields bonus beetroot.
+    rarity: COMMON
+    category: FARMING
+    pool: common
+    trigger: ON_BLOCK_BREAK
+    equipment: *id028
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 18
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: BEETROOT
+      amount:
+        base: 1
+        per-level: 0.2
+  prospector_pumpkin_finder:
+    name: Prospector's Pumpkin Finder
+    description: A prospector's touch yields bonus pumpkin.
+    rarity: COMMON
+    category: FARMING
+    pool: common
+    trigger: ON_BLOCK_BREAK
+    equipment: *id028
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 18
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: PUMPKIN
+      amount:
+        base: 1
+        per-level: 0.2
+  prospector_melon_slice_finder:
+    name: Prospector's Melon Slice Finder
+    description: A prospector's touch yields bonus melon slice.
+    rarity: COMMON
+    category: FARMING
+    pool: common
+    trigger: ON_BLOCK_BREAK
+    equipment: *id028
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 18
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: MELON_SLICE
+      amount:
+        base: 1
+        per-level: 0.2
+  prospector_sugar_cane_finder:
+    name: Prospector's Sugar Cane Finder
+    description: A prospector's touch yields bonus sugar cane.
+    rarity: COMMON
+    category: FARMING
+    pool: common
+    trigger: ON_BLOCK_BREAK
+    equipment: *id028
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 18
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: SUGAR_CANE
+      amount:
+        base: 1
+        per-level: 0.2
+  prospector_nether_wart_finder:
+    name: Prospector's Nether Wart Finder
+    description: A prospector's touch yields bonus nether wart.
+    rarity: COMMON
+    category: FARMING
+    pool: common
+    trigger: ON_BLOCK_BREAK
+    equipment: *id028
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 18
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: NETHER_WART
+      amount:
+        base: 1
+        per-level: 0.2
+  prospector_sand_finder:
+    name: Prospector's Sand Finder
+    description: A prospector's touch yields bonus sand.
+    rarity: COMMON
+    category: DIGGING
+    pool: common
+    trigger: ON_BLOCK_BREAK
+    equipment: &id029
+    - SHOVEL
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 18
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: SAND
+      amount:
+        base: 1
+        per-level: 0.2
+  prospector_gravel_finder:
+    name: Prospector's Gravel Finder
+    description: A prospector's touch yields bonus gravel.
+    rarity: COMMON
+    category: DIGGING
+    pool: common
+    trigger: ON_BLOCK_BREAK
+    equipment: *id029
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 18
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: GRAVEL
+      amount:
+        base: 1
+        per-level: 0.2
+  prospector_clay_ball_finder:
+    name: Prospector's Clay Ball Finder
+    description: A prospector's touch yields bonus clay ball.
+    rarity: COMMON
+    category: DIGGING
+    pool: common
+    trigger: ON_BLOCK_BREAK
+    equipment: *id029
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 18
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: CLAY_BALL
+      amount:
+        base: 1
+        per-level: 0.2
+  prospector_dirt_finder:
+    name: Prospector's Dirt Finder
+    description: A prospector's touch yields bonus dirt.
+    rarity: COMMON
+    category: DIGGING
+    pool: common
+    trigger: ON_BLOCK_BREAK
+    equipment: *id029
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 18
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: DIRT
+      amount:
+        base: 1
+        per-level: 0.2
+  prospector_soul_sand_finder:
+    name: Prospector's Soul Sand Finder
+    description: A prospector's touch yields bonus soul sand.
+    rarity: COMMON
+    category: DIGGING
+    pool: common
+    trigger: ON_BLOCK_BREAK
+    equipment: *id029
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 18
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: SOUL_SAND
+      amount:
+        base: 1
+        per-level: 0.2
+  prospector_red_sand_finder:
+    name: Prospector's Red Sand Finder
+    description: A prospector's touch yields bonus red sand.
+    rarity: COMMON
+    category: DIGGING
+    pool: common
+    trigger: ON_BLOCK_BREAK
+    equipment: *id029
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 18
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: RED_SAND
+      amount:
+        base: 1
+        per-level: 0.2
+  prospector_snowball_finder:
+    name: Prospector's Snowball Finder
+    description: A prospector's touch yields bonus snowball.
+    rarity: COMMON
+    category: DIGGING
+    pool: common
+    trigger: ON_BLOCK_BREAK
+    equipment: *id029
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 18
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: SNOWBALL
+      amount:
+        base: 1
+        per-level: 0.2
+  prospector_mud_finder:
+    name: Prospector's Mud Finder
+    description: A prospector's touch yields bonus mud.
+    rarity: COMMON
+    category: DIGGING
+    pool: common
+    trigger: ON_BLOCK_BREAK
+    equipment: *id029
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 18
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: MUD
+      amount:
+        base: 1
+        per-level: 0.2
+  prospector_cod_finder:
+    name: Prospector's Cod Finder
+    description: A prospector's touch yields bonus cod.
+    rarity: COMMON
+    category: FISHING
+    pool: common
+    trigger: ON_FISH
+    equipment: &id030
+    - FISHING_ROD
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 18
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: COD
+      amount:
+        base: 1
+        per-level: 0.2
+  prospector_salmon_finder:
+    name: Prospector's Salmon Finder
+    description: A prospector's touch yields bonus salmon.
+    rarity: COMMON
+    category: FISHING
+    pool: common
+    trigger: ON_FISH
+    equipment: *id030
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 18
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: SALMON
+      amount:
+        base: 1
+        per-level: 0.2
+  prospector_tropical_fish_finder:
+    name: Prospector's Tropical Fish Finder
+    description: A prospector's touch yields bonus tropical fish.
+    rarity: COMMON
+    category: FISHING
+    pool: common
+    trigger: ON_FISH
+    equipment: *id030
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 18
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: TROPICAL_FISH
+      amount:
+        base: 1
+        per-level: 0.2
+  prospector_pufferfish_finder:
+    name: Prospector's Pufferfish Finder
+    description: A prospector's touch yields bonus pufferfish.
+    rarity: COMMON
+    category: FISHING
+    pool: common
+    trigger: ON_FISH
+    equipment: *id030
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 18
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: PUFFERFISH
+      amount:
+        base: 1
+        per-level: 0.2
+  prospector_ink_sac_finder:
+    name: Prospector's Ink Sac Finder
+    description: A prospector's touch yields bonus ink sac.
+    rarity: COMMON
+    category: FISHING
+    pool: common
+    trigger: ON_FISH
+    equipment: *id030
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 18
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: INK_SAC
+      amount:
+        base: 1
+        per-level: 0.2
+  prospector_prismarine_shard_finder:
+    name: Prospector's Prismarine Shard Finder
+    description: A prospector's touch yields bonus prismarine shard.
+    rarity: COMMON
+    category: FISHING
+    pool: common
+    trigger: ON_FISH
+    equipment: *id030
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 18
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: PRISMARINE_SHARD
+      amount:
+        base: 1
+        per-level: 0.2
+  prospector_nautilus_shell_finder:
+    name: Prospector's Nautilus Shell Finder
+    description: A prospector's touch yields bonus nautilus shell.
+    rarity: COMMON
+    category: FISHING
+    pool: common
+    trigger: ON_FISH
+    equipment: *id030
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 18
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: NAUTILUS_SHELL
+      amount:
+        base: 1
+        per-level: 0.2
+  prospector_bone_finder:
+    name: Prospector's Bone Finder
+    description: A prospector's touch yields bonus bone.
+    rarity: COMMON
+    category: FISHING
+    pool: common
+    trigger: ON_FISH
+    equipment: *id030
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 18
+      per-level: 2.5
+    effects:
+    - type: ITEM_DROP
+      material: BONE
+      amount:
+        base: 1
+        per-level: 0.2
+  vampiric_blade:
+    name: Vampiric Blade
+    description: This blade drains life force on hit.
+    rarity: COMMON
+    category: COMBAT
+    pool: common
+    trigger: ON_HIT
+    equipment: *id002
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 20
+      per-level: 2.5
+    effects:
+    - type: HEAL
+      amount: &id031
+        base: 1.5
+        per-level: 0.4
+  vampiric_axe:
+    name: Vampiric Axe
+    description: This axe drains life force on hit.
+    rarity: COMMON
+    category: COMBAT
+    pool: common
+    trigger: ON_HIT
+    equipment: *id003
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 20
+      per-level: 2.5
+    effects:
+    - type: HEAL
+      amount: *id031
+  vampiric_bow:
+    name: Vampiric Bow
+    description: This bow drains life force on hit.
+    rarity: COMMON
+    category: COMBAT
+    pool: common
+    trigger: ON_ATTACK
+    equipment: *id006
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 20
+      per-level: 2.5
+    effects:
+    - type: HEAL
+      amount: *id031
+  vampiric_trident:
+    name: Vampiric Trident
+    description: This trident drains life force on hit.
+    rarity: COMMON
+    category: COMBAT
+    pool: common
+    trigger: ON_HIT
+    equipment: *id007
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 20
+      per-level: 2.5
+    effects:
+    - type: HEAL
+      amount: *id031
+  executing_blade:
+    name: Executing Blade
+    description: This blade seeks out weak points.
+    rarity: COMMON
+    category: COMBAT
+    pool: common
+    trigger: ON_HIT
+    equipment: *id002
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 20
+      per-level: 2.5
+    effects:
+    - type: DAMAGE
+      target: TARGET
+      amount: &id032
+        base: 3
+        per-level: 0.8
+  executing_axe:
+    name: Executing Axe
+    description: This axe seeks out weak points.
+    rarity: COMMON
+    category: COMBAT
+    pool: common
+    trigger: ON_HIT
+    equipment: *id003
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 20
+      per-level: 2.5
+    effects:
+    - type: DAMAGE
+      target: TARGET
+      amount: *id032
+  executing_bow:
+    name: Executing Bow
+    description: This bow seeks out weak points.
+    rarity: COMMON
+    category: COMBAT
+    pool: common
+    trigger: ON_ATTACK
+    equipment: *id006
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 20
+      per-level: 2.5
+    effects:
+    - type: DAMAGE
+      target: TARGET
+      amount: *id032
+  executing_trident:
+    name: Executing Trident
+    description: This trident seeks out weak points.
+    rarity: COMMON
+    category: COMBAT
+    pool: common
+    trigger: ON_HIT
+    equipment: *id007
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 20
+      per-level: 2.5
+    effects:
+    - type: DAMAGE
+      target: TARGET
+      amount: *id032
+  stunning_blade:
+    name: Stunning Blade
+    description: This blade stuns on impact.
+    rarity: COMMON
+    category: COMBAT
+    pool: common
+    trigger: ON_HIT
+    equipment: *id002
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 20
+      per-level: 2.5
+    effects:
+    - type: SLOW
+      ticks: &id033
+        base: 30
+        per-level: 6
+      amplifier: 2
+  stunning_axe:
+    name: Stunning Axe
+    description: This axe stuns on impact.
+    rarity: COMMON
+    category: COMBAT
+    pool: common
+    trigger: ON_HIT
+    equipment: *id003
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 20
+      per-level: 2.5
+    effects:
+    - type: SLOW
+      ticks: *id033
+      amplifier: 2
+  stunning_bow:
+    name: Stunning Bow
+    description: This bow stuns on impact.
+    rarity: COMMON
+    category: COMBAT
+    pool: common
+    trigger: ON_ATTACK
+    equipment: *id006
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 20
+      per-level: 2.5
+    effects:
+    - type: SLOW
+      ticks: *id033
+      amplifier: 2
+  stunning_trident:
+    name: Stunning Trident
+    description: This trident stuns on impact.
+    rarity: COMMON
+    category: COMBAT
+    pool: common
+    trigger: ON_HIT
+    equipment: *id007
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 20
+      per-level: 2.5
+    effects:
+    - type: SLOW
+      ticks: *id033
+      amplifier: 2
+  piercing_blade:
+    name: Piercing Blade
+    description: This blade pierces through to nearby foes.
+    rarity: COMMON
+    category: COMBAT
+    pool: common
+    trigger: ON_HIT
+    equipment: *id002
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 20
+      per-level: 2.5
+    effects:
+    - type: AREA_DAMAGE
+      amount: &id034
+        base: 2
+        per-level: 0.5
+      radius: 2
+  piercing_axe:
+    name: Piercing Axe
+    description: This axe pierces through to nearby foes.
+    rarity: COMMON
+    category: COMBAT
+    pool: common
+    trigger: ON_HIT
+    equipment: *id003
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 20
+      per-level: 2.5
+    effects:
+    - type: AREA_DAMAGE
+      amount: *id034
+      radius: 2
+  piercing_bow:
+    name: Piercing Bow
+    description: This bow pierces through to nearby foes.
+    rarity: COMMON
+    category: COMBAT
+    pool: common
+    trigger: ON_ATTACK
+    equipment: *id006
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 20
+      per-level: 2.5
+    effects:
+    - type: AREA_DAMAGE
+      amount: *id034
+      radius: 2
+  piercing_trident:
+    name: Piercing Trident
+    description: This trident pierces through to nearby foes.
+    rarity: COMMON
+    category: COMBAT
+    pool: common
+    trigger: ON_HIT
+    equipment: *id007
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 20
+      per-level: 2.5
+    effects:
+    - type: AREA_DAMAGE
+      amount: *id034
+      radius: 2
+  momentum_blade:
+    name: Momentum Blade
+    description: This blade knocks enemies back with force.
+    rarity: COMMON
+    category: COMBAT
+    pool: common
+    trigger: ON_HIT
+    equipment: *id002
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 20
+      per-level: 2.5
+    effects:
+    - type: PUSH
+      strength: &id035
+        base: 0.8
+        per-level: 0.15
+  momentum_axe:
+    name: Momentum Axe
+    description: This axe knocks enemies back with force.
+    rarity: COMMON
+    category: COMBAT
+    pool: common
+    trigger: ON_HIT
+    equipment: *id003
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 20
+      per-level: 2.5
+    effects:
+    - type: PUSH
+      strength: *id035
+  momentum_bow:
+    name: Momentum Bow
+    description: This bow knocks enemies back with force.
+    rarity: COMMON
+    category: COMBAT
+    pool: common
+    trigger: ON_ATTACK
+    equipment: *id006
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 20
+      per-level: 2.5
+    effects:
+    - type: PUSH
+      strength: *id035
+  momentum_trident:
+    name: Momentum Trident
+    description: This trident knocks enemies back with force.
+    rarity: COMMON
+    category: COMBAT
+    pool: common
+    trigger: ON_HIT
+    equipment: *id007
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 20
+      per-level: 2.5
+    effects:
+    - type: PUSH
+      strength: *id035
+  ferocity_helm:
+    name: Ferocity Helm
+    description: Your helm resonates with ferocity.
+    rarity: COMMON
+    category: ARMOR
+    pool: common
+    trigger: ON_HIT
+    equipment: *id012
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 18
+    effects:
+    - type: STRENGTH
+      ticks: &id036
+        base: 40
+        per-level: 8
+      amplifier: 0
+  ferocity_plate:
+    name: Ferocity Plate
+    description: Your plate resonates with ferocity.
+    rarity: COMMON
+    category: ARMOR
+    pool: common
+    trigger: ON_HIT
+    equipment: *id013
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 18
+    effects:
+    - type: STRENGTH
+      ticks: *id036
+      amplifier: 0
+  ferocity_greaves:
+    name: Ferocity Greaves
+    description: Your greaves resonates with ferocity.
+    rarity: COMMON
+    category: ARMOR
+    pool: common
+    trigger: ON_HIT
+    equipment: *id015
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 18
+    effects:
+    - type: STRENGTH
+      ticks: *id036
+      amplifier: 0
+  ferocity_treads:
+    name: Ferocity Treads
+    description: Your treads resonates with ferocity.
+    rarity: COMMON
+    category: ARMOR
+    pool: common
+    trigger: ON_HIT
+    equipment: *id016
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 18
+    effects:
+    - type: STRENGTH
+      ticks: *id036
+      amplifier: 0
+  ward_helm:
+    name: Ward Helm
+    description: Your helm resonates with ward.
+    rarity: COMMON
+    category: ARMOR
+    pool: common
+    trigger: ON_ARMOR_EQUIP
+    equipment: *id012
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 18
+    effects:
+    - type: ABSORPTION
+      ticks: &id037
+        base: 40
+        per-level: 8
+      amplifier: 0
+  ward_plate:
+    name: Ward Plate
+    description: Your plate resonates with ward.
+    rarity: COMMON
+    category: ARMOR
+    pool: common
+    trigger: ON_ARMOR_EQUIP
+    equipment: *id013
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 18
+    effects:
+    - type: ABSORPTION
+      ticks: *id037
+      amplifier: 0
+  ward_greaves:
+    name: Ward Greaves
+    description: Your greaves resonates with ward.
+    rarity: COMMON
+    category: ARMOR
+    pool: common
+    trigger: ON_ARMOR_EQUIP
+    equipment: *id015
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 18
+    effects:
+    - type: ABSORPTION
+      ticks: *id037
+      amplifier: 0
+  ward_treads:
+    name: Ward Treads
+    description: Your treads resonates with ward.
+    rarity: COMMON
+    category: ARMOR
+    pool: common
+    trigger: ON_ARMOR_EQUIP
+    equipment: *id016
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 18
+    effects:
+    - type: ABSORPTION
+      ticks: *id037
+      amplifier: 0
+  momentum_guard_helm:
+    name: Momentum Guard Helm
+    description: Your helm resonates with momentum guard.
+    rarity: COMMON
+    category: ARMOR
+    pool: common
+    trigger: ON_JUMP
+    equipment: *id012
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 18
+    effects:
+    - type: SPEED
+      ticks: &id038
+        base: 40
+        per-level: 8
+      amplifier: 0
+  momentum_guard_plate:
+    name: Momentum Guard Plate
+    description: Your plate resonates with momentum guard.
+    rarity: COMMON
+    category: ARMOR
+    pool: common
+    trigger: ON_JUMP
+    equipment: *id013
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 18
+    effects:
+    - type: SPEED
+      ticks: *id038
+      amplifier: 0
+  momentum_guard_greaves:
+    name: Momentum Guard Greaves
+    description: Your greaves resonates with momentum guard.
+    rarity: COMMON
+    category: ARMOR
+    pool: common
+    trigger: ON_JUMP
+    equipment: *id015
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 18
+    effects:
+    - type: SPEED
+      ticks: *id038
+      amplifier: 0
+  momentum_guard_treads:
+    name: Momentum Guard Treads
+    description: Your treads resonates with momentum guard.
+    rarity: COMMON
+    category: ARMOR
+    pool: common
+    trigger: ON_JUMP
+    equipment: *id016
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 18
+    effects:
+    - type: SPEED
+      ticks: *id038
+      amplifier: 0
+  mending_light_helm:
+    name: Mending Light Helm
+    description: Your helm resonates with mending light.
+    rarity: COMMON
+    category: ARMOR
+    pool: common
+    trigger: ON_HEAL
+    equipment: *id012
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 18
+    effects:
+    - type: REGENERATION
+      ticks: &id039
+        base: 40
+        per-level: 8
+      amplifier: 1
+  mending_light_plate:
+    name: Mending Light Plate
+    description: Your plate resonates with mending light.
+    rarity: COMMON
+    category: ARMOR
+    pool: common
+    trigger: ON_HEAL
+    equipment: *id013
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 18
+    effects:
+    - type: REGENERATION
+      ticks: *id039
+      amplifier: 1
+  mending_light_greaves:
+    name: Mending Light Greaves
+    description: Your greaves resonates with mending light.
+    rarity: COMMON
+    category: ARMOR
+    pool: common
+    trigger: ON_HEAL
+    equipment: *id015
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 18
+    effects:
+    - type: REGENERATION
+      ticks: *id039
+      amplifier: 1
+  mending_light_treads:
+    name: Mending Light Treads
+    description: Your treads resonates with mending light.
+    rarity: COMMON
+    category: ARMOR
+    pool: common
+    trigger: ON_HEAL
+    equipment: *id016
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+    cooldown:
+      base: 18
+    effects:
+    - type: REGENERATION
+      ticks: *id039
+      amplifier: 1
+  recall:
+    name: Recall
+    description: A utility rune themed around recall.
+    rarity: COMMON
+    category: UTILITY
+    pool: common
+    trigger: ON_SPRINT
+    equipment:
+    - ANY
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 20
+      per-level: 2.5
+    cooldown:
+      base: 10
+      per-level: -0.5
+    effects:
+    - type: TELEPORT
+      mode: random-nearby
+      radius: 6
+  magpie:
+    name: Magpie
+    description: A utility rune themed around magpie.
+    rarity: COMMON
+    category: UTILITY
+    pool: common
+    trigger: ON_BLOCK_BREAK
+    equipment:
+    - PICKAXE
+    - SHOVEL
+    - AXE
+    - HOE
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 20
+      per-level: 2.5
+    cooldown:
+      base: 10
+      per-level: -0.5
+    effects:
+    - type: PULL
+      target: AREA
+      radius: 5
+      strength: 0.5
+  windfall:
+    name: Windfall
+    description: A utility rune themed around windfall.
+    rarity: COMMON
+    category: UTILITY
+    pool: common
+    trigger: ON_KILL
+    equipment:
+    - SWORD
+    - AXE
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 20
+      per-level: 2.5
+    cooldown:
+      base: 10
+      per-level: -0.5
+    effects:
+    - type: PUSH
+      target: NEARBY_MOBS
+      strength: 1.2
+  prospectors_call:
+    name: Prospector's Call
+    description: A utility rune themed around prospector's call.
+    rarity: COMMON
+    category: UTILITY
+    pool: common
+    trigger: ON_BLOCK_BREAK
+    equipment:
+    - PICKAXE
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 20
+      per-level: 2.5
+    cooldown:
+      base: 10
+      per-level: -0.5
+    effects:
+    - type: ACTIONBAR
+      text: <gray>You sense something nearby...
+  riptide:
+    name: Riptide
+    description: A combat rune built around riptide.
+    rarity: COMMON
+    category: COMBAT
+    pool: common
+    trigger: ON_ATTACK
+    equipment:
+    - TRIDENT
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 18
+      per-level: 2
+    cooldown:
+      base: 6
+      per-level: -0.3
+    effects:
+    - type: PUSH
+      target: SELF
+      strength:
+        base: 1
+        per-level: 0.2
+  overcharge:
+    name: Overcharge
+    description: A combat rune built around overcharge.
+    rarity: COMMON
+    category: WEAPONS
+    pool: common
+    trigger: ON_CRITICAL
+    equipment:
+    - SWORD
+    - AXE
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 18
+      per-level: 2
+    cooldown:
+      base: 6
+      per-level: -0.3
+    effects:
+    - type: STRENGTH
+      ticks:
+        base: 40
+        per-level: 8
+      amplifier: 1
+  backdraft:
+    name: Backdraft
+    description: A combat rune built around backdraft.
+    rarity: COMMON
+    category: COMBAT
+    pool: common
+    trigger: ON_KILL
+    equipment:
+    - SWORD
+    - AXE
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 18
+      per-level: 2
+    cooldown:
+      base: 6
+      per-level: -0.3
+    effects:
+    - type: FIRE
+      target: NEARBY_MOBS
+      ticks:
+        base: 30
+        per-level: 6
+  static_field:
+    name: Static Field
+    description: A combat rune built around static field.
+    rarity: COMMON
+    category: COMBAT
+    pool: common
+    trigger: ON_ATTACK
+    equipment:
+    - TRIDENT
+    - SWORD
+    max-level: 5
+    weight: 100
+    symbol: ✦
+    original: false
+    chance:
+      base: 18
+      per-level: 2
+    cooldown:
+      base: 6
+      per-level: -0.3
+    effects:
+    - type: SLOW
+      target: NEARBY_MOBS
+      ticks:
+        base: 30
+        per-level: 6
+      amplifier: 0

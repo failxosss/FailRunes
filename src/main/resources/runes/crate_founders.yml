@@ -1,0 +1,82 @@
+# Auto-generated rune definitions for pool 'crate_founders'. Safe to hand-edit; /runeadmin reload picks up changes.
+runes:
+  crate_founders_mask:
+    name: Founder's Mask
+    description: A crate-exclusive relic from the Founder's Crate.
+    rarity: MYTHICAL
+    category: CRATE
+    pool: crate_founders
+    trigger: ON_ARMOR_EQUIP
+    equipment:
+    - HELMET
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+      per-level: 0
+    effects:
+    - type: PARTICLE
+      particle: SOUL
+      count: 8
+  crate_founders_robes:
+    name: Founder's Robes
+    description: A crate-exclusive relic from the Founder's Crate.
+    rarity: MYTHICAL
+    category: CRATE
+    pool: crate_founders
+    trigger: ON_ARMOR_EQUIP
+    equipment:
+    - CHESTPLATE
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+      per-level: 0
+    effects:
+    - type: PARTICLE
+      particle: SOUL
+      count: 8
+  crate_founders_fang:
+    name: Founder's Fang
+    description: A crate-exclusive relic from the Founder's Crate.
+    rarity: MYTHICAL
+    category: CRATE
+    pool: crate_founders
+    trigger: ON_HIT
+    equipment:
+    - SWORD
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 12
+      per-level: 2
+    effects:
+    - type: PARTICLE
+      particle: SOUL
+      count: 8
+  crate_founders_boots:
+    name: Founder's Boots
+    description: A crate-exclusive relic from the Founder's Crate.
+    rarity: MYTHICAL
+    category: CRATE
+    pool: crate_founders
+    trigger: ON_ARMOR_EQUIP
+    equipment:
+    - BOOTS
+    max-level: 8
+    weight: 3
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+      per-level: 0
+    effects:
+    - type: PARTICLE
+      particle: SOUL
+      count: 8

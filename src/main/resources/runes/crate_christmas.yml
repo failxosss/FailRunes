@@ -1,0 +1,82 @@
+# Auto-generated rune definitions for pool 'crate_christmas'. Safe to hand-edit; /runeadmin reload picks up changes.
+runes:
+  christmas_mask:
+    name: Christmas Mask
+    description: A crate-exclusive christmas relic with a flair all its own.
+    rarity: LEGENDARY
+    category: CRATE
+    pool: crate_christmas
+    trigger: ON_ARMOR_EQUIP
+    equipment:
+    - HELMET
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+      per-level: 0
+    effects:
+    - type: PARTICLE
+      particle: SNOWFLAKE
+      count: 8
+  christmas_robes:
+    name: Christmas Robes
+    description: A crate-exclusive christmas relic with a flair all its own.
+    rarity: LEGENDARY
+    category: CRATE
+    pool: crate_christmas
+    trigger: ON_ARMOR_EQUIP
+    equipment:
+    - CHESTPLATE
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+      per-level: 0
+    effects:
+    - type: PARTICLE
+      particle: SNOWFLAKE
+      count: 8
+  christmas_fang:
+    name: Christmas Fang
+    description: A crate-exclusive christmas relic with a flair all its own.
+    rarity: LEGENDARY
+    category: CRATE
+    pool: crate_christmas
+    trigger: ON_HIT
+    equipment:
+    - SWORD
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 15
+      per-level: 3
+    effects:
+    - type: PARTICLE
+      particle: SNOWFLAKE
+      count: 8
+  christmas_boots:
+    name: Christmas Boots
+    description: A crate-exclusive christmas relic with a flair all its own.
+    rarity: LEGENDARY
+    category: CRATE
+    pool: crate_christmas
+    trigger: ON_ARMOR_EQUIP
+    equipment:
+    - BOOTS
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 100
+      per-level: 0
+    effects:
+    - type: PARTICLE
+      particle: SNOWFLAKE
+      count: 8

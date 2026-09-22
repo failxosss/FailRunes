@@ -1,0 +1,23 @@
+# Requirement #44: equipment set bonuses, thresholds at 2/3/4 pieces.
+sets:
+  zenith:
+    display: "Zenith Set"
+    pieces: [zenith_helmet, zenith_chestplate, zenith_leggings, zenith_boots]
+    bonuses:
+      2pieces:
+        message: "<gold>Zenith Set (2): <white>+10% mining speed"
+        effects: []
+      4pieces:
+        message: "<gold>Zenith Set (4): <white>Chance to duplicate mined ore"
+        effects:
+          - type: PARTICLE
+            particle: END_ROD
+            count: 10
+
+  prismatic:
+    display: "Prismatic Set"
+    pieces: [prismatic_helmet, prismatic_chestplate, prismatic_leggings, prismatic_boots]
+    bonuses:
+      3pieces:
+        message: "<light_purple>Prismatic Set (3): <white>+15% XP gained"
+        effects: []

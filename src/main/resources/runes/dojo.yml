@@ -1,0 +1,161 @@
+# Auto-generated rune definitions for pool 'dojo'. Safe to hand-edit; /runeadmin reload picks up changes.
+runes:
+  disciples_rare_dojo:
+    name: Disciple's Technique
+    description: A Dragon Dojo technique that channels dojo training into raw power.
+    rarity: RARE
+    category: COMBAT
+    pool: dojo
+    trigger: ON_ATTACK
+    equipment: &id001
+    - SWORD
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 18
+      per-level: 2.5
+    effects:
+    - type: STRENGTH
+      ticks: 40
+      amplifier: 0
+    conditions:
+    - sneaking
+  disciples_legendary_dojo:
+    name: Disciple's Technique
+    description: A Dragon Dojo technique that channels dojo training into raw power.
+    rarity: LEGENDARY
+    category: COMBAT
+    pool: dojo
+    trigger: ON_ATTACK
+    equipment: *id001
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 12
+      per-level: 2.5
+    effects:
+    - type: STRENGTH
+      ticks: 40
+      amplifier: 0
+    conditions:
+    - sneaking
+  senseis_rare_dojo:
+    name: Sensei's Technique
+    description: A Dragon Dojo technique that grants a master's swiftness.
+    rarity: RARE
+    category: MOVEMENT
+    pool: dojo
+    trigger: ON_SPRINT
+    equipment: &id002
+    - BOOTS
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 18
+      per-level: 2.5
+    effects:
+    - type: SPEED
+      ticks: 40
+      amplifier: 1
+  senseis_legendary_dojo:
+    name: Sensei's Technique
+    description: A Dragon Dojo technique that grants a master's swiftness.
+    rarity: LEGENDARY
+    category: MOVEMENT
+    pool: dojo
+    trigger: ON_SPRINT
+    equipment: *id002
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 12
+      per-level: 2.5
+    effects:
+    - type: SPEED
+      ticks: 40
+      amplifier: 1
+  dragon_fist_rare_dojo:
+    name: Dragon Fist Technique
+    description: A Dragon Dojo technique that unleashes a dragon-style shockwave.
+    rarity: RARE
+    category: COMBAT
+    pool: dojo
+    trigger: ON_CRITICAL
+    equipment: &id003
+    - SWORD
+    - AXE
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 18
+      per-level: 2.5
+    effects:
+    - type: AREA_DAMAGE
+      amount: 3
+      radius: 3
+  dragon_fist_legendary_dojo:
+    name: Dragon Fist Technique
+    description: A Dragon Dojo technique that unleashes a dragon-style shockwave.
+    rarity: LEGENDARY
+    category: COMBAT
+    pool: dojo
+    trigger: ON_CRITICAL
+    equipment: *id003
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 12
+      per-level: 2.5
+    effects:
+    - type: AREA_DAMAGE
+      amount: 3
+      radius: 3
+  dojo_anglers_rare_dojo:
+    name: Dojo Angler's Technique
+    description: A Dragon Dojo technique that rewards patient dojo fishing with XP.
+    rarity: RARE
+    category: FISHING
+    pool: dojo
+    trigger: ON_FISH
+    equipment: &id004
+    - FISHING_ROD
+    max-level: 6
+    weight: 40
+    symbol: ✦
+    original: false
+    chance:
+      base: 18
+      per-level: 2.5
+    effects:
+    - type: XP
+      amount: 4
+  dojo_anglers_legendary_dojo:
+    name: Dojo Angler's Technique
+    description: A Dragon Dojo technique that rewards patient dojo fishing with XP.
+    rarity: LEGENDARY
+    category: FISHING
+    pool: dojo
+    trigger: ON_FISH
+    equipment: *id004
+    max-level: 7
+    weight: 12
+    symbol: ✦
+    original: false
+    chance:
+      base: 12
+      per-level: 2.5
+    effects:
+    - type: XP
+      amount: 4

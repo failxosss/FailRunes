@@ -1,0 +1,134 @@
+# Requirement #2/#37-#43: every special pool independently controls visibility, availability, source, drop
+# method and its own rune list. The four core tiers (common/rare/legendary/mythical) are always registered
+# automatically and don't need an entry here unless you want to override their display name.
+pools:
+  tomb:
+    type: TOMB
+    display: "Pharaoh's Tomb"
+    visible: true
+    purchasable: false
+    drop-method: ZONE
+    source: "Pharaoh's Tomb loot"
+    tier: RARE
+
+  darkzone:
+    type: DARKZONE
+    display: "Darkzone"
+    visible: true
+    purchasable: false
+    drop-method: ZONE
+    source: "Darkzone mob/boss drops"
+    tier: LEGENDARY
+
+  dojo:
+    type: DOJO
+    display: "Dragon Dojo"
+    visible: true
+    purchasable: false
+    drop-method: ZONE
+    source: "Dragon Dojo activities"
+    tier: LEGENDARY
+
+  crate_oni:
+    type: CRATE_EXCLUSIVE
+    display: "Oni Crate"
+    visible: true
+    purchasable: false
+    drop-method: CRATE
+    source: "Oni Crate"
+    tier: MYTHICAL
+
+  crate_christmas:
+    type: CRATE_EXCLUSIVE
+    display: "Christmas Crate"
+    visible: true
+    purchasable: false
+    drop-method: CRATE
+    source: "Christmas Crate"
+    tier: LEGENDARY
+
+  seasonal_christmas:
+    type: SEASONAL
+    display: "Christmas"
+    visible: true
+    purchasable: false
+    drop-method: SEASONAL
+    source: "Christmas event"
+    ends-at: "2026-12-31"
+    tier: LEGENDARY
+
+  seasonal_halloween:
+    type: SEASONAL
+    display: "Halloween"
+    visible: true
+    purchasable: false
+    drop-method: SEASONAL
+    source: "Halloween event"
+    ends-at: "2026-11-05"
+    tier: RARE
+
+  boss_ender_dragon:
+    type: BOSS
+    display: "Ender Dragon"
+    visible: true
+    purchasable: false
+    drop-method: BOSS
+    source: "Ender Dragon"
+    tier: MYTHICAL
+
+  event_summer:
+    type: EVENT
+    display: "Summer Splash"
+    visible: true
+    purchasable: false
+    drop-method: EVENT
+    source: "Summer Splash event"
+    tier: RARE
+
+  seasonal_easter:
+    type: SEASONAL
+    display: "Easter"
+    visible: true
+    purchasable: false
+    drop-method: SEASONAL
+    source: "Easter event"
+    ends-at: "2027-04-15"
+    tier: RARE
+
+  seasonal_anniversary:
+    type: SEASONAL
+    display: "Server Anniversary"
+    visible: true
+    purchasable: false
+    drop-method: SEASONAL
+    source: "Anniversary event"
+    ends-at: "2026-12-31"
+    tier: LEGENDARY
+
+  seasonal_valentine:
+    type: SEASONAL
+    display: "Valentine"
+    visible: true
+    purchasable: false
+    drop-method: SEASONAL
+    source: "Valentine event"
+    ends-at: "2027-02-20"
+    tier: RARE
+
+  crate_halloween:
+    type: CRATE_EXCLUSIVE
+    display: "Halloween Crate"
+    visible: true
+    purchasable: false
+    drop-method: CRATE
+    source: "Halloween Crate"
+    tier: LEGENDARY
+
+  crate_founders:
+    type: CRATE_EXCLUSIVE
+    display: "Founder's Crate"
+    visible: true
+    purchasable: false
+    drop-method: CRATE
+    source: "Founder's Crate"
+    tier: MYTHICAL

@@ -1,0 +1,32 @@
+# Requirement #64: documents the built-in effect types available to runes.yml. This file is informational;
+# effects themselves are Java-registered (see EffectRegistry) and can be extended by other plugins at runtime.
+built-in-effects:
+  - DAMAGE
+  - AREA_DAMAGE
+  - HEAL
+  - LIGHTNING
+  - FIRE
+  - POISON
+  - WITHER
+  - SLOW
+  - SPEED
+  - STRENGTH
+  - REGENERATION
+  - ABSORPTION
+  - TELEPORT
+  - PULL
+  - PUSH
+  - EXPLOSION
+  - PROJECTILE
+  - MULTI_PROJECTILE
+  - BLOCK_BREAK
+  - BLOCK_PLACE
+  - ITEM_DROP
+  - MONEY
+  - XP
+  - LOOT
+  - PARTICLE
+  - SOUND
+  - MESSAGE
+  - TITLE
+  - ACTIONBAR
