@@ -21,7 +21,7 @@ public final class PlaceholderHook extends PlaceholderExpansion {
     @Override public @NotNull String getVersion() { return plugin.getPluginMeta().getVersion(); }
     @Override public boolean persist() { return true; }
 
-    @Override public String onPlaceholder(OfflinePlayer p, @NotNull String params) {
+    @Override public String onRequest(OfflinePlayer p, @NotNull String params) {
         if (p == null || p.getUniqueId() == null) return "";
         PlayerData d = plugin.storage().cached(p.getUniqueId());
         if (d == null) return "";
