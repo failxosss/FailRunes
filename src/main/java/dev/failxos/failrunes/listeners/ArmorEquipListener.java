@@ -2,7 +2,7 @@ package dev.failxos.failrunes.listeners;
 
 import dev.failxos.failrunes.FailRunesPlugin;
 import dev.failxos.failrunes.api.RuneTrigger;
-import io.papermc.paper.event.player.PlayerArmorChangeEvent;
+import com.destroystokyo.paper.event.player.PlayerArmorChangeEvent;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 
