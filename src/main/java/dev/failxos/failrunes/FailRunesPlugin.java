@@ -141,7 +141,7 @@ public final class FailRunesPlugin extends JavaPlugin {
 
     @Override public void onDisable() {
         if (storage != null) {
-            for (var p : getServer().getOnlinePlayers()) storage.save(storage.cachedOrLoad(p.getUniqueId()));
+            for (var p : getServer().getOnlinePlayers()) storage.save(storage().cachedOrLoad(p.getUniqueId()));
             storage.close();
         }
     }
